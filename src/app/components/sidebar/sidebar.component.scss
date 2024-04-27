@@ -1,0 +1,52 @@
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+  padding: 0;
+}
+aside {
+  border-right: 2px solid #BABABA;
+}
+
+.logout-container:hover .logout,
+.logout-container:hover p {
+  color: red !important;
+  transition: all 0.3s;
+  transition-timing-function: ease;
+}
+
+li > p{
+  letter-spacing: .7px;
+}
+
+li {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+}
+
+li:first-child {
+  background-color: #ddf1ef;
+}
+
+li:hover {
+  transition: all 0.2s ease;
+  background-color: #e7e5e5;
+}
+
+aside {
+  position: fixed;
+  margin-top: 113px;
+  bottom: 0;
+  top: 0;
+  width: 300px;
+  z-index: 99;
+  background-color: #f8f8f8;
+}
+
+@media (min-width: 1024px) {
+  aside {
+    position: relative;
+    margin-top: 0;
+    height: 100%;
+    width: 350px;
+  }
+}
