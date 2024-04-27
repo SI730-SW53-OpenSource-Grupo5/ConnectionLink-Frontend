@@ -1,9 +1,9 @@
-html, body { 
-    height: 100%; 
+html, body {
+    height: 100%;
 }
-body { 
-    margin: 0; 
-    font-family: Roboto, "Helvetica Neue", sans-serif; 
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 html, body { height: 100%; }
@@ -28,6 +28,34 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
             padding: 20px;
         }
     }
-    
-    
+
+}
+
+h1 {
+  font-size: 35px!important;
+  line-height: 40px!important;
+}
+h2 {
+  font-size: 30px !important;
+  line-height: 35px!important;
+}
+h3 {
+  font-size: 25px!important;
+  line-height: 30px!important;
+}
+h4 {
+  font-size: 20px!important;
+  line-height: 25px!important;
+}
+h5 {
+  font-size: 15px!important;
+  line-height: 20px!important;
+}
+p, a, button, input {
+  font-size: 15px!important;
+  line-height: 20px!important;
+}
+
+.mat-h4, .mat-body-1, .mat-typography .mat-h4, .mat-typography .mat-body-1, .mat-typography h4 {
+  all: unset;
 }
