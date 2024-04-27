@@ -1,0 +1,114 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Djalma Dioses",
+      "email": "djalmadioses123@connectlink.com",
+      "subject": "Stress at the university",
+      "description": "Unveiling School Stress: Insights and Solutions. Delve into the world of student stress with us as we explore its causes, effects, and effective coping mechanisms...",
+      "profile_img": "https://qph.cf2.quoracdn.net/main-qimg-3bb9e54e9cbd36f7157615cdc5969733-lq",
+      "publication_date": "24/09/23",
+      "likes_quantity": 173,
+      "comments_quantity": 24
+    },
+    {
+      "id": 2,
+      "name": "Arian Rodriguez",
+      "email": "arianrodriguez123@connectlink.com",
+      "subject": "Coping with anxiety",
+      "description": "Understanding Anxiety: A Comprehensive Guide. Join us as we explore the nature of anxiety, its causes, and effective strategies for managing it...",
+      "profile_img": "https://avatars.githubusercontent.com/u/164218254?v=4",
+      "publication_date": "25/09/23",
+      "likes_quantity": 200,
+      "comments_quantity": 30
+    },
+    {
+      "id": 3,
+      "name": "Sebastian Peña",
+      "email": "sebastianpena123@connectlink.com",
+      "subject": "Dealing with depression",
+      "description": "Navigating Through Depression: A Detailed Insight. Let's delve into the world of depression, understanding its causes, effects, and ways to cope...",
+      "profile_img": "https://camo.githubusercontent.com/bbba5d612eeca73f3664940dff68a626da4c2869bb9bf96f2574f76cc29cb0c1/68747470733a2f2f692e696d6775722e636f6d2f3657796f68556d2e6a706567",
+      "publication_date": "26/09/23",
+      "likes_quantity": 220,
+      "comments_quantity": 40
+    },
+    {
+      "id": 4,
+      "name": "Alex Avila",
+      "email": "alexavila123@connectlink.com",
+      "subject": "Understanding PTSD",
+      "description": "Unraveling PTSD: Causes, Effects, and Coping Mechanisms. Join us as we explore the complex world of Post-Traumatic Stress Disorder...",
+      "profile_img": "https://avatars.githubusercontent.com/u/60982533?v=4",
+      "publication_date": "27/09/23",
+      "likes_quantity": 150,
+      "comments_quantity": 35
+    },
+    {
+      "id": 5,
+      "name": "Maria Gonzalez",
+      "email": "mariagonzalez123@connectlink.com",
+      "subject": "The impact of stress on physical health",
+      "description": "The Hidden Impact of Stress: A Deep Dive into How Stress Affects Our Physical Health. Let's explore the often overlooked physical implications of stress...",
+      "profile_img": "https://media.licdn.com/dms/image/C4D03AQGyzxSlff9ZLQ/profile-displayphoto-shrink_800_800/0/1525420962252?e=2147483647&v=beta&t=wIZ55Qv_DIKOF3pvJhSbtzmpI1sp02fRriyEYghdOBo",
+      "publication_date": "28/09/23",
+      "likes_quantity": 180,
+      "comments_quantity": 38
+    },
+    {
+      "id": 6,
+      "name": "Carlos Ramirez",
+      "email": "carlosramirez123@connectlink.com",
+      "subject": "The role of exercise in mental health",
+      "description": "Exercise and Mental Health: An Inseparable Connection. Discover how regular physical activity can significantly improve your mental health...",
+      "profile_img": "https://media.licdn.com/dms/image/C4D03AQH2uYRINkpB1w/profile-displayphoto-shrink_800_800/0/1583840949935?e=2147483647&v=beta&t=TXbl0aR9jpZ1FHhLZqxv6zeRlh_li6txNdEzREN6up0",
+      "publication_date": "29/09/23",
+      "likes_quantity": 210,
+      "comments_quantity": 42
+    },
+    {
+      "id": 7,
+      "name": "Ana Fernandez",
+      "email": "anafernandez123@connectlink.com",
+      "subject": "The importance of sleep for mental health",
+      "description": "Sleep and Mental Health: An Undeniable Connection. Let's delve into the crucial role that sleep plays in maintaining our mental health...",
+      "profile_img": "https://media.cnnchile.com/sites/4/2019/02/IMAGENES-ASIM%C3%89TRICAS-NOTA-1.png",
+      "publication_date": "30/09/23",
+      "likes_quantity": 190,
+      "comments_quantity": 39
+    },
+    {
+      "id": 8,
+      "name": "Juan Perez",
+      "email": "juanperez123@connectlink.com",
+      "subject": "Mindfulness and mental health",
+      "description": "Mindfulness: A Powerful Tool for Mental Health. Discover how mindfulness can help you manage stress, anxiety, and improve your overall mental health...",
+      "profile_img": "https://www.mendozapost.com/files/image/14/14079/54f0601a47721.jpg",
+      "publication_date": "01/10/23",
+      "likes_quantity": 230,
+      "comments_quantity": 45
+    },
+    {
+      "id": 9,
+      "name": "Laura Martinez",
+      "email": "lauramartinez123@connectlink.com",
+      "subject": "The role of nutrition in mental health",
+      "description": "Nutrition and Mental Health: A Deep Connection. Join us as we explore how your diet can significantly impact your mental health...",
+      "profile_img": "https://paginasweb.tech/image/-123-700x700.jpg",
+      "publication_date": "02/10/23",
+      "likes_quantity": 240,
+      "comments_quantity": 50
+    },
+    {
+      "id": 10,
+      "name": "Pedro Lopez",
+      "email": "pedrolopez123@connectlink.com",
+      "subject": "The impact of social media on mental health",
+      "description": "Social Media and Mental Health: A Double-Edged Sword. Let's delve into the complex relationship between social media usage and mental health...",
+      "profile_img": "https://media.licdn.com/dms/image/C4D03AQFd21hzM4nCtA/profile-displayphoto-shrink_800_800/0/1587496219357?e=2147483647&v=beta&t=t05UDp_z-8STPlt_63cwrAF87sKWsS5F14675qZ3ptQ",
+      "publication_date": "03/10/23",
+      "likes_quantity": 250,
+      "comments_quantity": 55
+    }
+  ]
+}

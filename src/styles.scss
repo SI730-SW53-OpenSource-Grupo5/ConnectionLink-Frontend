@@ -5,3 +5,29 @@ body {
     margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.body-container {
+    .body-content {
+        display:  flex;
+
+        .sidebar-content {
+            .sidebar {
+                position: fixed;
+                height: calc(100vh - 112px);
+                top: 112px;
+            }
+            @media (min-width: 1024px) {
+                width: 349px;
+            }
+        }
+        .custom-content {
+            width: calc(100% - 349px);
+            padding: 20px;
+        }
+    }
+    
+    
+}
