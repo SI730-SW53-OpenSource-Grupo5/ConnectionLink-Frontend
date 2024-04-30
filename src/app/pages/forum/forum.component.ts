@@ -49,12 +49,14 @@ export class ForumComponent {
   ];
 
   topics: Topic[] = [
-    {value: 'depression-0', viewValue: 'Depression'},
-    {value: 'stress-1', viewValue: 'Stress'},
-    {value: 'mental-2', viewValue: 'Mental Health'},
+    {value: 'depression', viewValue: 'Depression'},
+    {value: 'stress', viewValue: 'Stress'},
+    {value: 'mental', viewValue: 'Mental Health'},
   ];
 
   posts: Array<PostEntity> = [];
+  // guardamos una copia del arreglo inicial
+  initialPosts: Array<PostEntity> = []
   showNewPostModal: boolean = false;
 
   constructor(private postService: PostService) {
@@ -81,8 +83,39 @@ export class ForumComponent {
             item.comments_quantity
           )
         });
+        this.initialPosts = [...this.posts];
         console.log(this.posts);
       });
+  }
+
+  filterByTopics(word: string) {
+    const filteredPosts = this.posts.filter(post => post.subject.toLowerCase().includes(word.toLowerCase()));
+    this.posts = filteredPosts;
+  }
+
+  refreshPosts() {
+    // restaureamos el estado inicial de posts
+    this.posts = [...this.initialPosts];
+  }
+
+  orderPostsBy(filter: string) {
+
+    console.log(filter);
+
+    switch(filter) {
+      case 'comments-0':
+        this.posts.sort((a, b) => b.comments_quantity - a.comments_quantity);
+        break;
+      case 'likes-1':
+        this.posts.sort((a, b) => b.likes_quantity - a.likes_quantity);
+        break;
+      case 'posts-2':
+        this.posts.sort((a, b) => new Date(a.publication_date).getTime() - new Date(b.publication_date).getTime());
+        break;
+      default:
+        console.log('Invalid filter');
+    }
+
   }
 
 }

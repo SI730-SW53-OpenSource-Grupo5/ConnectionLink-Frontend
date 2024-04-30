@@ -9,21 +9,22 @@
         <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="add_circle_outline"></mat-icon>
       </button>
       <button
-        class="flex items-center border-[1px] border-slate-800 bg-slate-100 text-slate-950 gap-1 px-4 py-1.5 rounded-2xl">
-        Favorites
-        <mat-icon class="text-xl w-0 h-0 mb-1.5" fontIcon="star_border"></mat-icon>
+        (click)="refreshPosts()"
+        class="refresh flex items-center border-slate-800 bg-slate-100 text-slate-950 gap-1 px-5 py-1.5 rounded-2xl">
+        Refresh
+        <mat-icon class="text-xl w-0 h-0 mb-1.5" fontIcon="refresh"></mat-icon>
       </button>
       <mat-form-field class="-mb-5" style="width: 175px">
         <mat-label>Order By</mat-label>
-        <mat-select>
+        <mat-select (selectionChange)="orderPostsBy($event.value)" >
           @for (filter of filters; track filter) {
-            <mat-option [value]="filter.value">{{filter.viewValue}}</mat-option>
+            <mat-option [value]="filter.value">{{filter.viewValue}} </mat-option>
           }
         </mat-select>
       </mat-form-field>
       <mat-form-field class="-mb-5" style="width: 175px">
         <mat-label>Topics</mat-label>
-        <mat-select>
+        <mat-select (selectionChange)="filterByTopics($event.value)">
           @for (topic of topics; track topic) {
             <mat-option [value]="topic.value">{{topic.viewValue}}</mat-option>
           }
