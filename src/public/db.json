@@ -130,5 +130,351 @@
       "specialistId": "smithandrew",
       "description": "Dr. Smith Kimbell is a true beacon of compassion and expertise in the field of psychology. His holistic approach to therapy, coupled with his unwavering empathy, has been instrumental in guiding me through life's most challenging moments. Through his insightful guidance, I have discovered newfound resilience and inner peace."
     }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "name": "Djalma Dioses",
+      "email": "djalmadioses123@connectlink.com",
+      "subject": "Stress at the university",
+      "description": "Unveiling School Stress: Insights and Solutions. Delve into the world of student stress with us as we explore its causes, effects, and effective coping mechanisms. We will discuss the various sources of stress that students face, such as academic pressure, social issues, and personal problems. We will also delve into the physical and mental effects of stress, including anxiety, depression, and health issues. Finally, we will provide effective coping mechanisms to help students manage their stress levels and maintain their mental health. Unveiling School Stress: Insights and Solutions. Delve into the world of student stress with us as we explore its causes, effects, and effective coping mechanisms. We will discuss the various sources of stress that students face, such as academic pressure, social issues, and personal problems. We will also delve into the physical and mental effects of stress, including anxiety, depression, and health issues. Finally, we will provide effective coping mechanisms to help students manage their stress levels and maintain their mental health. Unveiling School Stress: Insights and Solutions. Delve into the world of student stress with us as we explore its causes, effects, and effective coping mechanisms. We will discuss the various sources of stress that students face, such as academic pressure, social issues, and personal problems. We will also delve into the physical and mental effects of stress, including anxiety, depression, and health issues. Finally, we will provide effective coping mechanisms to help students manage their stress levels and maintain their mental health",
+      "profile_img": "https://github.com/SI730-SW53-OpenSource-Grupo5/FinalProject/blob/main/assets/members-profile/djalma-profile.png?raw=true",
+      "publication_date": "24/09/23",
+      "likes_quantity": 173,
+      "comments_quantity": 24
+    },
+    {
+      "id": 2,
+      "name": "Arian Rodriguez",
+      "email": "arianrodriguez123@connectlink.com",
+      "subject": "Coping with anxiety",
+      "description": "Understanding Anxiety: A Comprehensive Guide. Join us as we explore the nature of anxiety, its causes, and effective strategies for managing it. We will discuss the different types of anxiety disorders, their symptoms, and the impact they can have on a person's life. We will also delve into the various causes of anxiety, including genetic factors, environmental influences, and personal experiences. Finally, we will provide effective strategies for managing anxiety, such as cognitive-behavioral therapy, medication, and lifestyle changes. Understanding Anxiety: A Comprehensive Guide. Join us as we explore the nature of anxiety, its causes, and effective strategies for managing it. We will discuss the different types of anxiety disorders, their symptoms, and the impact they can have on a person's life. We will also delve into the various causes of anxiety, including genetic factors, environmental influences, and personal experiences. Finally, we will provide effective strategies for managing anxiety, such as cognitive-behavioral therapy, medication, and lifestyle changes. Understanding Anxiety: A Comprehensive Guide. Join us as we explore the nature of anxiety, its causes, and effective strategies for managing it. We will discuss the different types of anxiety disorders, their symptoms, and the impact they can have on a person's life. We will also delve into the various causes of anxiety, including genetic factors, environmental influences, and personal experiences. Finally, we will provide effective strategies for managing anxiety, such as cognitive-behavioral therapy, medication, and lifestyle changes",
+      "profile_img": "https://avatars.githubusercontent.com/u/164218254?v=4",
+      "publication_date": "25/09/23",
+      "likes_quantity": 200,
+      "comments_quantity": 30
+    },
+    {
+      "id": 3,
+      "name": "Sebastian Peña",
+      "email": "sebastianpena123@connectlink.com",
+      "subject": "Dealing with depression",
+      "description": "Exploring Depression: A Comprehensive Investigation. Depression, a widespread and debilitating mental health condition, profoundly impacts individuals' emotional well-being, cognitive processes, and behavioral patterns. It engenders overwhelming feelings of sadness, hopelessness, and despair, often accompanied by a pervasive sense of emptiness and a loss of interest in previously pleasurable activities. Beyond its emotional toll, depression exacts a significant physical and psychological toll, disrupting sleep patterns, impairing concentration and decision-making abilities, and sapping energy levels. This multifaceted disorder can manifest in various forms, ranging from mild and episodic bouts of sadness to severe and chronic states of despair. While the exact etiology of depression remains complex and multifactorial, it is often attributed to a combination of genetic predisposition, neurobiological factors, environmental stressors, and life experiences. Traumatic events, chronic stress, hormonal imbalances, and certain medical conditions can also precipitate or exacerbate depressive symptoms.\n\nDespite its prevalence and profound impact on individuals' lives, depression remains a highly stigmatized and misunderstood condition. Many individuals struggle in silence, reluctant to seek help due to fear of judgment or misconceptions about mental illness.",
+      "profile_img": "https://camo.githubusercontent.com/bbba5d612eeca73f3664940dff68a626da4c2869bb9bf96f2574f76cc29cb0c1/68747470733a2f2f692e696d6775722e636f6d2f3657796f68556d2e6a706567",
+      "publication_date": "26/09/23",
+      "likes_quantity": 220,
+      "comments_quantity": 40
+    },
+    {
+      "id": 4,
+      "name": "Alex Avila",
+      "email": "alexavila123@connectlink.com",
+      "subject": "Understanding PTSD",
+      "description": "Unraveling PTSD: Causes, Effects, and Coping Mechanisms. Post-Traumatic Stress Disorder (PTSD) is a mental health condition that's triggered by a terrifying event — either experiencing it or witnessing it. Symptoms may include flashbacks, nightmares and severe anxiety, as well as uncontrollable thoughts about the event. In this post, we will explore the complex world of PTSD, discussing its causes, effects, and coping mechanisms. We will delve into the symptoms of PTSD, the types of events that can trigger PTSD, and the various treatment options available for those suffering from PTSD. Unraveling PTSD: Causes, Effects, and Coping Mechanisms. Post-Traumatic Stress Disorder (PTSD) is a mental health condition that's triggered by a terrifying event — either experiencing it or witnessing it. Symptoms may include flashbacks, nightmares and severe anxiety, as well as uncontrollable thoughts about the event. In this post, we will explore the complex world of PTSD, discussing its causes, effects, and coping mechanisms. We will delve into the symptoms of PTSD, the types of events that can trigger PTSD, and the various treatment options available for those suffering from PTSD. Unraveling PTSD: Causes, Effects, and Coping Mechanisms. Post-Traumatic Stress Disorder (PTSD) is a mental health condition that's triggered by a terrifying event — either experiencing it or witnessing it. Symptoms may include flashbacks, nightmares and severe anxiety, as well as uncontrollable thoughts about the event. In this post, we will explore the complex world of PTSD, discussing its causes, effects, and coping mechanisms. We will delve into the symptoms of PTSD, the types of events that can trigger PTSD, and the various treatment options available for those suffering from PTSD",
+      "profile_img": "https://avatars.githubusercontent.com/u/60982533?v=4",
+      "publication_date": "27/09/23",
+      "likes_quantity": 150,
+      "comments_quantity": 35
+    },
+    {
+      "id": 5,
+      "name": "Maria Gonzalez",
+      "email": "mariagonzalez123@connectlink.com",
+      "subject": "The impact of stress on physical health",
+      "description": "The Hidden Impact of Stress: A Deep Dive into How Stress Affects Our Physical Health. Stress is not just a mental or emotional issue - it can also have significant physical implications. Chronic stress can lead to a variety of health problems, including heart disease, digestive problems, sleep disorders, and weight gain. In this post, we will explore the physiological processes that underlie these effects, and discuss strategies for managing stress and maintaining physical health. The Hidden Impact of Stress: A Deep Dive into How Stress Affects Our Physical Health. Stress is not just a mental or emotional issue - it can also have significant physical implications. Chronic stress can lead to a variety of health problems, including heart disease, digestive problems, sleep disorders, and weight gain. In this post, we will explore the physiological processes that underlie these effects, and discuss strategies for managing stress and maintaining physical health. The Hidden Impact of Stress: A Deep Dive into How Stress Affects Our Physical Health. Stress is not just a mental or emotional issue - it can also have significant physical implications. Chronic stress can lead to a variety of health problems, including heart disease, digestive problems, sleep disorders, and weight gain. In this post, we will explore the physiological processes that underlie these effects, and discuss strategies for managing stress and maintaining physical health",
+      "profile_img": "https://media.licdn.com/dms/image/C4D03AQGyzxSlff9ZLQ/profile-displayphoto-shrink_800_800/0/1525420962252?e=2147483647&v=beta&t=wIZ55Qv_DIKOF3pvJhSbtzmpI1sp02fRriyEYghdOBo",
+      "publication_date": "28/09/23",
+      "likes_quantity": 242,
+      "comments_quantity": 38
+    },
+    {
+      "id": 6,
+      "name": "Carlos Ramirez",
+      "email": "carlosramirez123@connectlink.com",
+      "subject": "The role of exercise in mental health",
+      "description": "Exercise and Mental Health: An Inseparable Connection. Regular physical activity is one of the most effective ways to maintain mental health and manage symptoms of mental health disorders. Exercise can reduce anxiety, depression, and negative mood by improving self-esteem and cognitive function. In this post, we will delve into the science behind these benefits, and provide practical advice for incorporating exercise into your routine. Exercise and Mental Health: An Inseparable Connection. Regular physical activity is one of the most effective ways to maintain mental health and manage symptoms of mental health disorders. Exercise can reduce anxiety, depression, and negative mood by improving self-esteem and cognitive function. In this post, we will delve into the science behind these benefits, and provide practical advice for incorporating exercise into your routine. Exercise and Mental Health: An Inseparable Connection. Regular physical activity is one of the most effective ways to maintain mental health and manage symptoms of mental health disorders. Exercise can reduce anxiety, depression, and negative mood by improving self-esteem and cognitive function. In this post, we will delve into the science behind these benefits, and provide practical advice for incorporating exercise into your routine",
+      "profile_img": "https://media.licdn.com/dms/image/C4D03AQH2uYRINkpB1w/profile-displayphoto-shrink_800_800/0/1583840949935?e=2147483647&v=beta&t=TXbl0aR9jpZ1FHhLZqxv6zeRlh_li6txNdEzREN6up0",
+      "publication_date": "29/09/23",
+      "likes_quantity": 210,
+      "comments_quantity": 42
+    },
+    {
+      "id": 7,
+      "name": "Ana Fernandez",
+      "email": "anafernandez123@connectlink.com",
+      "subject": "The importance of sleep for mental health",
+      "description": "Sleep and Mental Health: An Undeniable Connection. Sleep isn't just a time to rest and recover from the day's activities. It plays a vital role in mental health. Lack of sleep can exacerbate mental health conditions, while a good night's sleep can help improve mental well-being. In this post, we will explore the relationship between sleep and mental health, and provide tips for improving sleep quality. Sleep and Mental Health: An Undeniable Connection. Sleep isn't just a time to rest and recover from the day's activities. It plays a vital role in mental health. Lack of sleep can exacerbate mental health conditions, while a good night's sleep can help improve mental well-being. In this post, we will explore the relationship between sleep and mental health, and provide tips for improving sleep quality. Sleep and Mental Health: An Undeniable Connection. Sleep isn't just a time to rest and recover from the day's activities. It plays a vital role in mental health. Lack of sleep can exacerbate mental health conditions, while a good night's sleep can help improve mental well-being. In this post, we will explore the relationship between sleep and mental health, and provide tips for improving sleep quality",
+      "profile_img": "https://media.cnnchile.com/sites/4/2019/02/IMAGENES-ASIM%C3%89TRICAS-NOTA-1.png",
+      "publication_date": "30/09/23",
+      "likes_quantity": 190,
+      "comments_quantity": 55
+    },
+    {
+      "id": 8,
+      "name": "Juan Perez",
+      "email": "juanperez123@connectlink.com",
+      "subject": "Mindfulness and mental health",
+      "description": "Mindfulness: A Powerful Tool for Mental Health. Mindfulness, the practice of staying present and focused in the moment, is a powerful tool for mental health. It can help reduce stress, improve focus, and contribute to a better quality of life. In this post, we will explore the benefits of mindfulness, provide practical tips for incorporating mindfulness into your daily routine, and discuss how mindfulness can support mental health. Mindfulness: A Powerful Tool for Mental Health. Mindfulness, the practice of staying present and focused in the moment, is a powerful tool for mental health. It can help reduce stress, improve focus, and contribute to a better quality of life. In this post, we will explore the benefits of mindfulness, provide practical tips for incorporating mindfulness into your daily routine, and discuss how mindfulness can support mental health. Mindfulness: A Powerful Tool for Mental Health. Mindfulness, the practice of staying present and focused in the moment, is a powerful tool for mental health. It can help reduce stress, improve focus, and contribute to a better quality of life. In this post, we will explore the benefits of mindfulness, provide practical tips for incorporating mindfulness into your daily routine, and discuss how mindfulness can support mental health.",
+      "profile_img": "https://www.mendozapost.com/files/image/14/14079/54f0601a47721.jpg",
+      "publication_date": "01/10/23",
+      "likes_quantity": 230,
+      "comments_quantity": 45
+    },
+    {
+      "id": 9,
+      "name": "Laura Martinez",
+      "email": "lauramartinez123@connectlink.com",
+      "subject": "The role of nutrition in mental health",
+      "description": "Nutrition and Mental Health: A Deep Connection. What we eat can significantly impact our mental health. A diet rich in nutrients can help manage mental health conditions, while a poor diet can exacerbate symptoms. In this post, we will explore the connection between nutrition and mental health, discuss the role of various nutrients in maintaining mental well-being, and provide practical tips for a mental health-friendly diet. Nutrition and Mental Health: A Deep Connection. What we eat can significantly impact our mental health. A diet rich in nutrients can help manage mental health conditions, while a poor diet can exacerbate symptoms. In this post, we will explore the connection between nutrition and mental health, discuss the role of various nutrients in maintaining mental well-being, and provide practical tips for a mental health-friendly diet. Nutrition and Mental Health: A Deep Connection. What we eat can significantly impact our mental health. A diet rich in nutrients can help manage mental health conditions, while a poor diet can exacerbate symptoms. In this post, we will explore the connection between nutrition and mental health, discuss the role of various nutrients in maintaining mental well-being, and provide practical tips for a mental health-friendly diet",
+      "profile_img": "https://paginasweb.tech/image/-123-700x700.jpg",
+      "publication_date": "02/10/23",
+      "likes_quantity": 240,
+      "comments_quantity": 50
+    },
+    {
+      "id": 10,
+      "name": "Pedro Lopez",
+      "email": "pedrolopez123@connectlink.com",
+      "subject": "The impact of social media on mental health",
+      "description": "Social Media and Mental Health: A Double-Edged Sword. While social media can be a great way to connect with others, it can also have negative effects on mental health. Excessive use of social media can lead to anxiety, depression, loneliness, and poor self-esteem. In this post, we will explore the impact of social media on mental health, discuss strategies for healthy social media use, and provide resources for those struggling with social media-related mental health issues. Social Media and Mental Health: A Double-Edged Sword. While social media can be a great way to connect with others, it can also have negative effects on mental health. Excessive use of social media can lead to anxiety, depression, loneliness, and poor self-esteem. In this post, we will explore the impact of social media on mental health, discuss strategies for healthy social media use, and provide resources for those struggling with social media-related mental health issues. Social Media and Mental Health: A Double-Edged Sword. While social media can be a great way to connect with others, it can also have negative effects on mental health. Excessive use of social media can lead to anxiety, depression, loneliness, and poor self-esteem. In this post, we will explore the impact of social media on mental health, discuss strategies for healthy social media use, and provide resources for those struggling with social media-related mental health issues",
+      "profile_img": "https://media.licdn.com/dms/image/C4D03AQFd21hzM4nCtA/profile-displayphoto-shrink_800_800/0/1587496219357?e=2147483647&v=beta&t=t05UDp_z-8STPlt_63cwrAF87sKWsS5F14675qZ3ptQ",
+      "publication_date": "03/09/23",
+      "likes_quantity": 208,
+      "comments_quantity": 43
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": 1,
+      "name": "Alan Smith",
+      "email": "asmith@connectlink.com",
+      "type": "specialist",
+      "comment": "This is a very insightful post...",
+      "publication_date": "25/09/23",
+      "likes_quantity": 54,
+      "imageURL": "https://randomuser.me/api/portraits/men/1.jpg"
+    },
+    {
+      "id": 2,
+      "postId": 1,
+      "name": "Maria Gonzalez",
+      "email": "mariagonzalez123@connectlink.com",
+      "type": "user",
+      "comment": "I agree with the points made in this post...",
+      "publication_date": "26/09/23",
+      "likes_quantity": 23,
+      "imageURL": "https://randomuser.me/api/portraits/women/2.jpg"
+    },
+    {
+      "id": 3,
+      "postId": 2,
+      "name": "Carlos Ramirez",
+      "email": "carlosramirez123@connectlink.com",
+      "imageURL": "https://randomuser.me/api/portraits/men/3.jpg",
+      "comment": "Great post, very informative!",
+      "publication_date": "27/09/23",
+      "type": "user",
+      "likes_quantity": 35
+    },
+    {
+      "id": 4,
+      "postId": 3,
+      "name": "Ana Fernandez",
+      "email": "anafernandez123@connectlink.com",
+      "comment": "I found this post very helpful, thanks for sharing.",
+      "publication_date": "28/09/23",
+      "type": "specialist",
+      "likes_quantity": 42,
+      "imageURL": "https://randomuser.me/api/portraits/women/4.jpg"
+    },
+    {
+      "id": 5,
+      "postId": 4,
+      "name": "Juan Perez",
+      "email": "juanperez123@connectlink.com",
+      "type": "user",
+      "comment": "Interesting points, I learned a lot.",
+      "publication_date": "29/09/23",
+      "likes_quantity": 28,
+      "imageURL": "https://randomuser.me/api/portraits/men/5.jpg"
+    },
+    {
+      "id": 6,
+      "postId": 5,
+      "name": "Laura Martinez",
+      "email": "lauramartinez123@connectlink.com",
+      "type": "specialist",
+      "comment": "This post really made me think, thank you.",
+      "publication_date": "30/09/23",
+      "likes_quantity": 37,
+      "imageURL": "https://randomuser.me/api/portraits/women/6.jpg"
+    },
+    {
+      "id": 7,
+      "postId": 6,
+      "name": "Pedro Lopez",
+      "email": "pedrolopez123@connectlink.com",
+      "type": "user",
+      "comment": "I appreciate the insights in this post.",
+      "publication_date": "01/10/23",
+      "likes_quantity": 33,
+      "imageURL": "https://randomuser.me/api/portraits/men/7.jpg"
+    },
+    {
+      "id": 8,
+      "postId": 7,
+      "name": "Maria Gonzalez",
+      "email": "mariagonzalez123@connectlink.com",
+      "type": "specialist",
+      "comment": "Very well written, I enjoyed reading this post.",
+      "publication_date": "02/10/23",
+      "likes_quantity": 40,
+      "imageURL": "https://randomuser.me/api/portraits/women/8.jpg"
+    },
+    {
+      "id": 9,
+      "postId": 8,
+      "name": "Alan Smith",
+      "email": "asmith@connectlink.com",
+      "type": "user",
+      "comment": "This post was very enlightening, thank you for sharing.",
+      "publication_date": "03/10/23",
+      "likes_quantity": 45,
+      "imageURL": "https://randomuser.me/api/portraits/men/9.jpg"
+    },
+    {
+      "id": 10,
+      "postId": 9,
+      "name": "Djalma Dioses",
+      "email": "djalmadioses123@connectlink.com",
+      "profile_img": "https://qph.cf2.quoracdn.net/main-qimg-3bb9e54e9cbd36f7157615cdc5969733-lq",
+      "type": "specialist",
+      "comment": "I found this post to be very informative.",
+      "publication_date": "04/10/23",
+      "likes_quantity": 38,
+      "imageURL": "https://randomuser.me/api/portraits/men/10.jpg"
+    },
+    {
+      "id": 11,
+      "postId": 10,
+      "name": "Arian Rodriguez",
+      "email": "arianrodriguez123@connectlink.com",
+      "type": "user",
+      "comment": "Great insights, I learned a lot from this post.",
+      "publication_date": "05/10/23",
+      "likes_quantity": 41,
+      "imageURL": "https://randomuser.me/api/portraits/men/11.jpg"
+    },
+    {
+      "id": 12,
+      "postId": 1,
+      "name": "Carlos Ramirez",
+      "email": "carlosramirez123@connectlink.com",
+      "type": "specialist",
+      "comment": "I found this post very helpful, thanks for sharing.",
+      "publication_date": "06/10/23",
+      "likes_quantity": 32,
+      "imageURL": "https://randomuser.me/api/portraits/men/12.jpg"
+    },
+    {
+      "id": 13,
+      "postId": 2,
+      "name": "Ana Fernandez",
+      "email": "anafernandez123@connectlink.com",
+      "type": "specialist",
+      "comment": "Interesting points, I learned a lot.",
+      "publication_date": "07/10/23",
+      "likes_quantity": 39,
+      "imageURL": "https://randomuser.me/api/portraits/women/13.jpg"
+    },
+    {
+      "id": 14,
+      "postId": 3,
+      "name": "Juan Perez",
+      "email": "juanperez123@connectlink.com",
+      "type": "user",
+      "comment": "This post really made me think, thank you.",
+      "publication_date": "08/10/23",
+      "likes_quantity": 27,
+      "imageURL": "https://randomuser.me/api/portraits/men/14.jpg"
+    },
+    {
+      "id": 15,
+      "postId": 4,
+      "name": "Laura Martinez",
+      "email": "lauramartinez123@connectlink.com",
+      "type": "specialist",
+      "comment": "I appreciate the insights in this post.",
+      "publication_date": "09/10/23",
+      "likes_quantity": 36,
+      "imageURL": "https://randomuser.me/api/portraits/women/15.jpg"
+    },
+    {
+      "id": 16,
+      "postId": 5,
+      "name": "Pedro Lopez",
+      "email": "pedrolopez123@connectlink.com",
+      "type": "user",
+      "comment": "Very well written, I enjoyed reading this post.",
+      "publication_date": "10/10/23",
+      "likes_quantity": 32,
+      "imageURL": "https://randomuser.me/api/portraits/men/16.jpg"
+    },
+    {
+      "id": 17,
+      "postId": 6,
+      "name": "Maria Gonzalez",
+      "email": "mariagonzalez123@connectlink.com",
+      "type": "specialist",
+      "comment": "This post was very enlightening, thank you for sharing.",
+      "publication_date": "11/10/23",
+      "likes_quantity": 39,
+      "imageURL": "https://randomuser.me/api/portraits/women/17.jpg"
+    },
+    {
+      "id": 18,
+      "postId": 7,
+      "name": "Alan Smith",
+      "email": "asmith@connectlink.com",
+      "type": "user",
+      "comment": "I found this post to be very informative.",
+      "publication_date": "12/10/23",
+      "likes_quantity": 44,
+      "imageURL": "https://randomuser.me/api/portraits/men/18.jpg"
+    },
+    {
+      "id": 19,
+      "postId": 8,
+      "name": "Djalma Dioses",
+      "email": "djalmadioses123@connectlink.com",
+      "type": "specialist",
+      "comment": "Great insights, I learned a lot from this post.",
+      "publication_date": "13/10/23",
+      "likes_quantity": 37,
+      "imageURL": "https://randomuser.me/api/portraits/men/19.jpg"
+    },
+    {
+      "id": 20,
+      "postId": 9,
+      "name": "Arian Rodriguez",
+      "email": "arianrodriguez123@connectlink.com",
+      "type": "user",
+      "comment": "This is a very insightful post...",
+      "publication_date": "14/10/23",
+      "likes_quantity": 40,
+      "imageURL": "https://randomuser.me/api/portraits/men/20.jpg"
+    },
+    {
+      "id": 21,
+      "postId": 10,
+      "name": "Maria Gonzalez",
+      "email": "mariagonzalez123@connectlink.com",
+      "type": "specialist",
+      "comment": "I agree with the points made in this post...",
+      "publication_date": "15/10/23",
+      "likes_quantity": 23,
+      "imageURL": "https://randomuser.me/api/portraits/women/21.jpg"
+    }
   ]
 }
