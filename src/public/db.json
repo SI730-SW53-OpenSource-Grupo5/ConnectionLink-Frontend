@@ -476,5 +476,10 @@
       "likes_quantity": 23,
       "imageURL": "https://randomuser.me/api/portraits/women/21.jpg"
     }
+  ],
+  "events": [
+    {
+      "name": dx
+    }
   ]
 }
