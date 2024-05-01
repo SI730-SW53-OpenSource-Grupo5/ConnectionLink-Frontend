@@ -14,7 +14,39 @@
       "email": "smithak@gmail.com",
       "password": "pass",
       "etiquets": "Anxiety and stress",
-      "phone": "935-873-489"
+      "phone": "935-873-489",
+      "posts": [
+        {
+          "id": "1",
+          "title": "The Importance of Self-Care for Mental Well-being",
+          "description": "Explore strategies to prioritize self-care and enhance your mental health.",
+          "datePublished": "2024-04-01"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "firstName": "Smith Andrew",
+      "lastName": "Kimbell",
+      "age": "32",
+      "studies": "Peruvian University of Applied Sciences",
+      "ocupation": "Psychologist at HelpForAll",
+      "biography": "Dedicated psychologist, employs a holistic and empathetic approach to help individuals overcome traumas and foster emotional well-being. He also advocates for mental health in his community through workshops and educational talks.",
+      "cv": "https://google.com",
+      "urlImage": "https://d1ih8jugeo2m5m.cloudfront.net/2023/06/como-emprender-si-eres-psicologo.jpg",
+      "username": "smithandrew",
+      "email": "smithak@gmail.com",
+      "password": "pass",
+      "etiquets": "Anxiety and stress",
+      "phone": "935-873-489",
+      "posts": [
+        {
+          "id": "1",
+          "title": "The Importance of Self-Care for Mental Well-being",
+          "description": "Explore strategies to prioritize self-care and enhance your mental health.",
+          "datePublished": "2024-04-01"
+        }
+      ]
     }
   ],
   "users": [

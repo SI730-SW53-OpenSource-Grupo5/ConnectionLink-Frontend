@@ -1,0 +1,17 @@
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 3em;
+  color: #333;
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s ease-in-out;
+}
+
+h1:hover {
+  color: #75aa9c;
+}
