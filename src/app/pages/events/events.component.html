@@ -1,33 +1,29 @@
 <section class="h-full relative">
   <div class="events-container flex flex-col gap-4">
-    <h3>Events</h3>
-    <p>Join and participate in various events created by different specialists</p>
-    <div class="cards-event-container mt-3 border">
-      <article class="flex flex-col" style="border: 1px solid #DDDDDD">
-        <div class="inline-flex">
-          <img class="h-full w-full" src="assets/home-hero.png" >
-        </div>
-        <div class="flex flex-col gap-3 px-4 py-5 bg-cyan-50">
-          <div class="flex flex-row justify-between items-center">
-            <h4>Spiritual Healing Event</h4>
-            <p class="font-medium tracking-wide">Status: <span class="text-blue-600">Free</span></p>
-          </div>
-          <p style="padding: 3px 0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <div class="flex flex-row gap-3 items-center justify-between">
-            <div class="flex flex-row items-center gap-2">
-              <img class="rounded-full w-12 h-12" src="https://randomuser.me/api/portraits/men/6.jpg" >
-              <div class="flex flex-col gap-1">
-                <h5>John Smith</h5>
-                <span class="text-slate-500">Physocologist at HealthForAll</span>
-              </div>
-            </div>
-            <mat-icon
-              style="font-size: 1.7rem"
-              class="cursor-pointer mt-0.5 font-medium w-0 h-0 mb-1.5 hover:scale-110 transition-all duration-300 ease-out"
-              fontIcon="launch"></mat-icon>
-          </div>
-        </div>
-      </article>
+    <div class="flex flex-row">
+      <div class="flex flex-col gap-4 justify-between w-full">
+        <h3>Events</h3>
+        <p>Join and participate in various events created by different specialists</p>
+      </div>
+      <div class="flex flex-row gap-3 self-center">
+        <button
+          (click)="refreshEvents()"
+          class="bg-slate-100 px-3 hover:bg-slate-300 transition-all duration-300 ease rounded-lg">
+          <mat-icon
+            style="font-size: 1.7rem"
+            class="self-end cursor-pointer mt-0.5 font-medium w-0 h-0 mb-1.5 hover:scale-110 transition-all duration-300 ease-out"
+            fontIcon="refresh"></mat-icon>
+        </button>
+        <mat-form-field class="-mb-5 self-center" style="width: 175px; height: 80px">
+          <mat-label>Filter By</mat-label>
+          <mat-select [(value)]="selectedEventFilter" (selectionChange)="filterByStatus($event.value)" >
+            @for (filter of filters; track filter) {
+              <mat-option [value]="filter.value">{{filter.viewValue}} </mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
     </div>
+    <app-event-card [events]="events"></app-event-card>
   </div>
 </section>
