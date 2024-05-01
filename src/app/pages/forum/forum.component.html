@@ -16,7 +16,7 @@
       </button>
       <mat-form-field class="-mb-5" style="width: 175px">
         <mat-label>Order By</mat-label>
-        <mat-select (selectionChange)="orderPostsBy($event.value)" >
+        <mat-select [(value)]="selectedFilter" (selectionChange)="orderPostsBy($event.value)" >
           @for (filter of filters; track filter) {
             <mat-option [value]="filter.value">{{filter.viewValue}} </mat-option>
           }
@@ -24,7 +24,7 @@
       </mat-form-field>
       <mat-form-field class="-mb-5" style="width: 175px">
         <mat-label>Topics</mat-label>
-        <mat-select (selectionChange)="filterByTopics($event.value)">
+        <mat-select [(value)]="selectedTopic" (selectionChange)="filterByTopics($event.value)">
           @for (topic of topics; track topic) {
             <mat-option [value]="topic.value">{{topic.viewValue}}</mat-option>
           }

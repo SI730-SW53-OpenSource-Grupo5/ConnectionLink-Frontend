@@ -42,10 +42,13 @@ interface Topic {
 })
 export class ForumComponent {
 
+  selectedFilter: string | null = null;
+  selectedTopic: string | null = null;
+
   filters: Filter[] = [
-    {value: 'comments-0', viewValue: 'More comments'},
-    {value: 'likes-1', viewValue: 'More likes'},
-    {value: 'posts-2', viewValue: 'Previous posts'},
+    {value: 'comments', viewValue: 'More comments'},
+    {value: 'likes', viewValue: 'More likes'},
+    {value: 'posts', viewValue: 'Previous posts'},
   ];
 
   topics: Topic[] = [
@@ -96,6 +99,8 @@ export class ForumComponent {
   refreshPosts() {
     // restaureamos el estado inicial de posts
     this.posts = [...this.initialPosts];
+    this.selectedFilter = null;
+    this.selectedTopic = null;
   }
 
   orderPostsBy(filter: string) {
@@ -103,13 +108,13 @@ export class ForumComponent {
     console.log(filter);
 
     switch(filter) {
-      case 'comments-0':
+      case 'comments':
         this.posts.sort((a, b) => b.comments_quantity - a.comments_quantity);
         break;
-      case 'likes-1':
+      case 'likes':
         this.posts.sort((a, b) => b.likes_quantity - a.likes_quantity);
         break;
-      case 'posts-2':
+      case 'posts':
         this.posts.sort((a, b) => new Date(a.publication_date).getTime() - new Date(b.publication_date).getTime());
         break;
       default:
