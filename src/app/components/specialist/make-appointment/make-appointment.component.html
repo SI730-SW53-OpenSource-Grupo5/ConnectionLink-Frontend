@@ -1,0 +1,61 @@
+<section *ngIf="showPopup" class="popup">
+    <div class="popup-content p-[30px] md:p-[70px]">
+        @if(!isCreatedAppoiment) {
+            <h2 class="pb-[30px]">Make an appoinment:</h2>
+            <form (submit)="onSubmit()" #specialistForm="ngForm">
+                <div class="flex gap-[20px] items-center">
+                    <p>Specialist name</p>
+                    <mat-form-field class="w-full max-w-[70%]">
+                        <input class="border border-black" matInput placeholder="Name of Specialist" name="name" required  [(ngModel)]="specialistData.firstName"/>
+                    </mat-form-field>
+                </div>
+    
+                <div class="flex gap-[20px] items-center">
+                    <p>Email</p>
+                    <mat-form-field class="w-full max-w-[70%]">
+                        <input matInput placeholder="Email of Specialist" name="email" required  [(ngModel)]="specialistData.email"/>
+                    </mat-form-field>
+                </div>
+    
+                <div class="flex gap-[20px] items-center">
+                    <p>Etiquets</p>
+                    <mat-form-field class="w-full max-w-[70%]">
+                        <input matInput placeholder="Etiquets of Specialist" name="etiquets" required  [(ngModel)]="specialistData.etiquets"/>
+                    </mat-form-field>
+                </div>
+    
+                <div class="flex gap-[20px] items-center">
+                    <p>Schedule</p>
+                    <mat-form-field class="w-full max-w-[70%]">
+                        <mat-select placeholder="Schedule of appoinment" name="schedule" [(ngModel)]="selectedOptionForm">
+                            @for (calendar of specialistCalendarData; track calendar) {
+                                <mat-option [value]="calendar.id">{{calendar.hour + " - " + calendar.day}}</mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+    
+                <div class="flex gap-[20px] items-center">
+                    <p>Phone</p>
+                    <mat-form-field class="w-full max-w-[70%]">
+                        <input matInput placeholder="Phone of Specialist" name="phone" required  [(ngModel)]="specialistData.phone"/>
+                    </mat-form-field>
+                </div>
+    
+                <div class="flex gap-[20px] items-center justify-end mt-[20px]">
+                    <button mat-raised-button class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase ">Reserve</button>
+                    <button mat-raised-button class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase " (click)="clickedPopup.emit()">Cancel</button>
+                </div>
+            </form>
+        } @else {
+            <div class="flex flex-col gap-[20px] items-center">
+                <img src="../../../assets/check.svg" alt="Check Icon" />
+                <h2>Your appointment was successfully registered!</h2>
+                <div class="flex gap-[20px] items-center justify-center">
+                    <button class="flex items-center bg-[#C3E8D6] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase" mat-raised-button (click)="goToPage('/')" >Go to Home</button>
+                    <button class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase" mat-raised-button (click)="goToPage('/calendar')">Go to Calendar</button>
+                </div>
+            </div>
+        }
+    </div>
+</section>
