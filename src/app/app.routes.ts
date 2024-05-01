@@ -6,5 +6,5 @@ import { PaymentComponent } from "./pages/payment/payment.component";
 export const routes: Routes = [
     {path: "", component: HomeComponent},
     {path: "forum/:id", component: ForumComponent},
-    {path: "payment", Component: PaymentComponent}
+    {path: "payment", component: PaymentComponent}
 ];
