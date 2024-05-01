@@ -25,6 +25,6 @@ export class ThreadService {
 
   // obtenemos los comentarios en base al postId seleccionado
   getCommentsByPostId(postId: number): Observable<CommentEntity[]> {
-    return this.http.get<CommentEntity[]>(`${this.baseURL}/posts/${postId}/comments`);
+    return this.http.get<CommentEntity[]>(`${this.baseURL}/comments?postId=${postId}`);
   }
 }
