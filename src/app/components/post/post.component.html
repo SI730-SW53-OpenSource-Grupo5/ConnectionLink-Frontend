@@ -1,5 +1,5 @@
 <div *ngFor="let item of data">
-  @if(item.posts.length > 0) {
+  @if(item.posts?.length > 0) {
     <mat-card class="flex flex-col px-[10px] py-[15px] card roundede-[5px] cursor-hover" (click)="goToPage('/forums/' + item.id)">
       <mat-card-header class="flex items-center">
           <img class="w-[50px] h-[50px] rounded-full mr-[15px]" mat-card-image src="{{item.urlImage}}" alt=""/>
