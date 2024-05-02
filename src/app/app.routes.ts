@@ -12,7 +12,8 @@ import { CalendarComponent} from "./pages/calendar/calendar.component";
 
 
 export const routes: Routes = [
-    {path: "", component: HomeComponent},
+    {path: "", redirectTo: "/home", pathMatch: "full"},
+    {path: "home", component: HomeComponent},
     {path: "forum/:id", component: ForumComponent},
     {path: "inboxs", component: InboxsComponent},
     {path: "specialist/:id", component: SpecialistComponent},

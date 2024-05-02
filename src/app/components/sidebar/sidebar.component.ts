@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 import {Component, Input} from '@angular/core';
 import {MatIcon} from "@angular/material/icon";
 import {NgClass, NgIf} from "@angular/common";
@@ -9,7 +9,9 @@ import {NgClass, NgIf} from "@angular/common";
   imports: [
     MatIcon,
     NgIf,
-    NgClass
+    NgClass,
+    RouterLink,
+    RouterLinkActive
   ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
@@ -18,8 +20,7 @@ export class SidebarComponent {
   @Input() isSidebarOpen!: boolean;
   constructor(private router: Router){}
 
-
-  goToPage(url: string) {
+  /*goToPage(url: string) {
     this.router.navigateByUrl(url)
-  }
+  }*/
 }
