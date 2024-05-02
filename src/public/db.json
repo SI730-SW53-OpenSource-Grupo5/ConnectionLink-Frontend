@@ -545,5 +545,55 @@
       "likes_quantity": 23,
       "imageURL": "https://randomuser.me/api/portraits/women/21.jpg"
     }
+  ],
+  "events": [
+    {
+      "id": "1",
+      "idSpecialist": "1",
+      "title": "Spiritual Healing Event",
+      "banner_img": "https://trauma-informed.ca/wp-content/uploads/2022/11/shutterstock_84363868.jpg",
+      "description": "Join us for a unique journey of spiritual healing where we will explore the depths of the soul and connect with our inner essence.",
+      "status": "free"
+    },
+    {
+      "id": "2",
+      "idSpecialist": "2",
+      "title": "Mindfulness Workshop",
+      "banner_img": "https://berkeleyca.gov/sites/default/files/2023-12/mindfulness.jpg",
+      "description": "A workshop designed to introduce the basics of mindfulness and how it can improve your mental well-being.",
+      "status": "paid"
+    },
+    {
+      "id": "3",
+      "idSpecialist": "3",
+      "title": "Stress Management Seminar",
+      "banner_img": "https://www.totalsuccess.co.uk/wp-content/uploads/2018/06/iStock-518889364_super-556x371.jpg",
+      "description": "Learn effective stress management techniques to improve your quality of life.",
+      "status": "free"
+    },
+    {
+      "id": "4",
+      "idSpecialist": "4",
+      "title": "Yoga for Mental Health",
+      "banner_img": "https://i0.wp.com/studentnews.manchester.ac.uk/wp-content/uploads/2020/04/yoga-carola.png?fit=692%2C390&ssl=1",
+      "description": "Join us for a yoga session focused on improving mental health and reducing anxiety.",
+      "status": "paid"
+    },
+    {
+      "id": "5",
+      "idSpecialist": "5",
+      "title": "Nutrition and Mental Health Talk",
+      "banner_img": "https://www.hcbh.org/media/rdynpnx4/nutrition.png?anchor=center&mode=crop&width=1200&height=630&rnd=133516970745500000",
+      "description": "A talk on the importance of nutrition in maintaining good mental health.",
+      "status": "free"
+    },
+    {
+      "id": "6",
+      "idSpecialist": "2",
+      "title": "Meditation for Beginners",
+      "banner_img": "https://aboutmeditation.com/wp-content/uploads/2015/02/Beginners-guide-to-meditation.jpg",
+      "description": "A beginner-friendly session introducing the basics of meditation and its benefits for mental health.",
+      "status": "paid"
+    }
   ]
 }

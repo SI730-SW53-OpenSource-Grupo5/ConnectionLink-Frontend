@@ -4,6 +4,7 @@ import { ForumComponent } from './pages/forum/forum.component';
 import { SpecialistComponent } from './pages/specialist/specialist.component';
 import { InboxsComponent } from './pages/inboxs/inboxs.component';
 import {ThreadComponent} from "./pages/thread/thread.component";
+import {EventsComponent} from "./pages/events/events.component";
 
 export const routes: Routes = [
     {path: "", component: HomeComponent},
@@ -11,5 +12,6 @@ export const routes: Routes = [
     {path: "inboxs", component: InboxsComponent},
     {path: "specialist/:id", component: SpecialistComponent},
     {path: "forums", component: ForumComponent},
-    {path: "forums/:id", component: ThreadComponent}
+    {path: "forums/:id", component: ThreadComponent},
+    {path: "events", component: EventsComponent}
 ];

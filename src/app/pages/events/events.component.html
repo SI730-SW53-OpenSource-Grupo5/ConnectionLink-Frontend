@@ -1,0 +1,29 @@
+<section class="h-full relative">
+  <div class="events-container flex flex-col gap-4">
+    <div class="flex flex-row justify-between gap-4 flex-wrap">
+      <div class="flex flex-col gap-4">
+        <h3>Events</h3>
+        <p>Join and participate in various events created by different specialists</p>
+      </div>
+      <div class="flex flex-row gap-3 self-center">
+        <button
+          (click)="refreshEvents()"
+          class="bg-slate-100 px-3 hover:bg-slate-300 transition-all duration-300 ease rounded-lg">
+          <mat-icon
+            style="font-size: 1.7rem"
+            class="self-end cursor-pointer mt-0.5 font-medium w-0 h-0 mb-1.5 hover:scale-110 transition-all duration-300 ease-out"
+            fontIcon="refresh"></mat-icon>
+        </button>
+        <mat-form-field class="-mb-5 self-center" style="width: 175px; height: 80px">
+          <mat-label>Filter By</mat-label>
+          <mat-select [(value)]="selectedEventFilter" (selectionChange)="filterByStatus($event.value)" >
+            @for (filter of filters; track filter) {
+              <mat-option [value]="filter.value">{{filter.viewValue}} </mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <app-event-card [events]="events"></app-event-card>
+  </div>
+</section>
