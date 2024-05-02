@@ -1,0 +1,45 @@
+<div class="flex flex-col gap-5 mt-2">
+  <article *ngFor="let post of posts" class="bg-slate-100 p-4 flex flex-col gap-3.5 rounded-xl">
+    <div class="flex flex-row justify-between">
+      <div class="flex flex-row gap-3">
+        <img class="example-header-image" [src]="post.profile_img">
+        <div class="flex flex-col justify-center gap-1">
+          <p class="text-sm font-normal">{{ post.name }}</p>
+          <span class="text-sm font-light text-gray-500">{{ post.email }}</span>
+        </div>
+      </div>
+      <mat-icon class="cursor-pointer font-medium text-2xl w-0 h-0 mb-1.5 hover:scale-125 transition-all duration-300 ease-out"
+                fontIcon="star_border"></mat-icon>
+    </div>
+    <p class="font-medium">Publication: <span class="font-normal">{{ post.publication_date }}</span></p>
+    <p class="font-medium">Subject: <span class="font-normal">{{ post.subject }}</span></p>
+    <p class="text-pretty description">Dear Hope ConnectLink,<br/>
+      {{ post.description }}
+    </p>
+    <div class="flex flex-row gap-8 items-center flex-wrap">
+      <button
+        (click)="navigateTo(post.id)"
+        class="flex items-center border-[1px] border-slate-800 bg-slate-100 text-slate-950
+              gap-1 px-4 py-1.5 rounded-2xl tracking-wider hover:bg-cyan-100 transition-all duration-300 ease">
+        Join
+        <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="people"></mat-icon>
+      </button>
+      <div class="flex flex-row gap-2 items-center">
+        <span>{{ post.likes_quantity }}</span>
+        <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="thumb_up_alt"></mat-icon>
+      </div>
+      <div class="flex flex-row gap-2 items-center">
+        <span>{{ post.comments_quantity }}</span>
+        <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="comment"></mat-icon>
+      </div>
+      <div class="flex flex-row gap-2 items-center">
+        <span>Compartir</span>
+        <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="share"></mat-icon>
+      </div>
+      <div class="flex flex-row gap-2 items-center">
+        <span>Reportar</span>
+        <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="outlined_flag"></mat-icon>
+      </div>
+    </div>
+  </article>
+</div>

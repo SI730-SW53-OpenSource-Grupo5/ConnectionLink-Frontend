@@ -1,0 +1,20 @@
+<div *ngFor="let item of data">
+  @if(item.posts?.length > 0) {
+    <mat-card class="flex flex-col px-[10px] py-[15px] card roundede-[5px] cursor-hover" (click)="goToPage('/forums/' + item.id)">
+      <mat-card-header class="flex items-center">
+          <img class="w-[50px] h-[50px] rounded-full mr-[15px]" mat-card-image src="{{item.urlImage}}" alt=""/>
+          <div class="ml-15px cardHeader">
+              <p class="mb-0 text-sm">{{item.firstName + " " + item.lastName}}</p>
+              <p class="mb-0 text-sm text-[#C2C2C2]">{{item.email}}</p>
+          </div>
+      </mat-card-header>
+      <mat-card-content class="cardContent">
+          <ng-container *ngFor="let post of item.posts">
+            <p> <strong>Subject:</strong>  {{post.title}}</p>
+            <p>{{post.description}}</p>
+          </ng-container>
+      </mat-card-content>
+    </mat-card>
+    }
+</div>
+
