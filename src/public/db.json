@@ -25,8 +25,8 @@
       ]
     },
     {
-      "id": "1",
-      "firstName": "Smith Andrew",
+      "id": "2",
+      "firstName": "Pedro Andrew",
       "lastName": "Kimbell",
       "age": "32",
       "studies": "Peruvian University of Applied Sciences",
@@ -34,7 +34,7 @@
       "biography": "Dedicated psychologist, employs a holistic and empathetic approach to help individuals overcome traumas and foster emotional well-being. He also advocates for mental health in his community through workshops and educational talks.",
       "cv": "https://google.com",
       "urlImage": "https://d1ih8jugeo2m5m.cloudfront.net/2023/06/como-emprender-si-eres-psicologo.jpg",
-      "username": "smithandrew",
+      "username": "pedroandrew",
       "email": "smithak@gmail.com",
       "password": "pass",
       "etiquets": "Anxiety and stress",
@@ -47,7 +47,56 @@
           "datePublished": "2024-04-01"
         }
       ]
+    },
+    {
+      "id": "3",
+      "firstName": "Jane Doe",
+      "lastName": "Johnson",
+      "age": "40",
+      "studies": "Stanford University",
+      "ocupation": "Counseling Psychologist",
+      "biography": "Specializes in working with children and adolescents.",
+      "cv": "https://google.com",
+      "urlImage": "https://media.licdn.com/dms/image/C4D03AQH7uQ51cC33UA/profile-displayphoto-shrink_800_800/0/1657080548973?e=2147483647&v=beta&t=sZ16Te94pjpSJC3LYKU9T_IZ55tBPxWc_G_oueCLZ_U",
+      "username": "janedoe",
+      "email": "janedoe@gmail.com",
+      "password": "pass",
+      "etiquets": "Child psychology",
+      "phone": "935-873-481"
+    },
+    {
+      "id": "4",
+      "firstName": "Robert Smith",
+      "lastName": "Johnson",
+      "age": "45",
+      "studies": "Yale University",
+      "ocupation": "Forensic Psychologist",
+      "biography": "Experienced in criminal psychology and legal matters.",
+      "cv": "https://google.com",
+      "urlImage": "https://photos.psychologytoday.com/b7de6483-40f2-4ba3-a4a0-0bec24259c79/2/320x400.jpeg",
+      "username": "robertsmith",
+      "email": "robertsmith@gmail.com",
+      "password": "pass",
+      "etiquets": "Forensic psychology",
+      "phone": "935-873-482"
+    },
+    {
+      "id": "5",
+      "firstName": "Emily Johnson",
+      "lastName": "Smith",
+      "age": "50",
+      "studies": "Princeton University",
+      "ocupation": "Children Psychologist",
+      "biography": "Focuses on helping individuals with personal and interpersonal issues.",
+      "cv": "https://google.com",
+      "urlImage": "https://media.licdn.com/dms/image/C4D03AQHGh7d4yVi5tQ/profile-displayphoto-shrink_800_800/0/1523151282167?e=2147483647&v=beta&t=pKAwufox-2k2zoBIAfADOi4oUy4cUdyd615-S4yPQc4",
+      "username": "emilyjohnson",
+      "email": "emilyjohnson@gmail.com",
+      "password": "pass",
+      "etiquets": "Counseling",
+      "phone": "935-873-483"
     }
+
   ],
   "users": [
     {
