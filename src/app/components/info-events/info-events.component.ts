@@ -1,7 +1,7 @@
+import { EventService } from './../../services/event.service';
+import { EventEntity } from './../../models/calendar-event';
 import {Component, OnInit} from '@angular/core';
 import {MatTableDataSource, MatTableModule} from "@angular/material/table";
-import { EventEntity } from '../../models/event.entity';
-import { EventService} from "../../services/calendar.service";
 
 @Component({
   selector: 'app-info-events',
@@ -31,6 +31,7 @@ export class InfoEventsComponent implements OnInit {
       (response: any) => {
         // Map the response data to EventEntity objects and assign to dataSource
         this.events = response.map((event: any) => {
+          console.log(event)
           return new EventEntity(event.id, event.userId, event.specialistId, event.description, event.date);
         });
         this.dataSource.data = this.events;
