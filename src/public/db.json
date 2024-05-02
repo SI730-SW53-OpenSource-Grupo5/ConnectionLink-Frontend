@@ -96,7 +96,6 @@
       "etiquets": "Counseling",
       "phone": "935-873-483"
     }
-
   ],
   "users": [
     {
@@ -195,6 +194,11 @@
       "id": "f023",
       "userId": "asmith",
       "calendarId": "1"
+    },
+    {
+      "id": "b965",
+      "userId": "asmith",
+      "calendarId": "1"
     }
   ],
   "reviews": [
@@ -217,35 +221,35 @@
       "description": "Dr. Smith Kimbell is a true beacon of compassion and expertise in the field of psychology. His holistic approach to therapy, coupled with his unwavering empathy, has been instrumental in guiding me through life's most challenging moments. Through his insightful guidance, I have discovered newfound resilience and inner peace."
     }
   ],
-  "inbox":[
+  "inbox": [
     {
-      "id":"1",
-      "message":"Me gustaria charlar con ustedes sobree esto...",
-      "iduser":"1",
+      "id": "1",
+      "message": "Me gustaria charlar con ustedes sobree esto...",
+      "iduser": "1",
       "date": "2024-04-03"
     },
     {
-      "id":"2",
-      "message":"Me gustaria charlar con ustedes sobree esto...",
-      "iduser":"1",
+      "id": "2",
+      "message": "Me gustaria charlar con ustedes sobree esto...",
+      "iduser": "1",
       "date": "2024-04-19"
     },
     {
-      "id":"3",
-      "message":"Me gustaria charlar con ustedes sobree esto...",
-      "iduser":"1",
+      "id": "3",
+      "message": "Me gustaria charlar con ustedes sobree esto...",
+      "iduser": "1",
       "date": "2024-04-19"
     },
     {
-      "id":"4",
-      "message":"Me gustaria charlar con ustedes sobree esto...",
-      "iduser":"1",
+      "id": "4",
+      "message": "Me gustaria charlar con ustedes sobree esto...",
+      "iduser": "1",
       "date": "2024-04-04"
     },
     {
-      "id":"5",
-      "message":"Me gustaria charlar con ustedes sobree estado...",
-      "iduser":"1",
+      "id": "5",
+      "message": "Me gustaria charlar con ustedes sobree estado...",
+      "iduser": "1",
       "date": "2024-03-03"
     }
   ],
@@ -364,7 +368,7 @@
   "comments": [
     {
       "id": 1,
-      " ": 1,
+      "postId": 1,
       "name": "Alan Smith",
       "email": "asmith@connectlink.com",
       "type": "specialist",

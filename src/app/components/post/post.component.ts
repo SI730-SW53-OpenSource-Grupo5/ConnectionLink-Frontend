@@ -73,6 +73,10 @@ export class PostComponent  {
       }
     )
   }
+
+  goToPage(url: string) {
+    this.router.navigateByUrl(url)
+  }
 }
 
 

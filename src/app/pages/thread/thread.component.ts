@@ -63,7 +63,8 @@ export class ThreadComponent implements OnInit {
             item.comment,
             item.imageURL,
             item.publication_date,
-            item.likes_quantity
+            item.likes_quantity,
+            item.username
           )
         });
         console.log(this.comments);

@@ -28,12 +28,17 @@
     </p>
     <div class="flex flex-row gap-3 items-center flex-wrap justify-between">
       <div class="flex flex-row flex-wrap gap-5 items-center">
-        <button
+        @if(comment.type === 'specialist') {
+          <button 
           class="flex items-center border-[1px] border-slate-800 bg-slate-100 text-slate-950
-              gap-1 px-4 py-1.5 rounded-2xl tracking-wider hover:bg-slate-200 transition-all duration-300 ease">
+              gap-1 px-4 py-1.5 rounded-2xl tracking-wider hover:bg-slate-200 transition-all duration-300 ease" 
+              
+              (click)="goToPage('/specialist/' + 'smithandrew')"    >
           See profile
           <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="person_search"></mat-icon>
-        </button>
+          </button>
+        }
+        
         <div class="flex flex-row gap-2 items-center">
           <span>{{ comment.likes_quantity }}</span>
           <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="thumb_up_alt"></mat-icon>
