@@ -6,6 +6,8 @@ import { InboxsComponent } from './pages/inboxs/inboxs.component';
 import {ThreadComponent} from "./pages/thread/thread.component";
 import {EventsComponent} from "./pages/events/events.component";
 import { PaymentComponent } from "./pages/payment/payment.component";
+import {AnalyticsComponent} from "./pages/analytics/analytics.component";
+
 
 
 export const routes: Routes = [
@@ -16,5 +18,7 @@ export const routes: Routes = [
     {path: "forums", component: ForumComponent},
     {path: "forums/:id", component: ThreadComponent},
     {path: "events", component: EventsComponent},
-    {path: "payment", component: PaymentComponent}
+    {path: "payment", component: PaymentComponent},
+    {path: "analytics", component: AnalyticsComponent}
+
 ];
