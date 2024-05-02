@@ -7,6 +7,7 @@ import {ThreadComponent} from "./pages/thread/thread.component";
 import {EventsComponent} from "./pages/events/events.component";
 import { PaymentComponent } from "./pages/payment/payment.component";
 import {AnalyticsComponent} from "./pages/analytics/analytics.component";
+import { CalendarComponent} from "./pages/calendar/calendar.component";
 
 
 
@@ -19,6 +20,7 @@ export const routes: Routes = [
     {path: "forums/:id", component: ThreadComponent},
     {path: "events", component: EventsComponent},
     {path: "payment", component: PaymentComponent},
-    {path: "analytics", component: AnalyticsComponent}
+    {path: "analytics", component: AnalyticsComponent},
+    {path: "calendar", component: CalendarComponent},
 
 ];

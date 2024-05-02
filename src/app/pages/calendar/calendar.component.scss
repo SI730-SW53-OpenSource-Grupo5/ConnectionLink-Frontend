@@ -1,0 +1,9 @@
+.demo-inline-calendar-card {
+  min-width:300px;
+}
+
+@media (min-width: 768px) {
+  .demo-inline-calendar-card {
+    width: 100%;
+  }
+}
