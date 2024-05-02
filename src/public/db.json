@@ -130,5 +130,35 @@
       "specialistId": "smithandrew",
       "description": "Dr. Smith Kimbell is a true beacon of compassion and expertise in the field of psychology. His holistic approach to therapy, coupled with his unwavering empathy, has been instrumental in guiding me through life's most challenging moments. Through his insightful guidance, I have discovered newfound resilience and inner peace."
     }
+  ],
+  "eventsCalendar" : [
+    {
+      "id": "1",
+      "userId": "user1",
+      "specialistId": "specialist1",
+      "description": "description1",
+      "date": "2024-04-30"
+    },
+    {
+      "id": "2",
+      "userId": "user2",
+      "specialistId": "specialist2",
+      "description": "description2",
+      "date": "2024-05-01"
+    },
+    {
+      "id": "3",
+      "userId": "user3",
+      "specialistId": "specialist3",
+      "description": "description3",
+      "date": "2024-05-02"
+    },
+    {
+      "id": "4",
+      "userId": "user4",
+      "specialistId": "specialist4",
+      "description": "description4",
+      "date": "2024-05-03"
+    }
   ]
 }
