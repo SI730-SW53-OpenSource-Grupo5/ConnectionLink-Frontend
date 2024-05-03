@@ -3,12 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Specialist } from '../models/specialist';
 import { Appointment } from '../models/appointment';
+import {environment} from "../enviroments/environments";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppointmentService {
-  base_Url="http://localhost:3000/appointments";
+  base_Url=`${environment.baseUrl}/appointments`;
   constructor(private http: HttpClient) {}
 
 

@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Calendar } from '../models/calendar';
+import {environment} from "../enviroments/environments";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CalendarService {
-  base_Url="http://localhost:3000";
+  base_Url= environment.baseUrl;
   constructor(private http: HttpClient) {}
 
 
@@ -27,5 +28,5 @@ export class CalendarService {
   getAllEvents(): Observable<EventEntity>{
     return this.http.get<EventEntity>(this.base_Url + "/eventsCalendar");
   }
-  
+
 }
