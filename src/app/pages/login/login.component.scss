@@ -1,0 +1,32 @@
+.background-login {
+  background-color: #E5F3F4;
+}
+
+.background-login input {
+  font-size: .9rem !important;
+}
+
+.background-login h4 {
+  font-weight: 300 !important;
+  letter-spacing: 1px !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+}
+
+.logo-title {
+  font-family: 'Lora' !important;
+  font-weight: 500 !important;
+}
+
+.background-login input:focus {
+  background-color: #F7F7F7;
+}
+
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.8rem !important;
+  }
+}

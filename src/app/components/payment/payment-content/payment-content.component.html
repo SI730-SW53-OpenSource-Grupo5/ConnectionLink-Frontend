@@ -1,0 +1,57 @@
+<section class="h-full flex flex-col gap-8">
+  <h2>Payment Method:</h2>
+  <div class="border-[1px] border-[#5C5C5C] justify-center bg-[#F4F4F4] flex-1 p-5 sm:p-10 flex flex-col gap-8">
+    <h4 class="uppercase font-light">Choose a payment method:</h4>
+    <div class="flex flex-col my-5">
+      <div class="flex flex-row justify-evenly items-center gap-8 sm:gap-0 flex-wrap">
+        <div class="flex flex-col gap-3 py-5 px-12 bg-slate-50 rounded-3xl shadow-sm">
+          <img src="assets/card.jpg" />
+          <p class="text-center">Credit card</p>
+        </div>
+        <div class="flex flex-col gap-3 py-5 px-12 bg-slate-50 rounded-3xl shadow-sm">
+          <img src="assets/paypal.png" />
+          <p class="text-center">Pay Pal</p>
+        </div>
+        <div class="flex flex-col gap-3 py-5 px-12 bg-slate-50 rounded-3xl shadow-sm">
+          <img src="assets/cash.png" />
+          <p class="text-center">Deposit cash</p>
+        </div>
+      </div>
+    </div>
+    <form class="flex flex-col gap-8">
+      <div class="flex flex-col md:flex-row gap-10 w-full">
+        <div class="flex-1 flex flex-col gap-3">
+          <label class="font-base text-lg tracking-wider">Card number:</label>
+          <input class="py-3 border-[1px] border-slate-300 indent-3" placeholder="302-412-421-421" />
+        </div>
+        <div class="flex-1 flex flex-col gap-3">
+          <label class="font-base text-lg tracking-wider">Expiration date:</label>
+          <input class="py-3 border-[1px] border-slate-300 indent-3" placeholder="07/21/19" />
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row gap-10 w-full">
+        <div class="flex-1 flex flex-col gap-3">
+          <label class="font-base text-lg tracking-wider">Card holder name:</label>
+          <input class="py-3 border-[1px] border-slate-300 indent-3" placeholder="SABATINO CORP SANTINAS" />
+        </div>
+        <div class="flex-1 flex flex-col gap-3">
+          <label class="font-base text-lg tracking-wider">CVV:</label>
+          <input class="py-3 border-[1px] border-slate-300 indent-3" placeholder="291" />
+        </div>
+      </div>
+    </form>
+    <div class="flex fle-row justify-between items-stretch mt-6 flex-wrap gap-10 sm:gap-0">
+      <div class="border p-4 bg-[#D9EDEE] border border-slate-500">
+        <p class="font-medium">Total Price: <span class="font-normal">$/. 12.00</span></p>
+      </div>
+      <div class="flex flex-row gap-5 justify-center sm:justify-normal sm:justify-center w-full sm:w-auto flex-wrap">
+        <button class="border border-black py-4 px-8 rounded-3xl bg-[#FFB0B0] uppercase font-medium">
+          Purchase
+        </button>
+        <button class="border border-black py-4 px-8 rounded-3xl bg-[#C1C8FF] uppercase font-medium">
+          Purchase
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

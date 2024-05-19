@@ -9,15 +9,12 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class SliderComponent implements OnInit, OnDestroy {
   images = [
-    'https://media.istockphoto.com/id/1345043834/es/v%C3%ADdeo/la-consejera-da-consejos-durante-una-sesi%C3%B3n-de-terapia-en-l%C3%ADnea.jpg?s=640x640&k=20&c=frQwAc5yrzII0IKK0gxlr6_pPGSEYJ25ly9EahosNXs=',
-    'https://media.istockphoto.com/id/1304961896/es/v%C3%ADdeo/telemedicina-y-terapia-en-l%C3%ADnea-m%C3%A9dico-consultor-de-pacientes-de-c%C3%A1ncer-sobre-videollamada.jpg?s=640x640&k=20&c=iU4wcL8rZimmljjvM0U2H6svOANwGrMs4D38wPLb-fs=',
-    'https://media.istockphoto.com/id/1370632975/es/v%C3%ADdeo/el-paciente-de-terapia-seria-atenta-escucha-los-consejos-del-terapeuta.jpg?s=640x640&k=20&c=Oy0Fq8LxT3GuWDNrJJ5MdJHmwZCXg0jK4R5H9i3I-V4=',
-    'https://media.istockphoto.com/id/1223387274/es/v%C3%ADdeo/jovencita-hablando-con-psic%C3%B3logo-en-l%C3%ADnea-durante-la-consulta-de-asesoramiento-por-webcam.jpg?s=640x640&k=20&c=BeeVgj9jiZ5tv24WaiLYSj8C_2eTzycUygx2BYzcznM=',
-    'https://media.istockphoto.com/id/1395851060/es/v%C3%ADdeo/una-mujer-irreconocible-teniendo-una-sesi%C3%B3n-de-terapia-con-un-psic%C3%B3logo-primer-plano-de-un.jpg?s=640x640&k=20&c=UCIrkA1rUS1cZjbpngbj-RV_V90vWmFapBBH_hUwbDw=',
-    'https://media.istockphoto.com/id/1316268911/es/v%C3%ADdeo/mujer-vulnerable-habla-con-profesional-de-salud-mental.jpg?s=640x640&k=20&c=JExalyeVYSVsL0Tw_jCgthkaT0ewvkQSMpu94NIWJ_s=',
-    'https://media.istockphoto.com/id/1317225074/es/v%C3%ADdeo/consejera-y-personas-sentadas-en-c%C3%ADrculo-durante-una-sesi%C3%B3n-de-terapia-grupal.jpg?s=640x640&k=20&c=Ihr3gVLO7_Q1EU-PwifaTCIh5t_wh0dxur8icLysmdM=',
-    'https://media.istockphoto.com/id/1370953204/es/v%C3%ADdeo/la-consejera-escolar-femenina-da-consejos-durante-el-grupo-de-apoyo-para-adolescentes.jpg?s=640x640&k=20&c=96g5-ULeSiQE8MyXfsbhhkVCZGVmcOAbZM5p7Vd9Eck='
+    'https://images.unsplash.com/opengraph/1x1.png?blend=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1562026700-3425431ecb5b%3Fblend%3D000000%26blend-alpha%3D10%26blend-mode%3Dnormal%26crop%3Dfaces%252Cedges%26h%3D630%26mark%3Dhttps%253A%252F%252Fimages.unsplash.com%252Fopengraph%252Fsearch-input.png%253Fh%253D84%2526txt%253Dhealing%252Bhands%2526txt-align%253Dmiddle%25252Cleft%2526txt-clip%253Dellipsis%2526txt-color%253D000000%2526txt-pad%253D80%2526txt-size%253D40%2526txt-width%253D660%2526w%253D750%2526auto%253Dformat%2526fit%253Dcrop%2526q%253D60%26mark-align%3Dmiddle%252Ccenter%26mark-w%3D750%26w%3D1200%26auto%3Dformat%26fit%3Dcrop%26q%3D60%26ixid%3DM3wxMjA3fDB8MXxzZWFyY2h8NHx8aGVhbGluZyUyMGhhbmRzfGVufDB8fHx8MTcxNTM2NTM2MHww%26ixlib%3Drb-4.0.3&blend-w=1&h=630&mark=https%3A%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&mark-align=top%2Cleft&mark-pad=50&mark-w=64&w=1200&auto=format&fit=crop&q=60',
+    'https://static.vecteezy.com/system/resources/previews/019/859/704/non_2x/girls-and-boys-holding-hands-on-the-green-background-of-the-tree-the-concept-of-working-together-for-success-free-photo.JPG',
+    'https://media.es.wired.com/photos/648895b6a566376ee967bf0e/16:9/w_2560%2Cc_limit/GettyImages-1436807309.jpg',
+    'https://centromedicoabc.com/storage/2023/01/salud-mental.jpg',
   ];
+
   currentIndex = 0;
   intervalId: number | undefined; // Stores the timer reference
 

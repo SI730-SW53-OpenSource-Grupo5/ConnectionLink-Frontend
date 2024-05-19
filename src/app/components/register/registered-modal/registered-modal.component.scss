@@ -1,0 +1,27 @@
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+}
+
+.check-icon {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  font-size: 90px;
+  width: auto;
+  height: auto;
+  margin-bottom: 20px;
+  color: #4CAF50;
+}
+
+.confirm-button {
+  background-color: #3f51b5;
+  padding: 15px 30px;
+  color: white;
+  border: none;
+  appearance: none;
+  background-image: none;
+}
+
+.registered-modal {
+  padding: 30px;
+}
