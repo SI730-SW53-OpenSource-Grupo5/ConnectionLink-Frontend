@@ -4,7 +4,7 @@
     <div class="flex flex-col gap-[20px]" >
         <mat-card class="flex flex-col gap-[25px] px-[10px] py-[15px] card roundede-[5px]" *ngFor="let review of specialistReviewData">
             <mat-card-header class="flex items-center">
-                <img class="w-[50px] h-[50px] rounded-full mr-[15px]" mat-card-image src="{{review.user.urlImage}}" alt=""/>
+                <img class="w-[50px] h-[50px] rounded-full mr-[15px]" mat-card-image src="{{review.user.profileImg}}" alt=""/>
                 <div class="ml-15px cardHeader">
                     <p class="mb-0 text-sm">{{review.user.firstName + " " + review.user.lastName}}</p>
                     <p class="mb-0 text-sm text-[#C2C2C2]">{{review.user.email}}</p>

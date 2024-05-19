@@ -20,7 +20,9 @@ export class SidebarComponent {
   @Input() isSidebarOpen!: boolean;
   constructor(private router: Router){}
 
-  /*goToPage(url: string) {
-    this.router.navigateByUrl(url)
-  }*/
+  navigateToLogin() {
+    this.router.navigate(['/login']);
+  }
+
+
 }

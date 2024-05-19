@@ -53,7 +53,8 @@
     </ul>
     <div class="pr-5">
       <div class="flex flex-row border-top-1 border-gray-500 gap-3 items-center pt-4 pl-4">
-        <div class="logout-container flex gap-2.5 cursor-pointer items-center">
+        <div class="logout-container flex gap-2.5 cursor-pointer items-center cursor-pointer"
+          (click)="navigateToLogin()">
           <mat-icon class="logout flex h-0 w-0 text-slate-800" aria-label="team icon" fontIcon="logout"></mat-icon>
           <p class="text-base tracking-wider font-medium text-gray-700">Log out</p>
         </div>

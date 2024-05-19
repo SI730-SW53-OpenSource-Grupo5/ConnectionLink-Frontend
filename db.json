@@ -1,4 +1,258 @@
 {
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Ramirex",
+      "lastName": "Hotman",
+      "email": "ramihot@connectionlink.com",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://avatars.githubusercontent.com/u/129230632?v=4",
+      "role": "specialist"
+    },
+    {
+      "id": "2",
+      "firstName": "Sebastian",
+      "lastName": "Peña",
+      "email": "rosadita@aidmanager.com",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://github.com/AplicacionesWeb-WX54/si730-WX54-Grupo1-Repository/blob/main/assets/members-profile/Manuel.jpg?raw=true",
+      "role": "patient",
+      "isSubscribed": false
+    },
+    {
+      "id": "3",
+      "firstName": "Nekolas",
+      "lastName": "Soaps",
+      "email": "neko@connectionlink.com",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://github.com/AplicacionesWeb-WX54/si730-WX54-Grupo1-Repository/blob/main/assets/members-profile/arigeimpleis.jpg?raw=true",
+      "role": "spacialist"
+    },
+    {
+      "id": "4",
+      "firstName": "María",
+      "lastName": "Gómez",
+      "email": "maria@connectionlink.com",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/women/4.jpg",
+      "role": "patient",
+      "isSubscribed": false
+    },
+    {
+      "id": "5",
+      "firstName": "Carlos",
+      "lastName": "Pérez",
+      "email": "carlos@medhealth.org",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/men/5.jpg",
+      "role": "specialist"
+    },
+    {
+      "id": "6",
+      "firstName": "Laura",
+      "lastName": "Rodríguez",
+      "email": "laura@connectionlink.com",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/women/6.jpg",
+      "role": "patient",
+      "isSubscribed": false
+    },
+    {
+      "id": "7",
+      "firstName": "David",
+      "lastName": "López",
+      "email": "david@healthcareplus.net",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/men/7.jpg",
+      "role": "specialist"
+    },
+    {
+      "id": "8",
+      "firstName": "Ana",
+      "lastName": "Martínez",
+      "email": "ana@connectionlink.com",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/women/8.jpg",
+      "role": "patient",
+      "isSubscribed": false
+    },
+    {
+      "id": "9",
+      "firstName": "Jorge",
+      "lastName": "Hernández",
+      "email": "jorge@wellnessinstitute.org",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/men/9.jpg",
+      "role": "specialist"
+    },
+    {
+      "id": "10",
+      "firstName": "Isabel",
+      "lastName": "García",
+      "email": "isabel@connectionlink.com",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/women/10.jpg",
+      "role": "patient",
+      "isSubscribed": false
+    },
+    {
+      "id": "11",
+      "firstName": "Miguel",
+      "lastName": "Ramírez",
+      "email": "miguel@medhealth.org",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/men/11.jpg",
+      "role": "specialist"
+    },
+    {
+      "id": "12",
+      "firstName": "Lucía",
+      "lastName": "Fernández",
+      "email": "lucia@connectionlink.com",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/women/12.jpg",
+      "role": "patient",
+      "isSubscribed": false
+    },
+    {
+      "id": "13",
+      "firstName": "Antonio",
+      "lastName": "Sánchez",
+      "email": "antonio@healthcareplus.net",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/men/13.jpg",
+      "role": "specialist"
+    },
+    {
+      "id": "14",
+      "firstName": "Carmen",
+      "lastName": "Torres",
+      "email": "carmen@connectionlink.com",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/women/14.jpg",
+      "role": "patient",
+      "isSubscribed": false
+    },
+    {
+      "id": "15",
+      "firstName": "Juan",
+      "lastName": "Domínguez",
+      "email": "juan@wellnessinstitute.org",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/men/15.jpg",
+      "role": "specialist"
+    },
+    {
+      "id": "16",
+      "firstName": "Rosa",
+      "lastName": "Vega",
+      "email": "rosa@connectionlink.com",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/women/16.jpg",
+      "role": "patient",
+      "isSubscribed": false
+    },
+    {
+      "id": "17",
+      "firstName": "José",
+      "lastName": "González",
+      "email": "jose@medhealth.org",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/men/17.jpg",
+      "role": "specialist"
+    },
+    {
+      "id": "18",
+      "firstName": "Elena",
+      "lastName": "Cruz",
+      "email": "elena@connectionlink.com",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/women/18.jpg",
+      "role": "patient",
+      "isSubscribed": false
+    },
+    {
+      "id": "19",
+      "firstName": "Francisco",
+      "lastName": "Navarro",
+      "email": "francisco@healthcareplus.net",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/men/19.jpg",
+      "role": "specialist"
+    },
+    {
+      "id": "20",
+      "firstName": "Patricia",
+      "lastName": "Reyes",
+      "email": "patricia@connectionlink.com",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/women/20.jpg",
+      "role": "patient",
+      "isSubscribed": false
+    },
+    {
+      "id": "21",
+      "firstName": "Fernando",
+      "lastName": "Ortiz",
+      "email": "fernando@wellnessinstitute.org",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/men/21.jpg",
+      "role": "specialist"
+    },
+    {
+      "id": "22",
+      "firstName": "Sandra",
+      "lastName": "Mendoza",
+      "email": "sandra@connectionlink.com",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/women/22.jpg",
+      "role": "patient",
+      "isSubscribed": true
+    },
+    {
+      "id": "23",
+      "firstName": "Ricardo",
+      "lastName": "Ríos",
+      "email": "ricardo@medhealth.org",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/men/23.jpg",
+      "role": "specialist"
+    },
+    {
+      "id": "24",
+      "firstName": "Verónica",
+      "lastName": "Morales",
+      "email": "veronica@connectionlink.com",
+      "phone": 983129121,
+      "password": "admin123",
+      "profileImg": "https://randomuser.me/api/portraits/women/24.jpg",
+      "role": "patient",
+      "isSubscribed": false
+    }
+  ],
   "specialists": [
     {
       "id": "1",
@@ -97,7 +351,7 @@
       "phone": "935-873-483"
     }
   ],
-  "users": [
+  "Ousers": [
     {
       "id": "1",
       "firstName": "Alan",
@@ -649,7 +903,7 @@
       "status": "paid"
     }
   ],
-  "eventsCalendar" : [
+  "eventsCalendar": [
     {
       "id": "1",
       "userId": "user1",
