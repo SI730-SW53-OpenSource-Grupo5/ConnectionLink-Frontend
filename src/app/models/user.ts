@@ -5,11 +5,11 @@ export class User {
   profileImg: string;
   email: string;
   password: string;
-  phone: number;
+  phone: string;
   role: string;
   isSubscribed?: boolean;
 
-  constructor(id: string, firstName: string, lastName: string, profileImg: string, email: string, password: string, phone: number, role: string, isSubscribed?: boolean) {
+  constructor(id: string, firstName: string, lastName: string, profileImg: string, email: string, password: string, phone: string, role: string, isSubscribed?: boolean) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;

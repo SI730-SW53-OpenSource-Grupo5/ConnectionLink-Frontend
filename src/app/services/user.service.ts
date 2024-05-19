@@ -23,4 +23,13 @@ export class UserService {
     return this.http.get<User[]>(this.base_Url);
   }
 
+  createNewUser(user: any): Observable<User> {
+
+    if (user.role === 'patient') {
+      user.isSubscribed = false;
+    }
+
+    return this.http.post<User>(this.base_Url, user);
+  }
+
 }
