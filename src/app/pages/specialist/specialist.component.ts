@@ -1,16 +1,18 @@
-import { CalendarService } from './../../services/calendar.service';
-import { SpecialistService } from './../../services/specialist.service';
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { InformationProfileComponent } from '../../components/specialist/information-profile/information-profile.component';
-import { UserReviewsComponent } from '../../components/specialist/user-reviews/user-reviews.component';
-import { MakeAppointmentComponent } from '../../components/specialist/make-appointment/make-appointment.component';
-import { ActivatedRoute } from '@angular/router';
-import { Specialist } from '../../models/specialist';
-import { CommonModule } from '@angular/common';
-import { Calendar } from '../../models/calendar';
-import { Review } from '../../models/review';
-import { ReviewService } from '../../services/review.service';
-import { UserService } from '../../services/user.service';
+import {CalendarService} from './../../services/calendar.service';
+import {SpecialistService} from './../../services/specialist.service';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {
+  InformationProfileComponent
+} from '../../components/specialist/information-profile/information-profile.component';
+import {UserReviewsComponent} from '../../components/specialist/user-reviews/user-reviews.component';
+import {MakeAppointmentComponent} from '../../components/specialist/make-appointment/make-appointment.component';
+import {ActivatedRoute} from '@angular/router';
+import {Specialist} from '../../models/specialist';
+import {CommonModule} from '@angular/common';
+import {Calendar} from '../../models/calendar';
+import {Review} from '../../models/review';
+import {ReviewService} from '../../services/review.service';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-specialist',
@@ -24,7 +26,7 @@ import { UserService } from '../../services/user.service';
   templateUrl: './specialist.component.html',
   styleUrl: './specialist.component.scss'
 })
-export class SpecialistComponent implements OnInit{
+export class SpecialistComponent implements OnInit {
   specialistData!: Specialist;
   specialistCalendarData!: Array<Calendar>;
   specialistReviewData!: Array<Review>;
@@ -73,7 +75,7 @@ export class SpecialistComponent implements OnInit{
       (response: any) => {
         response.map(
           (element: any) => {
-            
+
             this.userService.getUser(element.userId).subscribe(
               (res: any) => {
                 this.specialistReviewData.push({
