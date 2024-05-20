@@ -7,6 +7,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {
   ErrorCredentialsModalComponent
 } from "../../components/login/error-credentials-modal/error-credentials-modal.component";
+import {AuthService} from "../../shared/auth/auth.service";
 
 @Component({
   selector: 'app-login',
@@ -26,7 +27,7 @@ export class LoginComponent implements OnInit {
   isRegistered: boolean = false;
 
   constructor(private router: Router, private userService: UserService,
-              public dialog: MatDialog) {
+              public dialog: MatDialog, private authService: AuthService) {
   }
 
   ngOnInit() {
@@ -50,6 +51,8 @@ export class LoginComponent implements OnInit {
 
       if (this.users[i].email === this.email && this.users[i].password === this.password) {
         this.isRegistered = true;
+        // setamos el estado user en AuthService
+        this.authService.setUser(this.users[i]);
         this.navigateToHome();
         break;
       }
