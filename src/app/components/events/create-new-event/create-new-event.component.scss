@@ -1,0 +1,99 @@
+.container {
+  padding: 20px;
+}
+
+.example-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.label-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.label-container label {
+  width: 120px;
+  text-align: end;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.example-full-width {
+  flex: 1;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-container button {
+  flex: auto; /* En lugar de flex: 1 */
+  margin-right: 10px;
+}
+
+.label-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon input {
+  padding-right: 30px;
+}
+
+.mat-icon {
+  position: absolute;
+  right: 5px;
+}
+
+
+.promo {
+  position: relative;
+  border: 2px solid black; /* Borde con color negro */
+  background-color: #fbfafa; /* Color de fondo casi blanco */
+}
+
+.container {
+  margin-bottom: 40px; /* Espacio entre el formulario y los botones */
+}
+
+.button-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+}
+.promo .button-container button:nth-child(1) {
+  border: 2px solid black;
+  color: black;
+  border-radius: 30px;
+  background-color: #a3eddc;
+  margin-right: 10px;
+}
+
+.promo .button-container button:nth-child(2) {
+  border: 2px solid black;
+  color: black;
+  border-radius: 30px;
+  background-color: #d7aded;
+}
+
+.promo .button-container button:hover {
+  background-color: #aa9d9d;
+  color: white;
+}
+
+.promo .label-container {
+  margin-bottom: 20px;
+}
+
+.promo .example-full-width {
+  width: 100%;
+}

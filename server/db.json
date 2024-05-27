@@ -649,7 +649,7 @@
       "status": "paid"
     }
   ],
-  "eventsCalendar" : [
+  "eventsCalendar": [
     {
       "id": "1",
       "userId": "user1",
@@ -677,6 +677,17 @@
       "specialistId": "specialist4",
       "description": "description4",
       "date": "2024-05-03"
+    }
+  ],
+  "newEvent": [
+    {
+      "id": 1,
+      "eventName": "Spiritual Healing Event",
+      "platform": "Google meet",
+      "schedule": "8:00 pm to 10:00 pm - Saturday",
+      "participants": 30,
+      "image": null,
+      "description": "Important meet"
     }
   ]
 }

@@ -6,6 +6,7 @@ import {EventService} from "../../services/event.service";
 import {EventCardComponent} from "../../components/events/event-card/event-card.component";
 import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
 import {MatOption, MatSelect} from "@angular/material/select";
+import {RouterLink, RouterLinkActive} from "@angular/router";
 
 interface Filter {
   value: string,
@@ -15,18 +16,20 @@ interface Filter {
 @Component({
   selector: 'app-events',
   standalone: true,
-  imports: [
-    MatCard,
-    MatCardHeader,
-    MatCardContent,
-    MatCardModule,
-    MatIcon,
-    EventCardComponent,
-    MatFormField,
-    MatSelect,
-    MatOption,
-    MatFormFieldModule
-  ],
+    imports: [
+        MatCard,
+        MatCardHeader,
+        MatCardContent,
+        MatCardModule,
+        MatIcon,
+        EventCardComponent,
+        MatFormField,
+        MatSelect,
+        MatOption,
+        MatFormFieldModule,
+        RouterLink,
+        RouterLinkActive
+    ],
   templateUrl: './events.component.html',
   styleUrl: './events.component.scss'
 })

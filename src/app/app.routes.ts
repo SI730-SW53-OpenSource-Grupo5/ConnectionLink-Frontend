@@ -8,6 +8,7 @@ import {EventsComponent} from "./pages/events/events.component";
 import { PaymentComponent } from "./pages/payment/payment.component";
 import {AnalyticsComponent} from "./pages/analytics/analytics.component";
 import { CalendarComponent} from "./pages/calendar/calendar.component";
+import {NewEventComponent} from "./pages/new-event/new-event.component";
 
 
 
@@ -23,5 +24,7 @@ export const routes: Routes = [
     {path: "payment", component: PaymentComponent},
     {path: "analytics", component: AnalyticsComponent},
     {path: "calendar", component: CalendarComponent},
+    {path: "events/new-event", component: NewEventComponent},
+
 
 ];

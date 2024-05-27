@@ -1,0 +1,51 @@
+<div class="promo">
+  <div class="container">
+    <form class="example-form">
+      <div class="label-container">
+        <label mat-form-field-label>Event Name</label>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Spiritual Healing Event" required [(ngModel)]="formData.eventName" name="eventName">
+        </mat-form-field>
+      </div>
+
+      <div class="label-container">
+        <label mat-form-field-label>Platform</label>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Google meet" required [(ngModel)]="formData.platform" name="platform">
+        </mat-form-field>
+      </div>
+
+      <div class="label-container">
+        <label mat-form-field-label>Schedule</label>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="8:00 pm to 10:00 pm - Saturday" required [(ngModel)]="formData.schedule" name="schedule">
+          <mat-icon aria-hidden="false"  fontIcon="event"></mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="label-container">
+        <label mat-form-field-label>Number of Participants</label>
+        <mat-form-field class="example-full-width">
+          <input matInput type="number" placeholder="30" required [(ngModel)]="formData.participants" name="participants">
+        </mat-form-field>
+      </div>
+
+      <div class="label-container">
+        <label mat-form-field-label>Reference Image</label>
+        <input type="file" class="file-input hidden-placeholder" (change)="onFileSelected($event)" accept="image/*" required name="image">
+      </div>
+
+      <div class="label-container">
+        <label mat-form-field-label>Description</label>
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Enter description" [(ngModel)]="formData.description" name="description"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="button-container">
+        <button mat-raised-button color="primary" (click)="onSubmit()">Create</button>
+        <button mat-raised-button color="warn">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
