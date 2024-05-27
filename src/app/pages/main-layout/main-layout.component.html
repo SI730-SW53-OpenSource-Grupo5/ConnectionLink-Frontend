@@ -1,0 +1,11 @@
+<div class="body-container">
+  <app-header (toggleSidebar)="onToggleSidebar()" class="toolbar"></app-header>
+  <div class="body-content">
+    <div class="sidebar-content">
+      <app-sidebar [isSidebarOpen]="isSidebarOpen" class="sidebar"></app-sidebar>
+    </div>
+    <div class="custom-content flex-1">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

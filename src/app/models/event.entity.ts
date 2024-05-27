@@ -1,16 +1,19 @@
-export class EventEntity {
+class EventEntity {
   id: string;
-  userId: string;
-  specialistId: string;
+  idSpecialist: string;
+  title: string;
+  banner_img: string;
   description: string;
-  date: Date;
+  status: string;
+  specialist: any; // objto que contiene la informacion del especialista asociado al evento
 
-  constructor(id: string, userId: string, specialistId: string, description: string, date: Date) {
+  constructor(id: string, idSpecialist: string, title: string, banner_img: string, description: string, status: string) {
     this.id = id;
-    this.userId = userId;
-    this.specialistId = specialistId;
+    this.idSpecialist = idSpecialist;
+    this.title = title;
+    this.banner_img = banner_img;
     this.description = description;
-    this.date = date;
+    this.status = status;
   }
 }
-
+export default EventEntity;

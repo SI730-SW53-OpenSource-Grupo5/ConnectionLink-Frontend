@@ -1,0 +1,50 @@
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+  padding: 0;
+}
+
+.message-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: stretch;
+  display: flex; /* Make the card a flex container */
+  border: 2px solid #ccc; /* Add a border to the card */
+  background-color: #f8f8f8;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.message-card-image {
+  width: 50px; /* Set image width */
+  margin-right: 10px; /* Add margin between image and text */
+  border-radius: 50%; /* Make the image round */
+}
+
+.message-card-title,
+.message-card-subtitle {
+  flex: 1; /* Allow title and subtitle to grow horizontally */
+  font-size: 15px
+}
+
+.headerr {
+  display: flex;
+}
+
+.image {
+  display: flex;
+}
+
+.name {
+  display: flex;
+}
+
+.text {
+  display: flex;
+}
+
+.message {
+  display: flex;
+}

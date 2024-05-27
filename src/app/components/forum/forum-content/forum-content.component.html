@@ -1,0 +1,36 @@
+<section class="forum h-full relative">
+  <div class="forum-container flex flex-col gap-2 h-full">
+    <h2>Forums:</h2>
+    <p>Join and participate in various threads created by different users</p>
+    <div class="flex flex-row flex-wrap gap-4 pb-3">
+      <button
+        class="flex items-center bg-indigo-900 text-slate-50 gap-1 px-4 py-1.5 rounded-2xl">
+        Create new post
+        <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="add_circle_outline"></mat-icon>
+      </button>
+      <button
+        (click)="refreshPosts()"
+        class="refresh flex items-center border-slate-800 bg-slate-100 text-slate-950 gap-1 px-5 py-1.5 rounded-2xl">
+        Refresh
+        <mat-icon class="text-xl w-0 h-0 mb-1.5" fontIcon="refresh"></mat-icon>
+      </button>
+      <mat-form-field class="-mb-5" style="width: 175px">
+        <mat-label>Order By</mat-label>
+        <mat-select [(value)]="selectedFilter" (selectionChange)="orderPostsBy($event.value)" >
+          @for (filter of filters; track filter) {
+            <mat-option [value]="filter.value">{{filter.viewValue}} </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="-mb-5" style="width: 175px">
+        <mat-label>Topics</mat-label>
+        <mat-select [(value)]="selectedTopic" (selectionChange)="filterByTopics($event.value)">
+          @for (topic of topics; track topic) {
+            <mat-option [value]="topic.value">{{topic.viewValue}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <app-post-list class="posts-container" [posts]="posts"></app-post-list>
+  </div>
+</section>

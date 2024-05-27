@@ -1,0 +1,29 @@
+<section class="profile-information-container">
+    <div class="grid grid-cols-1 xl:grid-cols-[1fr,auto] grid-rows-[1fr,auto] xl:grid-rows-1 p-8
+      items-center gap-10 w-full border border-gray-300 justify-center bg-slate-50">
+        <div class="flex flex-col gap-5 md:w-[80%] w-[100%]">
+            <h2 class="text-blue-900">{{specialistData.firstName + " " + specialistData.lastName}} profile:</h2>
+            <p><strong>Full name:</strong> {{specialistData.firstName + " " + specialistData.lastName}} </p>
+            <p><strong>Age:</strong> {{specialistData.age}} years</p>
+            <p><strong>Studies:</strong> {{specialistData.studies}}</p>
+            <p><strong>Ocupation:</strong> {{specialistData.ocupation}} </p>
+            <p class="text-balance"><strong>Bio:</strong> {{specialistData.biography}}</p>
+            <a class="flex items-center gap-[5px] w-fit bg-[#85B4C3]
+              text-black gap-1 px-[15px] py-[12.5px] self-center sm:self-start
+              hover:bg-cyan-500 transition-all duration-300 ease-in-out"
+               href="{{specialistData.cv}}" target="_blank">
+                <span>Download CV</span>
+                <mat-icon aria-hidden="false" aria-label="Download CV Icon">sim_card_download</mat-icon>
+            </a>
+        </div>
+
+        <div class="w-full flex flex-col gap-5 items-center">
+            <img  class="max-w-[400px] w-full flex mx-auto min-h-[400px] object-cover rounded-xl" src="{{specialistData.urlImage}}" alt="Smith Kimbell Image Profile" />
+            <div>
+                <button class="flex items-center bg-[#EFF0FF] text-black border border-black gap-1
+                  px-[15px] py-[12.5px] rounded-2xl hover:bg-purple-300 transition-all duration-300 ease-in-out"
+                  (click)="clickedPopup.emit()">Make an appoinment</button>
+            </div>
+        </div>
+    </div>
+</section>
