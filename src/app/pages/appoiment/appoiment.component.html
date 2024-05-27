@@ -1,0 +1,25 @@
+<section class="h-full relative">
+    <div class="appoiments-container flex flex-col gap-4">
+      <div class="flex flex-row justify-between gap-4 flex-wrap">
+        <div class="flex flex-col gap-4">
+          <h3>Appoiments</h3>
+          <p>You will be able to add, modify and delete your appointment times for patients.</p>
+        </div>
+      </div>
+      <div class="">
+        <div class="">
+            <button (click)="onClickPopup()"
+                class="flex items-center bg-indigo-900 text-slate-50 gap-1 px-4 py-1.5 rounded-2xl">
+                Create new Appoiment
+                <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="add_circle_outline"></mat-icon>
+          </button>
+        </div>
+        <app-date-appoinments [specialistCalendarData]="specialistCalendarData" (deleteCalendar)="deleteCalendar($event)"/>
+    </div>
+    </div>
+</section>
+
+<app-make-date-appoinment [specialistData]="specialistData" [specialistCalendarData]="specialistCalendarData" [showPopup]="showPopup" (clickedPopup)="onClickPopup()" />
+
+
+  
