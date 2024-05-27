@@ -31,6 +31,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     .custom-content {
       width: calc(100% - 349px);
       padding: 30px;
+      min-height: calc(100vh - 112px);
     }
     @media(max-width: 1024px) {
       .custom-content {
@@ -67,7 +68,6 @@ p, a, button, input {
   line-height: 20px!important;
 }
 
-.border {
-  border: 1px solid red;
-}
 
+html, body { min-height: 100vh; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

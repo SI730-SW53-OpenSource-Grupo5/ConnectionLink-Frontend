@@ -17,14 +17,18 @@ li > p{
   letter-spacing: .7px;
 }
 
-li {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  cursor: pointer;
+.active {
+  background-color: #ddf1ef !important;
 }
 
-li:first-child {
-  background-color: #ddf1ef;
+li:not(.active):hover {
+  transition: all 0.2s ease;
+  background-color: #ececec !important;
+}
+
+li:not(.active):hover {
+  transition: all 0.2s ease;
+  background-color: #ececec;
 }
 
 li:hover {

@@ -1,0 +1,54 @@
+.background-register {
+  background-color: #E5F3F4;
+}
+
+.background-register input {
+  font-size: .9rem !important;
+}
+
+.background-register h5 {
+  font-weight: 400 !important;
+  letter-spacing: 1px !important;
+}
+
+.background-register form input:focus {
+  background-color: #F7F7F7;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+}
+
+.logo-title {
+  font-family: 'Lora' !important;
+  font-weight: 700 !important;
+  letter-spacing: .7px;
+}
+
+.radio-input {
+  appearance: none;
+
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #999;
+  transition: 0.2s all linear;
+
+  position: relative;
+}
+
+.radio-input:checked {
+  border: 8px solid #0E46A3;
+}
+
+.input-field:focus {
+  background-color: #F7F7F7;
+}
+
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.8rem !important;
+  }
+}
