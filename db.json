@@ -474,6 +474,7 @@
       "specialistId": "smithandrew",
       "description": "Dr. Smith Kimbell is a true beacon of compassion and expertise in the field of psychology. His holistic approach to therapy, coupled with his unwavering empathy, has been instrumental in guiding me through life's most challenging moments. Through his insightful guidance, I have discovered newfound resilience and inner peace."
     }
+    
   ],
   "inbox": [
     {
@@ -509,7 +510,7 @@
   ],
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Djalma Dioses",
       "email": "djalmadioses123@connectlink.com",
       "subject": "Stress at the university",
@@ -520,7 +521,7 @@
       "comments_quantity": 24
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Arian Rodriguez",
       "email": "arianrodriguez123@connectlink.com",
       "subject": "Coping with anxiety",
@@ -531,7 +532,7 @@
       "comments_quantity": 30
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Sebastian Peña",
       "email": "sebastianpena123@connectlink.com",
       "subject": "Dealing with depression",
@@ -542,7 +543,7 @@
       "comments_quantity": 40
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Alex Avila",
       "email": "alexavila123@connectlink.com",
       "subject": "Understanding PTSD",
@@ -553,7 +554,7 @@
       "comments_quantity": 35
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Maria Gonzalez",
       "email": "mariagonzalez123@connectlink.com",
       "subject": "The impact of stress on physical health",
@@ -564,7 +565,7 @@
       "comments_quantity": 38
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Carlos Ramirez",
       "email": "carlosramirez123@connectlink.com",
       "subject": "The role of exercise in mental health",
@@ -575,7 +576,7 @@
       "comments_quantity": 42
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Ana Fernandez",
       "email": "anafernandez123@connectlink.com",
       "subject": "The importance of sleep for mental health",
@@ -586,7 +587,7 @@
       "comments_quantity": 55
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Juan Perez",
       "email": "juanperez123@connectlink.com",
       "subject": "Mindfulness and mental health",
@@ -597,7 +598,7 @@
       "comments_quantity": 45
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Laura Martinez",
       "email": "lauramartinez123@connectlink.com",
       "subject": "The role of nutrition in mental health",
@@ -608,7 +609,7 @@
       "comments_quantity": 50
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Pedro Lopez",
       "email": "pedrolopez123@connectlink.com",
       "subject": "The impact of social media on mental health",
@@ -621,7 +622,7 @@
   ],
   "comments": [
     {
-      "id": 1,
+      "id": "1",
       "postId": 1,
       "name": "Alan Smith",
       "email": "asmith@connectlink.com",
@@ -632,7 +633,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/1.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "postId": 1,
       "name": "Maria Gonzalez",
       "email": "mariagonzalez123@connectlink.com",
@@ -643,7 +644,7 @@
       "imageURL": "https://randomuser.me/api/portraits/women/2.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "postId": 2,
       "name": "Carlos Ramirez",
       "email": "carlosramirez123@connectlink.com",
@@ -654,7 +655,7 @@
       "likes_quantity": 35
     },
     {
-      "id": 4,
+      "id": "4",
       "postId": 3,
       "name": "Ana Fernandez",
       "email": "anafernandez123@connectlink.com",
@@ -665,7 +666,7 @@
       "imageURL": "https://randomuser.me/api/portraits/women/4.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "postId": 4,
       "name": "Juan Perez",
       "email": "juanperez123@connectlink.com",
@@ -676,7 +677,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/5.jpg"
     },
     {
-      "id": 6,
+      "id": "6",
       "postId": 5,
       "name": "Laura Martinez",
       "email": "lauramartinez123@connectlink.com",
@@ -687,7 +688,7 @@
       "imageURL": "https://randomuser.me/api/portraits/women/6.jpg"
     },
     {
-      "id": 7,
+      "id": "7",
       "postId": 6,
       "name": "Pedro Lopez",
       "email": "pedrolopez123@connectlink.com",
@@ -698,7 +699,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/7.jpg"
     },
     {
-      "id": 8,
+      "id": "8",
       "postId": 7,
       "name": "Maria Gonzalez",
       "email": "mariagonzalez123@connectlink.com",
@@ -709,7 +710,7 @@
       "imageURL": "https://randomuser.me/api/portraits/women/8.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "postId": 8,
       "name": "Alan Smith",
       "email": "asmith@connectlink.com",
@@ -720,7 +721,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/9.jpg"
     },
     {
-      "id": 10,
+      "id": "10",
       "postId": 9,
       "name": "Djalma Dioses",
       "email": "djalmadioses123@connectlink.com",
@@ -732,7 +733,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/10.jpg"
     },
     {
-      "id": 11,
+      "id": "11",
       "postId": 10,
       "name": "Arian Rodriguez",
       "email": "arianrodriguez123@connectlink.com",
@@ -743,7 +744,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/11.jpg"
     },
     {
-      "id": 12,
+      "id": "12",
       "postId": 1,
       "name": "Carlos Ramirez",
       "email": "carlosramirez123@connectlink.com",
@@ -754,7 +755,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/12.jpg"
     },
     {
-      "id": 13,
+      "id": "13",
       "postId": 2,
       "name": "Ana Fernandez",
       "email": "anafernandez123@connectlink.com",
@@ -765,7 +766,7 @@
       "imageURL": "https://randomuser.me/api/portraits/women/13.jpg"
     },
     {
-      "id": 14,
+      "id": "14",
       "postId": 3,
       "name": "Juan Perez",
       "email": "juanperez123@connectlink.com",
@@ -776,7 +777,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/14.jpg"
     },
     {
-      "id": 15,
+      "id": "15",
       "postId": 4,
       "name": "Laura Martinez",
       "email": "lauramartinez123@connectlink.com",
@@ -787,7 +788,7 @@
       "imageURL": "https://randomuser.me/api/portraits/women/15.jpg"
     },
     {
-      "id": 16,
+      "id": "16",
       "postId": 5,
       "name": "Pedro Lopez",
       "email": "pedrolopez123@connectlink.com",
@@ -798,7 +799,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/16.jpg"
     },
     {
-      "id": 17,
+      "id": "17",
       "postId": 6,
       "name": "Maria Gonzalez",
       "email": "mariagonzalez123@connectlink.com",
@@ -809,7 +810,7 @@
       "imageURL": "https://randomuser.me/api/portraits/women/17.jpg"
     },
     {
-      "id": 18,
+      "id": "18",
       "postId": 7,
       "name": "Alan Smith",
       "email": "asmith@connectlink.com",
@@ -820,7 +821,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/18.jpg"
     },
     {
-      "id": 19,
+      "id": "19",
       "postId": 8,
       "name": "Djalma Dioses",
       "email": "djalmadioses123@connectlink.com",
@@ -831,7 +832,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/19.jpg"
     },
     {
-      "id": 20,
+      "id": "20",
       "postId": 9,
       "name": "Arian Rodriguez",
       "email": "arianrodriguez123@connectlink.com",
@@ -842,7 +843,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/20.jpg"
     },
     {
-      "id": 21,
+      "id": "21",
       "postId": 10,
       "name": "Maria Gonzalez",
       "email": "mariagonzalez123@connectlink.com",

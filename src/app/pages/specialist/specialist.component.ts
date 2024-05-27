@@ -13,6 +13,10 @@ import {Calendar} from '../../models/calendar';
 import {Review} from '../../models/review';
 import {ReviewService} from '../../services/review.service';
 import {UserService} from '../../services/user.service';
+import { AddUserReviewComponent } from '../../components/specialist/add-user-review/add-user-review.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { User } from '../../models/user';
+
 
 @Component({
   selector: 'app-specialist',
@@ -21,7 +25,9 @@ import {UserService} from '../../services/user.service';
     InformationProfileComponent,
     UserReviewsComponent,
     MakeAppointmentComponent,
-    CommonModule
+    AddUserReviewComponent,
+    CommonModule,
+    MatDialogModule
   ],
   templateUrl: './specialist.component.html',
   styleUrl: './specialist.component.scss'
@@ -34,8 +40,21 @@ export class SpecialistComponent implements OnInit {
   showPopup: boolean = false;
   isSidebarOpen: boolean = false;
   specialistId: any = "";
+  currentUser!: User;
 
-  constructor(private route: ActivatedRoute, private specialistService: SpecialistService, private calendarService: CalendarService, private reviewService: ReviewService, private userService: UserService) {
+  rawUser: User = {
+    id: '12345',
+    firstName: 'John',
+    lastName: 'Doe',
+    profileImg: 'https://example.com/profile-img.jpg',
+    email: 'john.doe@example.com',
+    password: 'securepassword',
+    phone: '+1234567890',
+    role: 'patient',
+    isSubscribed: true
+  };
+
+  constructor(private route: ActivatedRoute, private specialistService: SpecialistService, private calendarService: CalendarService, private reviewService: ReviewService, private userService: UserService, public dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -44,6 +63,7 @@ export class SpecialistComponent implements OnInit {
     this.specialistReviewData = [] as Array<Review>;
     this.loadParamRoute();
     this.loadInitialData();
+    this.currentUser = this.rawUser;
     console.log(this.specialistCalendarData)
   }
 
@@ -91,4 +111,21 @@ export class SpecialistComponent implements OnInit {
       }
     )
   }
+  openAddReviewModal(): void {
+    const dialogRef = this.dialog.open(AddUserReviewComponent, {
+      width: '400px',
+      data: { id: this.generateUniqueId(),user: this.currentUser, specialist: this.specialistData }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.specialistReviewData.push(result);
+      }
+    });
+  }
+
+  generateUniqueId(): string {
+    return Math.random().toString(36).substr(2, 9);
+  }
+
 }

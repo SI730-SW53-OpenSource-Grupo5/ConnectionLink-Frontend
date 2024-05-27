@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input,Output,EventEmitter } from '@angular/core';
 import { MatCard, MatCardContent, MatCardHeader, MatCardImage, MatCardModule } from '@angular/material/card';
 import { Review } from '../../../models/review';
 import { CommonModule } from '@angular/common';
@@ -15,4 +15,10 @@ import { CommonModule } from '@angular/common';
 })
 export class UserReviewsComponent {
   @Input() specialistReviewData!: Array<Review>;
+  @Output() addReview = new EventEmitter<void>();
+
+
+  openAddReview() {
+    this.addReview.emit();
+  }
 }

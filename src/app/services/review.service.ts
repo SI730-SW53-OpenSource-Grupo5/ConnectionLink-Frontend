@@ -15,4 +15,8 @@ export class ReviewService {
     return this.http.get<Review>(this.base_Url + "/?specialistId=" + username);
   }
 
+  addReview(review: Review): Observable<Review> {
+    return this.http.post<Review>(this.base_Url, review);
+  }
+
 }
