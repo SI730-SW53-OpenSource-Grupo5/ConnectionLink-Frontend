@@ -367,115 +367,97 @@
   ],
   "calendars": [
     {
-      "hour": "9:00 am to 10:00 am",
-      "day": "Tuesday",
+      "day": "Martes",
+      "hour": "10:00 am - 11:00 am",
       "username": "smithandrew",
-      "available": false,
-      "id": "1"
+      "available": true,
+      "id": -1
     },
     {
-      "hour": "10:00 am to 11:00 am",
-      "day": "Tuesday",
+      "day": "Jueves",
+      "hour": "8:00 pm - 9:00 pm",
       "username": "smithandrew",
-      "available": false,
-      "id": "2"
+      "available": true,
+      "id": "gutCDoY"
     },
     {
-      "hour": "11:00 am to 12:00 pm",
-      "day": "Tuesday",
+      "day": "Lunes",
+      "hour": "9:00 am - 10:00 am",
       "username": "smithandrew",
-      "available": false,
-      "id": "3"
+      "available": true,
+      "id": 0
+    },
+    {
+      "day": "Martes",
+      "hour": "12:00 pm - 1:00 pm",
+      "username": "smithandrew",
+      "available": true,
+      "id": 1
     }
   ],
   "appointments": [
     {
-      "id": "e1c9",
-      "userId": "asmith",
-      "calendarId": 1
+      "id": "uA1rM36"
     },
     {
-      "id": "8c96",
-      "userId": "asmith",
-      "calendarId": "2"
+      "id": "hXd390_"
     },
     {
-      "id": "faf3",
-      "userId": "asmith",
-      "calendarId": "3"
+      "id": "l7Q1wJW"
     },
     {
-      "id": "dc44",
-      "userId": "asmith",
-      "calendarId": "2"
+      "id": "ruXYPzj"
     },
     {
-      "id": "7c67",
-      "userId": "asmith",
-      "calendarId": "2"
+      "id": "r85djyS"
     },
     {
-      "id": "793a",
-      "userId": "asmith",
-      "calendarId": "2"
+      "id": "mLCLQSR"
     },
     {
-      "id": "824e",
-      "userId": "asmith",
-      "calendarId": "2"
+      "id": "FNq2Gub"
     },
     {
-      "id": "6901",
-      "userId": "asmith",
-      "calendarId": "1"
+      "id": "2dY3Y_v"
     },
     {
-      "id": "505a",
-      "userId": "asmith",
-      "calendarId": "1"
+      "id": "7wGoWXK"
     },
     {
-      "id": "8cfa",
-      "userId": "asmith",
-      "calendarId": "2"
+      "id": "Rz1VHUr"
     },
     {
-      "id": "9716",
-      "userId": "asmith",
-      "calendarId": "1"
+      "id": "KLEOWRV"
     },
     {
-      "id": "f023",
-      "userId": "asmith",
-      "calendarId": "1"
+      "id": "Q64f346"
     },
     {
-      "id": "b965",
-      "userId": "asmith",
-      "calendarId": "1"
+      "id": "edPsdB7"
+    },
+    {
+      "id": "15ot-bG"
+    },
+    {
+      "id": "e43KS4C"
+    },
+    {
+      "id": "7mj8fth"
+    },
+    {
+      "id": "AtBOoCE"
+    },
+    {
+      "id": "u1XKU2U"
+    },
+    {
+      "id": "m3TTAha"
+    },
+    {
+      "id": "ABM2jP-"
     }
   ],
-  "reviews": [
-    {
-      "id": "1",
-      "userId": "asmith",
-      "specialistId": "smithandrew",
-      "description": "Dr. Smith Kimbell is a true beacon of compassion and expertise in the field of psychology. His holistic approach to therapy, coupled with his unwavering empathy, has been instrumental in guiding me through life's most challenging moments. Through his insightful guidance, I have discovered newfound resilience and inner peace."
-    },
-    {
-      "id": "2",
-      "userId": "asmith",
-      "specialistId": "smithandrew",
-      "description": "Dr. Smith Kimbell is a true beacon of compassion and expertise in the field of psychology. His holistic approach to therapy, coupled with his unwavering empathy, has been instrumental in guiding me through life's most challenging moments. Through his insightful guidance, I have discovered newfound resilience and inner peace."
-    },
-    {
-      "id": "3",
-      "userId": "asmith",
-      "specialistId": "smithandrew",
-      "description": "Dr. Smith Kimbell is a true beacon of compassion and expertise in the field of psychology. His holistic approach to therapy, coupled with his unwavering empathy, has been instrumental in guiding me through life's most challenging moments. Through his insightful guidance, I have discovered newfound resilience and inner peace."
-    }
-    
-  ],
+  "reviews": [],
   "inbox": [
     {
       "id": "1",
@@ -510,7 +492,7 @@
   ],
   "posts": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Djalma Dioses",
       "email": "djalmadioses123@connectlink.com",
       "subject": "Stress at the university",
@@ -521,7 +503,7 @@
       "comments_quantity": 24
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Arian Rodriguez",
       "email": "arianrodriguez123@connectlink.com",
       "subject": "Coping with anxiety",
@@ -532,7 +514,7 @@
       "comments_quantity": 30
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Sebastian Peña",
       "email": "sebastianpena123@connectlink.com",
       "subject": "Dealing with depression",
@@ -543,7 +525,7 @@
       "comments_quantity": 40
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Alex Avila",
       "email": "alexavila123@connectlink.com",
       "subject": "Understanding PTSD",
@@ -554,7 +536,7 @@
       "comments_quantity": 35
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Maria Gonzalez",
       "email": "mariagonzalez123@connectlink.com",
       "subject": "The impact of stress on physical health",
@@ -565,7 +547,7 @@
       "comments_quantity": 38
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Carlos Ramirez",
       "email": "carlosramirez123@connectlink.com",
       "subject": "The role of exercise in mental health",
@@ -576,7 +558,7 @@
       "comments_quantity": 42
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "Ana Fernandez",
       "email": "anafernandez123@connectlink.com",
       "subject": "The importance of sleep for mental health",
@@ -587,7 +569,7 @@
       "comments_quantity": 55
     },
     {
-      "id": "8",
+      "id": 8,
       "name": "Juan Perez",
       "email": "juanperez123@connectlink.com",
       "subject": "Mindfulness and mental health",
@@ -598,7 +580,7 @@
       "comments_quantity": 45
     },
     {
-      "id": "9",
+      "id": 9,
       "name": "Laura Martinez",
       "email": "lauramartinez123@connectlink.com",
       "subject": "The role of nutrition in mental health",
@@ -609,7 +591,7 @@
       "comments_quantity": 50
     },
     {
-      "id": "10",
+      "id": 10,
       "name": "Pedro Lopez",
       "email": "pedrolopez123@connectlink.com",
       "subject": "The impact of social media on mental health",
@@ -622,7 +604,7 @@
   ],
   "comments": [
     {
-      "id": "1",
+      "id": 1,
       "postId": 1,
       "name": "Alan Smith",
       "email": "asmith@connectlink.com",
@@ -633,7 +615,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/1.jpg"
     },
     {
-      "id": "2",
+      "id": 2,
       "postId": 1,
       "name": "Maria Gonzalez",
       "email": "mariagonzalez123@connectlink.com",
@@ -644,7 +626,7 @@
       "imageURL": "https://randomuser.me/api/portraits/women/2.jpg"
     },
     {
-      "id": "3",
+      "id": 3,
       "postId": 2,
       "name": "Carlos Ramirez",
       "email": "carlosramirez123@connectlink.com",
@@ -655,7 +637,7 @@
       "likes_quantity": 35
     },
     {
-      "id": "4",
+      "id": 4,
       "postId": 3,
       "name": "Ana Fernandez",
       "email": "anafernandez123@connectlink.com",
@@ -666,7 +648,7 @@
       "imageURL": "https://randomuser.me/api/portraits/women/4.jpg"
     },
     {
-      "id": "5",
+      "id": 5,
       "postId": 4,
       "name": "Juan Perez",
       "email": "juanperez123@connectlink.com",
@@ -677,7 +659,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/5.jpg"
     },
     {
-      "id": "6",
+      "id": 6,
       "postId": 5,
       "name": "Laura Martinez",
       "email": "lauramartinez123@connectlink.com",
@@ -688,7 +670,7 @@
       "imageURL": "https://randomuser.me/api/portraits/women/6.jpg"
     },
     {
-      "id": "7",
+      "id": 7,
       "postId": 6,
       "name": "Pedro Lopez",
       "email": "pedrolopez123@connectlink.com",
@@ -699,7 +681,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/7.jpg"
     },
     {
-      "id": "8",
+      "id": 8,
       "postId": 7,
       "name": "Maria Gonzalez",
       "email": "mariagonzalez123@connectlink.com",
@@ -710,7 +692,7 @@
       "imageURL": "https://randomuser.me/api/portraits/women/8.jpg"
     },
     {
-      "id": "9",
+      "id": 9,
       "postId": 8,
       "name": "Alan Smith",
       "email": "asmith@connectlink.com",
@@ -721,7 +703,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/9.jpg"
     },
     {
-      "id": "10",
+      "id": 10,
       "postId": 9,
       "name": "Djalma Dioses",
       "email": "djalmadioses123@connectlink.com",
@@ -733,7 +715,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/10.jpg"
     },
     {
-      "id": "11",
+      "id": 11,
       "postId": 10,
       "name": "Arian Rodriguez",
       "email": "arianrodriguez123@connectlink.com",
@@ -744,7 +726,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/11.jpg"
     },
     {
-      "id": "12",
+      "id": 12,
       "postId": 1,
       "name": "Carlos Ramirez",
       "email": "carlosramirez123@connectlink.com",
@@ -755,7 +737,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/12.jpg"
     },
     {
-      "id": "13",
+      "id": 13,
       "postId": 2,
       "name": "Ana Fernandez",
       "email": "anafernandez123@connectlink.com",
@@ -766,7 +748,7 @@
       "imageURL": "https://randomuser.me/api/portraits/women/13.jpg"
     },
     {
-      "id": "14",
+      "id": 14,
       "postId": 3,
       "name": "Juan Perez",
       "email": "juanperez123@connectlink.com",
@@ -777,7 +759,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/14.jpg"
     },
     {
-      "id": "15",
+      "id": 15,
       "postId": 4,
       "name": "Laura Martinez",
       "email": "lauramartinez123@connectlink.com",
@@ -788,7 +770,7 @@
       "imageURL": "https://randomuser.me/api/portraits/women/15.jpg"
     },
     {
-      "id": "16",
+      "id": 16,
       "postId": 5,
       "name": "Pedro Lopez",
       "email": "pedrolopez123@connectlink.com",
@@ -799,7 +781,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/16.jpg"
     },
     {
-      "id": "17",
+      "id": 17,
       "postId": 6,
       "name": "Maria Gonzalez",
       "email": "mariagonzalez123@connectlink.com",
@@ -810,7 +792,7 @@
       "imageURL": "https://randomuser.me/api/portraits/women/17.jpg"
     },
     {
-      "id": "18",
+      "id": 18,
       "postId": 7,
       "name": "Alan Smith",
       "email": "asmith@connectlink.com",
@@ -821,7 +803,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/18.jpg"
     },
     {
-      "id": "19",
+      "id": 19,
       "postId": 8,
       "name": "Djalma Dioses",
       "email": "djalmadioses123@connectlink.com",
@@ -832,7 +814,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/19.jpg"
     },
     {
-      "id": "20",
+      "id": 20,
       "postId": 9,
       "name": "Arian Rodriguez",
       "email": "arianrodriguez123@connectlink.com",
@@ -843,7 +825,7 @@
       "imageURL": "https://randomuser.me/api/portraits/men/20.jpg"
     },
     {
-      "id": "21",
+      "id": 21,
       "postId": 10,
       "name": "Maria Gonzalez",
       "email": "mariagonzalez123@connectlink.com",
@@ -904,34 +886,81 @@
       "status": "paid"
     }
   ],
-  "eventsCalendar": [
+  "eventsCalendar": [],
+  "days": [
     {
-      "id": "1",
-      "userId": "user1",
-      "specialistId": "specialist1",
-      "description": "description1",
-      "date": "2024-04-30"
+      "id": 1,
+      "day": "Lunes"
     },
     {
-      "id": "2",
-      "userId": "user2",
-      "specialistId": "specialist2",
-      "description": "description2",
-      "date": "2024-05-01"
+      "id": 2,
+      "day": "Martes"
     },
     {
-      "id": "3",
-      "userId": "user3",
-      "specialistId": "specialist3",
-      "description": "description3",
-      "date": "2024-05-02"
+      "id": 3,
+      "day": "Miércoles"
     },
     {
-      "id": "4",
-      "userId": "user4",
-      "specialistId": "specialist4",
-      "description": "description4",
-      "date": "2024-05-03"
+      "id": 4,
+      "day": "Jueves"
+    },
+    {
+      "id": 5,
+      "day": "Viernes"
+    }
+  ],
+  "hours": [
+    {
+      "id": 1,
+      "time": "9:00 am - 10:00 am"
+    },
+    {
+      "id": 2,
+      "time": "10:00 am - 11:00 am"
+    },
+    {
+      "id": 3,
+      "time": "11:00 am - 12:00 pm"
+    },
+    {
+      "id": 4,
+      "time": "12:00 pm - 1:00 pm"
+    },
+    {
+      "id": 5,
+      "time": "1:00 pm - 2:00 pm"
+    },
+    {
+      "id": 6,
+      "time": "2:00 pm - 3:00 pm"
+    },
+    {
+      "id": 7,
+      "time": "3:00 pm - 4:00 pm"
+    },
+    {
+      "id": 8,
+      "time": "4:00 pm - 5:00 pm"
+    },
+    {
+      "id": 9,
+      "time": "5:00 pm - 6:00 pm"
+    },
+    {
+      "id": 10,
+      "time": "6:00 pm - 7:00 pm"
+    },
+    {
+      "id": 11,
+      "time": "7:00 pm - 8:00 pm"
+    },
+    {
+      "id": 12,
+      "time": "8:00 pm - 9:00 pm"
+    },
+    {
+      "id": 13,
+      "time": "9:00 pm - 10:00 pm"
     }
   ]
 }

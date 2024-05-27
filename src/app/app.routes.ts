@@ -11,6 +11,7 @@ import {CalendarComponent} from "./pages/calendar/calendar.component";
 import {LoginComponent} from "./pages/login/login.component";
 import {MainLayoutComponent} from "./pages/main-layout/main-layout.component";
 import {RegisterComponent} from "./pages/register/register.component";
+import { AppoimentComponent } from './pages/appoiment/appoiment.component';
 
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -29,6 +30,7 @@ export const routes: Routes = [
       {path: "payment", component: PaymentComponent},
       {path: "analytics", component: AnalyticsComponent},
       {path: "calendar", component: CalendarComponent},
+      {path: "appoiment", component: AppoimentComponent},
     ]
   }
 ];
