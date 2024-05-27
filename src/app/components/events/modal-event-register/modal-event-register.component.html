@@ -1,0 +1,62 @@
+<section *ngIf="showPopup" class="popup">
+  <div class="popup-content p-[30px] md:p-[70px]">
+    <h2 class="pb-[30px]">Event register:</h2>
+    <form (submit)="onSubmit()" #specialistForm="ngForm" class="flex flex-col gap-1">
+      <div class="flex gap-[20px] items-center">
+        <p class="pb-2">Event name</p>
+        <mat-form-field class="w-full max-w-[70%]">
+          <input class="border border-black" matInput placeholder="Spiritual Healing Event" name="name" required
+                 [(ngModel)]="eventData.firstName"/>
+        </mat-form-field>
+      </div>
+
+      <div class="flex gap-[20px] items-center">
+        <p class="pb-2">Platform</p>
+        <mat-form-field class="w-full max-w-[70%]">
+          <mat-select placeholder="Google Meet" name="platform" [(ngModel)]="selectedOptionForm">
+            <mat-option *ngFor="let platform of platforms" [value]="platform">
+              {{ platform }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="flex gap-[20px] items-center">
+        <p class="pb-2">Schedule</p>
+        <mat-form-field class="w-full max-w-[70%]">
+          <mat-select placeholder="Schedule of event" name="schedule" [(ngModel)]="selectedOptionForm">
+            <mat-option *ngFor="let schedule of schedules" [value]="schedule">
+              {{ schedule }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="flex gap-[20px] items-center">
+        <p class="pb-2">Contact</p>
+        <mat-form-field class="w-full max-w-[70%]">
+          <input matInput placeholder="john.smith@healtforall.com" name="etiquets" required
+                 [(ngModel)]="eventData.etiquets"/>
+        </mat-form-field>
+      </div>
+
+      <div class="flex gap-[20px] items-starts">
+        <p class="pt-3">Description</p>
+        <mat-form-field class="w-full max-w-[70%] min-h-44">
+          <input matInput placeholder="Any description" name="phone" required [(ngModel)]="eventData.phone"/>
+        </mat-form-field>
+      </div>
+
+      <div class="flex gap-[20px] items-center justify-end mt-[20px]">
+        <button mat-raised-button
+                class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase ">
+          Reserve
+        </button>
+        <button mat-raised-button
+                class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase"
+                (click)="closeModal.emit()">Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

@@ -22,8 +22,9 @@
         <mat-icon
           style="font-size: 1.7rem"
           class="self-end cursor-pointer mt-0.5 font-medium w-0 h-0 mb-1.5 hover:scale-110 transition-all duration-300 ease-out"
-          fontIcon="launch"></mat-icon>
+          fontIcon="launch" (click)="showRegisterEvent()"></mat-icon>
       </div>
     </div>
   </article>
+  <app-modal-event-register [showPopup]="showPopUp" (closeModal)="closeModal()"></app-modal-event-register>
 </div>
