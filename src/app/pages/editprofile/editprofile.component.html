@@ -1,0 +1,110 @@
+<div class="popup">
+  <h2 class="pb-[10px]">Edit Profile:</h2>
+  <div class="popup-content p-[30px] md:p-[50px]">
+    <form  (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <div class="flex gap-[20px] items-center">
+        <p>Name</p>
+        <mat-form-field class="w-full max-w-[70%]">
+          <input
+            class="border border-black"
+            matInput
+            placeholder="Name of User"
+            name="firstName"
+            required
+            [(ngModel)]="userData.firstName"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="flex gap-[20px] items-center">
+        <p>LastName</p>
+        <mat-form-field class="w-full max-w-[70%]">
+          <input
+            class="border border-black"
+            matInput
+            placeholder="LastName of User"
+            name="lastName"
+            required
+            [(ngModel)]="userData.lastName"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="flex gap-[20px] items-center">
+        <p>Biography</p>
+        <mat-form-field class="w-full max-w-[70%]">
+          <input
+            class="border border-black"
+            matInput
+            placeholder="Biography of User"
+            name="biography"
+            required
+            [(ngModel)]="userData.biography"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="flex gap-[20px] items-center">
+        <p>UserName</p>
+        <mat-form-field class="w-full max-w-[70%]">
+          <input
+            class="border border-black"
+            matInput
+            placeholder="Username of User"
+            name="username"
+            required
+            [(ngModel)]="userData.username"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="flex gap-[20px] items-center">
+        <p>Email</p>
+        <mat-form-field class="w-full max-w-[70%]">
+          <input
+            class="border border-black"
+            matInput
+            placeholder="Email of Specialist"
+            name="email"
+            type="email"
+            required
+            [(ngModel)]="userData.email"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="flex gap-[20px] items-center">
+        <p>Password</p>
+        <mat-form-field class="w-full max-w-[70%]">
+          <input
+            class="border border-black"
+            matInput
+            placeholder="Password of User"
+            name="password"
+            required
+            [(ngModel)]="userData.password"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="flex gap-[20px] items-center justify-end mt-[20px]">
+        <button
+          mat-raised-button
+          class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase"
+          type="submit"
+        >
+          Edit
+        </button>
+        <button
+          mat-raised-button
+          class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase"
+          type="button"
+          (click)="onCancel()"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
