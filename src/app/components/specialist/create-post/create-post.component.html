@@ -1,20 +1,42 @@
-<form class="contenedorFormulario">
-    <div class="filas">
-        <div class="lineas">
-            <p class="subtittles">Tittle</p>
-            <input class="textbox" type="text">
+ <section *ngIf="showPopup" class="popup">
+        <div class="popup-content p-[30px] md:p-[70px]">
+            @if(!isCreatedPost) {
+                <h2 class="pb-[30px]">Create Post:</h2>
+                <form (submit)="onSubmit()" #specialistForm="ngForm">
+                    <div class="flex gap-[20px] items-center">
+                        <p>Title</p>
+                        <mat-form-field class="w-full max-w-[70%]">
+                            <input class="border border-black" matInput placeholder="Name of Title" name="name" required  [(ngModel)]="specialistData.firstName"/>
+                        </mat-form-field>
+                    </div>
+        
+                    <div class="flex gap-[20px] items-center">
+                        <p>Etiquets</p> 
+                        <mat-form-field class="w-full max-w-[70%]">
+                            <input matInput placeholder="Etiquets" name="email" required  [(ngModel)]="specialistData.email"/>
+                        </mat-form-field>
+                    </div>
+        
+                    <div class="flex gap-[20px] items-center">
+                        <p>Description</p>
+                        <mat-form-field class="w-full max-w-[70%]">
+                            <input matInput placeholder="Info" name="etiquets" required  [(ngModel)]="specialistData.etiquets"/>
+                        </mat-form-field>
+                    </div>
+        
+                    <div class="flex gap-[20px] items-center justify-end mt-[20px]">
+                        <button mat-raised-button class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase ">PUBLISH</button>
+                        <button mat-raised-button class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase " (click)="clickedPopup.emit()">EDIT VISIBILITY</button>
+                    </div>
+                </form>
+            } @else {
+                <div class="flex flex-col gap-[20px] items-center">
+                    <img src="../../../assets/check.svg" alt="Check Icon" />
+                    <h2>Your post was successfully registered!</h2>
+                    <div class="flex gap-[20px] items-center justify-center">
+                        <button class="flex items-center bg-[#C3E8D6] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase" mat-raised-button (click)="goToPage('/')" >Go to Home</button>
+                    </div>
+                </div>
+            }
         </div>
-        <div class="lineas">
-            <p class="subtittles">Etiquets</p>
-            <input class="textbox" type="text">
-        </div>
-        <div class="lineas">
-            <p class="subtittles">Description</p>
-            <input class="textboxbig" type="text">
-        </div>
-    </div>
-</form>
-<div class="BoxBootun">
-    <button class="Button1">PUBLISH</button>
-    <button class="Button2">EDIT VISIBILITY</button>
-</div>
+    </section>
