@@ -1,74 +1,30 @@
-div{
-    margin: 1%;
-}
-
-.bigBox {
-    width: auto;
-    height: auto;
-    margin: 10px 80px;
-    background: rgb(245, 247, 248);
-    border-width: 1px;
-    border-color: rgb(87, 86, 86);
-    border-style: solid;
-}
-
-.contenedorFormulario{
-    height: 250px;
-    display: flex;
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    z-index: 999;
     justify-content: center;
     align-items: center;
-}
-
-.filas{
-    margin:5px 100px;
-    width: 700px;
-    height: 200px;
-}
-
-.lineas{
-    height: 32px;
-    width: 600px;
-    float: left;
-}
-
-.subtittles{
-    width: 80px;
-    float: left;
-    display: flex;
-    justify-content:end;
-}
-
-.textbox{
-    width: 400px;
-    height: 25px;
-    float: right;
-}
-
-.textboxbig{
-    width: 400px;
-    height: 100px;
-    float: right;
-}
-
-.BoxBootun{
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Button1{
-    background:rgb(193, 236, 187);
-    border-width: 1px;
-    border-radius: 100px;
-    padding: 10px 30px;
-    margin:20px;
-}
-
-.Button2{
-    background:rgb(189, 189, 240);
-    border-width: 1px;
-    border-radius: 100px;
-    padding: 10px 30px;
-    margin:20px;
+    .popup-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 900px;
+        width: 100%;
+        height: fit-content;
+        margin: auto;
+        background-color: #FBFBFB;
+        border: 1px solid #5C5C5C;
+        border-radius: 10px;
+        form > div > p {
+            width: 120px;
+            text-align: end;
+            font-weight: 500;
+        }
+    }
 }
