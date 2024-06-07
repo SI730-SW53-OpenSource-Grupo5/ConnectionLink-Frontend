@@ -6,6 +6,7 @@ import {MatOption} from "@angular/material/autocomplete";
 import {MatSelect} from "@angular/material/select";
 import {NgForOf, NgIf} from "@angular/common";
 import {EventService} from "../../../services/event.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-modal-event-register',
@@ -37,10 +38,13 @@ export class ModalEventRegisterComponent {
   };
   selectedOptionForm!: string;
 
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService, private router: Router) { }
 
   onSubmit() {
     console.log('oli');
   }
 
+  goToPage(url: string) {
+    this.router.navigateByUrl(url)
+  }
 }
