@@ -11,7 +11,7 @@
     </div>
   </div>
   <span class="spacer"></span>
-  <div class="flex flex-row gap-3">
+  <div class="flex flex-row gap-4 cursor-pointer" (click)="goToPage('profile')">
     <div mat-card-avatar class="example-header-image"></div>
     <div class="flex flex-col justify-center gap-1.5">
       <p class="text-base font-medium tracking-wide">{{ user?.firstName + ' ' + user?.lastName }}</p>

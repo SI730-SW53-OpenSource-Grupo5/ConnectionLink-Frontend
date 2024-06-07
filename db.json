@@ -367,13 +367,6 @@
   ],
   "calendars": [
     {
-      "day": "Martes",
-      "hour": "10:00 am - 11:00 am",
-      "username": "smithandrew",
-      "available": true,
-      "id": -1
-    },
-    {
       "day": "Jueves",
       "hour": "8:00 pm - 9:00 pm",
       "username": "smithandrew",
@@ -393,6 +386,20 @@
       "username": "smithandrew",
       "available": true,
       "id": 1
+    },
+    {
+      "day": "Martes",
+      "hour": "10:00 am - 11:00 am",
+      "username": "smithandrew",
+      "available": true,
+      "id": 2
+    },
+    {
+      "day": "Jueves",
+      "hour": "10:00 am - 11:00 am",
+      "username": "smithandrew",
+      "available": true,
+      "id": 3
     }
   ],
   "appointments": [
@@ -457,7 +464,86 @@
       "id": "ABM2jP-"
     }
   ],
-  "reviews": [],
+  "reviews": [
+    {
+      "id": 1,
+      "user": {
+        "id": "12345",
+        "firstName": "John",
+        "lastName": "Doe",
+        "profileImg": "https://example.com/profile-img.jpg",
+        "email": "john.doe@example.com",
+        "password": "securepassword",
+        "phone": "+1234567890",
+        "role": "patient",
+        "isSubscribed": true
+      },
+      "specialist": {
+        "id": "1",
+        "firstName": "Smith Andrew",
+        "lastName": "Kimbell",
+        "age": "32",
+        "studies": "Peruvian University of Applied Sciences",
+        "ocupation": "Psychologist at HelpForAll",
+        "biography": "Dedicated psychologist, employs a holistic and empathetic approach to help individuals overcome traumas and foster emotional well-being. He also advocates for mental health in his community through workshops and educational talks.",
+        "cv": "https://google.com",
+        "urlImage": "https://d1ih8jugeo2m5m.cloudfront.net/2023/06/como-emprender-si-eres-psicologo.jpg",
+        "username": "smithandrew",
+        "email": "smithak@gmail.com",
+        "password": "pass",
+        "etiquets": "Anxiety and stress",
+        "phone": "935-873-489",
+        "posts": [
+          {
+            "id": "1",
+            "title": "The Importance of Self-Care for Mental Well-being",
+            "description": "Explore strategies to prioritize self-care and enhance your mental health.",
+            "datePublished": "2024-04-01"
+          }
+        ]
+      },
+      "description": "xdxd"
+    },
+    {
+      "id": 2,
+      "user": {
+        "id": "12345",
+        "firstName": "John",
+        "lastName": "Doe",
+        "profileImg": "https://example.com/profile-img.jpg",
+        "email": "john.doe@example.com",
+        "password": "securepassword",
+        "phone": "+1234567890",
+        "role": "patient",
+        "isSubscribed": true
+      },
+      "specialist": {
+        "id": "1",
+        "firstName": "Smith Andrew",
+        "lastName": "Kimbell",
+        "age": "32",
+        "studies": "Peruvian University of Applied Sciences",
+        "ocupation": "Psychologist at HelpForAll",
+        "biography": "Dedicated psychologist, employs a holistic and empathetic approach to help individuals overcome traumas and foster emotional well-being. He also advocates for mental health in his community through workshops and educational talks.",
+        "cv": "https://google.com",
+        "urlImage": "https://d1ih8jugeo2m5m.cloudfront.net/2023/06/como-emprender-si-eres-psicologo.jpg",
+        "username": "smithandrew",
+        "email": "smithak@gmail.com",
+        "password": "pass",
+        "etiquets": "Anxiety and stress",
+        "phone": "935-873-489",
+        "posts": [
+          {
+            "id": "1",
+            "title": "The Importance of Self-Care for Mental Well-being",
+            "description": "Explore strategies to prioritize self-care and enhance your mental health.",
+            "datePublished": "2024-04-01"
+          }
+        ]
+      },
+      "description": "Hola mi nombre es caserita osiosi"
+    }
+  ],
   "inbox": [
     {
       "id": "1",

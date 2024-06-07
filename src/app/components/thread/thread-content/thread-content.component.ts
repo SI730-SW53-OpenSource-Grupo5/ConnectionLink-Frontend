@@ -5,15 +5,17 @@ import CommentEntity from "../../../models/comment.entity";
 import {ThreadService} from "../../../services/thread.service";
 import {ActivatedRoute} from "@angular/router";
 import {NgForOf} from "@angular/common";
+import {NewCommentModalComponent} from "../new-comment-modal/new-comment-modal.component";
 
 @Component({
   selector: 'app-thread-content',
   standalone: true,
-    imports: [
-        CommentListComponent,
-        MatIcon,
-        NgForOf
-    ],
+  imports: [
+    CommentListComponent,
+    MatIcon,
+    NgForOf,
+    NewCommentModalComponent
+  ],
   templateUrl: './thread-content.component.html',
   styleUrl: './thread-content.component.scss'
 })
@@ -21,6 +23,7 @@ export class ThreadContentComponent implements OnInit{
 
   post: any = {};
   comments: Array<CommentEntity> = [];
+  showPopup: boolean = false;
 
   constructor(private threadService: ThreadService, private  route: ActivatedRoute) {}
 
@@ -68,6 +71,14 @@ export class ThreadContentComponent implements OnInit{
         });
         console.log(this.comments);
       });
+  }
+
+  showNewComment() {
+    this.showPopup = true;
+  }
+
+  closeModal(): void {
+    this.showPopup = false;
   }
 
 }

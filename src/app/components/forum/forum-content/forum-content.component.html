@@ -4,6 +4,7 @@
     <p>Join and participate in various threads created by different users</p>
     <div class="flex flex-row flex-wrap gap-4 pb-3">
       <button
+        (click)="showNewPost()"
         class="flex items-center bg-indigo-900 text-slate-50 gap-1 px-4 py-1.5 rounded-2xl">
         Create new post
         <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="add_circle_outline"></mat-icon>
@@ -32,5 +33,6 @@
       </mat-form-field>
     </div>
     <app-post-list class="posts-container" [posts]="posts"></app-post-list>
+    <app-new-post-modal [showPopup]="showPopup" (closeModal)="closeModal()" ></app-new-post-modal>
   </div>
 </section>

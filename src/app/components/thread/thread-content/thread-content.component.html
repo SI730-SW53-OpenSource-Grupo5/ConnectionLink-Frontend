@@ -42,6 +42,17 @@
       <p class="font-medium">Publication: <span class="font-normal">{{ post.publication_date }}</span></p>
     </div>
   </article>
-  <h4 class="pt-4 pb-3.5 font-semibold">Comments:</h4>
+  <div class="flex flex-row justify-between my-3 flex-wrap gap-8">
+    <h4 class="pt-4 pb-3.5 font-semibold">Comments:</h4>
+    <button
+      (click)="showNewComment()"
+      class="flex items-center border-[1px] border-slate-800 bg-slate-100 text-slate-950
+              gap-1 px-4 self-center py-1.5 rounded-2xl tracking-wider hover:bg-slate-200 transition-all duration-300 ease"
+    >
+      New comment
+      <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="comment"></mat-icon>
+    </button>
+  </div>
+  <app-new-comment-modal [showPopup]="showPopup" (closeModal)="closeModal()"></app-new-comment-modal>
   <app-comment-list [comments]="comments"></app-comment-list>
 </section>

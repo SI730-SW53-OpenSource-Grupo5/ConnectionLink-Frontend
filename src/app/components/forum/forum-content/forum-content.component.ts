@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {MatFormField, MatFormFieldModule, MatLabel} from "@angular/material/form-field";
+import {Component, OnInit} from '@angular/core';
+import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
 import {MatIcon} from "@angular/material/icon";
 import {MatOption} from "@angular/material/autocomplete";
 import {MatSelect} from "@angular/material/select";
@@ -11,6 +11,7 @@ import {MatCardAvatar} from "@angular/material/card";
 import {NgIf} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
+import {NewPostModalComponent} from "../new-post-modal/new-post-modal.component";
 
 interface Filter {
   value: string;
@@ -37,12 +38,13 @@ interface Topic {
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
-    PostListComponent
+    PostListComponent,
+    NewPostModalComponent
   ],
   templateUrl: './forum-content.component.html',
   styleUrl: './forum-content.component.scss'
 })
-export class ForumContentComponent {
+export class ForumContentComponent implements OnInit {
 
   selectedFilter: string | null = null;
   selectedTopic: string | null = null;
@@ -62,7 +64,7 @@ export class ForumContentComponent {
   posts: Array<PostEntity> = [];
   // guardamos una copia del arreglo inicial
   initialPosts: Array<PostEntity> = []
-  showNewPostModal: boolean = false;
+  showPopup: boolean = false;
 
   constructor(private postService: PostService) {
   }
@@ -94,8 +96,7 @@ export class ForumContentComponent {
   }
 
   filterByTopics(word: string) {
-    const filteredPosts = this.posts.filter(post => post.subject.toLowerCase().includes(word.toLowerCase()));
-    this.posts = filteredPosts;
+    this.posts = this.posts.filter(post => post.subject.toLowerCase().includes(word.toLowerCase()));
   }
 
   refreshPosts() {
@@ -123,6 +124,14 @@ export class ForumContentComponent {
         console.log('Invalid filter');
     }
 
+  }
+
+  showNewPost() {
+    this.showPopup = true;
+  }
+
+  closeModal(): void {
+    this.showPopup = false;
   }
 
 }

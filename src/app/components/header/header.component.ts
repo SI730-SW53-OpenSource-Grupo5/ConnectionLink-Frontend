@@ -5,6 +5,7 @@ import {MatCardAvatar, MatCardHeader, MatCardImage} from "@angular/material/card
 import {User} from "../../models/user";
 import {AuthService} from "../../shared/auth/auth.service";
 import {startWith} from "rxjs";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -25,7 +26,7 @@ export class HeaderComponent implements OnInit {
 
   @Output() toggleSidebar = new EventEmitter<void>();
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private router: Router) {
   }
 
   ngOnInit() {
@@ -41,6 +42,11 @@ export class HeaderComponent implements OnInit {
   private getUserFromLocalStorage(): User | null {
     const userStorage = localStorage.getItem('user');
     return userStorage ? JSON.parse(userStorage) : null;
+  }
+
+
+  goToPage(url: string) {
+    this.router.navigateByUrl(url)
   }
 
 }
