@@ -47,23 +47,19 @@ export class LoginComponent implements OnInit {
     console.log(this.email);
     console.log(this.password);
 
-    for (let i = 0; i < this.users.length; i++) {
-
-      if (this.users[i].email === this.email && this.users[i].password === this.password) {
-        this.isRegistered = true;
-        // setamos el estado user en AuthService
-        this.authService.setUser(this.users[i]);
-        this.navigateToHome();
-        break;
+    this.authService.loginUser(this.email, this.password).subscribe(
+      user => {
+        if (user) {
+          this.authService.setUser(user);
+          this.navigateToHome();
+        } else {
+          this.dialog.open(ErrorCredentialsModalComponent);
+        }
+      },
+      error => {
+        this.dialog.open(ErrorCredentialsModalComponent);
       }
-
-    }
-
-    if (!this.isRegistered) {
-      // mostramos un modal que es un componente cuando las credenciales ingresadas
-      // no sean las correctas
-      this.dialog.open(ErrorCredentialsModalComponent);
-    }
+    );
 
   }
 

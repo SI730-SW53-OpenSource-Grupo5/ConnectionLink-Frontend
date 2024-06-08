@@ -9,7 +9,7 @@ import {environment} from "../enviroments/environments";
 })
 export class UserService {
 
-  base_Url=`${environment.baseUrl}/users`;
+  base_Url=`${environment.realApiUrl}/users`;
   constructor(private http: HttpClient) {}
 
   getUser(username: string): Observable<User> {
