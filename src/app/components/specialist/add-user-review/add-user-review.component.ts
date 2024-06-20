@@ -1,12 +1,15 @@
-import { Component, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, Inject, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { NgForm, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ReviewService } from '../../../services/review.service';
 import { Review } from '../../../models/review';
+import { User } from '../../../models/user';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { Specialist } from '../../../models/specialist';
+
 @Component({
   selector: 'app-add-user-review',
   standalone: true,
@@ -16,31 +19,59 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
-    CommonModule],
+    CommonModule
+  ],
   templateUrl: './add-user-review.component.html',
-  styleUrl: './add-user-review.component.scss'
+  styleUrls: ['./add-user-review.component.scss']
 })
-export class AddUserReviewComponent {
+export class AddUserReviewComponent implements OnInit {
+  @Input() specialistData!: Specialist;
+  @Input() showPopup!: boolean;
+  @Input() currentUser!: User;
+  @Output() closePopup = new EventEmitter<Review | null>();
+
   review: Review = {
     id: null,
-    user: this.data.user,
-    specialist: this.data.specialist,
+    user: { id: '', firstName: '', lastName: '', profileImg: '', email: '', password: '', phone: '', role: '', isSubscribed: false },
+    specialist: { firstName: '', lastName: '', age: 0, studies: '', ocupation: '', biography: '', cv: '', urlImage: '', username: '', email: '', password: '', etiquets: '', phone: '' },
     description: ''
   };
 
+  isReviewAdded!: boolean;
+
   constructor(
-    public dialogRef: MatDialogRef<AddUserReviewComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private reviewService: ReviewService
+    private reviewService: ReviewService,
+    private router: Router
   ) {}
 
+  ngOnInit(): void {
+    this.review.user = this.currentUser;
+    this.isReviewAdded = false;
+  }
+
   onCancel(): void {
-    this.dialogRef.close();
+    this.showPopup = false;
+    this.closePopup.emit(null);
   }
 
   onSubmit(): void {
-    this.reviewService.addReview(this.review).subscribe(() => {
-      this.dialogRef.close(this.review);
-    });
+    if (this.review.description) {
+      this.reviewService.addReview(this.review).subscribe(() => {
+        this.isReviewAdded = true;
+        setTimeout(() => {
+          this.showPopup = false;
+          this.closePopup.emit(this.review);
+          this.isReviewAdded = true;
+        }, 3000); // Cerrar el popup después de 3 segundos
+      }, (error) => {
+        console.error('Error adding review', error);
+        this.showPopup = false;
+        this.closePopup.emit(null);
+      });
+    }
+  }
+
+  goToPage(page: string): void {
+    this.router.navigate([page]);
   }
 }

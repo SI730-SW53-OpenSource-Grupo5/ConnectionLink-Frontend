@@ -2,4 +2,6 @@
     <app-information-profile [specialistData]="specialistData" (clickedPopup)="onClickPopup()"></app-information-profile>
     <app-user-reviews [specialistReviewData]="specialistReviewData" (addReview)="openAddReviewModal()"></app-user-reviews>
     <app-make-appointment [specialistData]="specialistData" [specialistCalendarData]="specialistCalendarData" [showPopup]="showPopup" (clickedPopup)="onClickPopup()"></app-make-appointment>
-</div>
+    <app-add-user-review *ngIf="isReviewModalOpen" [showPopup]="isReviewModalOpen" [currentUser]="currentUser" (closePopup)="closeAddReviewModal($event)"></app-add-user-review>
+  </div>
+  

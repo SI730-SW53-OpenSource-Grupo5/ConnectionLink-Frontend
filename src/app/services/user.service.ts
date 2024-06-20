@@ -31,5 +31,7 @@ export class UserService {
 
     return this.http.post<User>(this.base_Url, user);
   }
-
+  getCurrentUser(): Observable<User> {
+    return this.http.get<User>(`${this.base_Url}/current`); 
+  }
 }
