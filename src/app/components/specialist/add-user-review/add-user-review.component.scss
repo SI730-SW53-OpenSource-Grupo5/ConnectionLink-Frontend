@@ -1,17 +1,21 @@
-.form-container {
-    max-width: 4000px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
-  .mat-form-field {
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .popup-content {
+    background-color: #fbfbfb;
+    border: 1px solid #5c5c5c;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 600px;
     width: 100%;
   }
-  
-  button {
-    margin-left: 50px;
-  }
-  
+}

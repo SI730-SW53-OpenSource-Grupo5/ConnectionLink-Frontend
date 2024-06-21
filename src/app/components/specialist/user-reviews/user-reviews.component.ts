@@ -1,5 +1,5 @@
-import { Component, Input,Output,EventEmitter } from '@angular/core';
-import { MatCard, MatCardContent, MatCardHeader, MatCardImage, MatCardModule } from '@angular/material/card';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
 import { Review } from '../../../models/review';
 import { CommonModule } from '@angular/common';
 
@@ -11,12 +11,11 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ],
   templateUrl: './user-reviews.component.html',
-  styleUrl: './user-reviews.component.scss'
+  styleUrls: ['./user-reviews.component.scss']
 })
 export class UserReviewsComponent {
   @Input() specialistReviewData!: Array<Review>;
   @Output() addReview = new EventEmitter<void>();
-
 
   openAddReview() {
     this.addReview.emit();

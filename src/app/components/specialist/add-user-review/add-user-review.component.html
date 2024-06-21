@@ -1,14 +1,40 @@
-<div class="form-container">
-    <h2>Add a Review</h2>
+<section *ngIf="showPopup" class="popup">
+  <div class="popup-content p-[30px] md:p-[70px]">
+    @if(!isReviewAdded) {
+    <h2 class="pb-[30px]">Add a Review:</h2>
     <form (ngSubmit)="onSubmit()" #reviewForm="ngForm">
-      <mat-form-field appearance="fill">
-        <mat-label>Review</mat-label>
-        <textarea matInput [(ngModel)]="review.description" name="description" required></textarea>
-      </mat-form-field>
-      <div class="flex justify-end">
-        <button mat-button type="button" (click)="onCancel()">Cancel</button>
-        <button mat-raised-button color="primary" type="submit" [disabled]="!reviewForm.form.valid">Submit</button>
+
+      <div class="flex gap-[20px] items-center">
+        <p>Specialist Name</p>
+        <mat-form-field class="w-full max-w-[70%]">
+
+          <input class="border border-black" matInput placeholder="Name of Specialist" name="name" required  [(ngModel)]="review.specialist.firstName"/>
+        </mat-form-field>
+      </div>
+      <div class="flex gap-[20px] items-center">
+        <p>Review</p>
+        <mat-form-field class="w-full max-w-[70%]">
+          <textarea matInput placeholder="Write your review here" name="description" required [(ngModel)]="review.description"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="flex gap-[20px] items-center justify-end mt-[20px]">
+        <button mat-raised-button class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase" type="submit">Submit</button>
+        <button mat-raised-button class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase" (click)="onCancel()">Cancel</button>
       </div>
     </form>
+  } @else{
+    <div class="flex flex-col gap-[20px] items-center">
+      <img src="../../../assets/check.svg" alt="Check Icon" />
+        <h2 class="pb-[30px]">Thank you!</h2>
+        <p>Your review has been registered successfully.</p>
+        <div class="flex gap-[20px] items-center justify-center">
+          <button class="flex items-center bg-[#C3E8D6] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase" mat-raised-button (click)="onCancel()">Thanks</button>
+        </div>
+    </div>
+  }
   </div>
   
+</section>
+
+
