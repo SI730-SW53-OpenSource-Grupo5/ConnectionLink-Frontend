@@ -47,6 +47,8 @@ export class AddUserReviewComponent implements OnInit {
   ngOnInit(): void {
     this.review.user = this.currentUser;
     this.isReviewAdded = false;
+    this.review.specialist.firstName =this.specialistData.firstName;
+    console.log(this.review.specialist.firstName); // Verificar inicialización
   }
 
   onCancel(): void {

@@ -7,7 +7,8 @@
       <div class="flex gap-[20px] items-center">
         <p>Specialist Name</p>
         <mat-form-field class="w-full max-w-[70%]">
-          <input matInput placeholder="Name of Specialist" name="specialistName" required [(ngModel)]="review.specialist.firstName" />
+
+          <input class="border border-black" matInput placeholder="Name of Specialist" name="name" required  [(ngModel)]="review.specialist.firstName"/>
         </mat-form-field>
       </div>
       <div class="flex gap-[20px] items-center">
