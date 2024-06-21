@@ -48,7 +48,6 @@ export class ThreadContentComponent implements OnInit{
         this.post = post;
       }
     )
-    console.log(this.post);
   }
 
   // obtenemos los commentarios en base al idPost

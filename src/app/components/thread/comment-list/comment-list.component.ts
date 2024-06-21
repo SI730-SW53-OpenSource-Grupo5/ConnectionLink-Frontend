@@ -19,8 +19,11 @@ export class CommentListComponent {
 
   @Input() comments: Array<CommentEntity> = [];
   constructor(private router: Router) {}
-  
+
   goToPage(url: string) {
     this.router.navigateByUrl(url)
   }
+
+
+
 }

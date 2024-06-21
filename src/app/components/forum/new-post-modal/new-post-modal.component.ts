@@ -23,8 +23,8 @@ import {NgForOf, NgIf} from "@angular/common";
 })
 export class NewPostModalComponent {
 
-  @Input() showPopup!: boolean;
-  @Output() closeModal = new EventEmitter<void>();
+    @Input() showPopup!: boolean;
+    @Output() closeModal = new EventEmitter<void>();
 
   postData = {
     title: '',

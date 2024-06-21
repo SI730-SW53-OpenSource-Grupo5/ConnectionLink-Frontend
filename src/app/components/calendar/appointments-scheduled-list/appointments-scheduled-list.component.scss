@@ -1,0 +1,20 @@
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+}
+
+.appointments-scheduled {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en filas */
+  gap: 25px;
+  justify-content: flex-start;
+}
+
+.appointments-scheduled > article {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  flex-basis: 550px;
+}
+
+.title-event {
+  letter-spacing: .8px;
+  font-weight: 400 !important;
+}

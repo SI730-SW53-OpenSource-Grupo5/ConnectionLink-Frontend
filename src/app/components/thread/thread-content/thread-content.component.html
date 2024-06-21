@@ -53,6 +53,6 @@
       <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="comment"></mat-icon>
     </button>
   </div>
-  <app-new-comment-modal [showPopup]="showPopup" (closeModal)="closeModal()"></app-new-comment-modal>
+  <app-new-comment-modal [post]="post"  [showPopup]="showPopup" (closeModal)="closeModal()"></app-new-comment-modal>
   <app-comment-list [comments]="comments"></app-comment-list>
 </section>

@@ -28,4 +28,10 @@ export class ThreadService {
   getCommentsByPostId(postId: number): Observable<CommentEntity[]> {
     return this.http.get<CommentEntity[]>(`${this.baseURL}/comments?postId=${postId}`);
   }
+
+  // creamos un comentario
+  createComment(item: any): Observable<any> {
+    return this.http.post<any>(`${this.baseURL}/comments`, item);
+  }
+
 }

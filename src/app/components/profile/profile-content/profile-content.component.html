@@ -8,14 +8,23 @@
       <p><strong>Phone:</strong> {{ user.phone }}</p>
       <p><strong>Role:</strong> {{ user.role }}</p>
       <p><strong>Age:</strong> 20 years</p>
-      <p style="line-height: 1.725 !important;"><strong>Bio:</strong> {{ user.firstName + user.lastName }} es un apasionado desarrollador de software con más de 10 años de experiencia
+      <p style="line-height: 1.725 !important;"><strong>Bio:</strong> {{ user.firstName + user.lastName }} es un
+        apasionado desarrollador de software con más de 10 años de experiencia
         en la industria tecnológica. Nacido y criado en Madrid, siempre mostró un gran interés por la tecnología desde
         muy joven. Su primer encuentro con la programación fue a los 12 años, cuando su tío le regaló un viejo ordenador
         y un libro de programación en BASIC.</p>
     </div>
-    <div class="w-full flex flex-col gap-5 items-center">
+    <div class="w-full flex flex-col gap-6 items-center">
       <img class="max-w-[400px] w-full flex mx-auto min-h-[400px] object-cover rounded-xl" src="{{user.profileImg}}"
            alt="{{ user.firstName + ' ' + user.lastName + ' Image Profile' }}"/>
+      <button
+        (click)="showEditProfileModal()"
+        class="flex items-center bg-[#EFF0FF] text-black border border-black gap-1
+        px-[15px] py-[12.5px] rounded-2xl hover:bg-gray-300 transition-all duration-300 ease-in-out">
+        <span class="uppercase mr-1">Edit Profile</span>
+        <mat-icon aria-hidden="false" aria-label="Edit Profile Icon">edit</mat-icon>
+      </button>
     </div>
   </div>
+  <app-edit-profile-modal [showPopup]="showPopup" (closeModal)="closeModal()"></app-edit-profile-modal>
 </section>
