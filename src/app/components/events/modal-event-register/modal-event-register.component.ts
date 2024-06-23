@@ -1,50 +1,64 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {FormsModule} from "@angular/forms";
-import {MatFormField} from "@angular/material/form-field";
-import {MatInput} from "@angular/material/input";
-import {MatOption} from "@angular/material/autocomplete";
-import {MatSelect} from "@angular/material/select";
-import {NgForOf, NgIf} from "@angular/common";
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { MatInputModule } from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { FormsModule, NgForm } from '@angular/forms';
+import { User } from '../../../models/user';
+import EventEntity from "../../../models/event.entity";
 import {EventService} from "../../../services/event.service";
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-modal-event-register',
   standalone: true,
   imports: [
-    FormsModule,
-    MatFormField,
-    MatInput,
-    MatOption,
-    MatSelect,
-    NgIf,
-    NgForOf
+    MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    CommonModule,
+    FormsModule
   ],
   templateUrl: './modal-event-register.component.html',
   styleUrl: './modal-event-register.component.scss'
 })
-export class ModalEventRegisterComponent {
-
+export class ModalEventRegisterComponent implements OnInit {
   @Input() showPopup!: boolean;
   @Output() closeModal = new EventEmitter<void>();
-  schedules: string[] = ['Horario 1', 'Horario 2'];
-  platforms: string[] = ['Microsoft Team', 'Videollamada Zoom'];
+  eventData!: EventEntity;
 
-  eventData = {
-    firstName: '',
-    email: '',
-    etiquets: '',
-    phone: ''
-  };
+  @Output() clickedPopup = new EventEmitter<void>();
+
+  @ViewChild('eventForm') eventForm!: NgForm;
+
+  specialistFormData!: User;
+  isCreatedEvent!: boolean;
   selectedOptionForm!: string;
 
-  constructor(private eventService: EventService, private router: Router) { }
+  constructor(private router: Router, private eventService: EventService) {
+    this.eventData= new EventEntity('','','','','','',0,'');
+  }
+
+  ngOnInit() {
+    this.selectedOptionForm = "";
+    this.isCreatedEvent = false;
+  }
+
+  MakeEvent() {
+    this.isCreatedEvent = true;
+  }
+
+  goToPage(page: string): void {
+    this.router.navigate([page]);
+  }
 
   onSubmit() {
-    console.log('oli');
+      this.eventService.createEvent(this.eventForm.value).subscribe(
+        (response: any) => {
+          this.MakeEvent()
+        }
+      )
   }
 
-  goToPage(url: string) {
-    this.router.navigateByUrl(url)
-  }
+
 }

@@ -13,6 +13,7 @@ import {MainLayoutComponent} from "./pages/main-layout/main-layout.component";
 import {RegisterComponent} from "./pages/register/register.component";
 import { AppoimentComponent } from './pages/appoiment/appoiment.component';
 import { ProfileComponent } from "./pages/profile/profile.component";
+import { ModalEventRegisterComponent } from "./components/events/modal-event-register/modal-event-register.component";
 
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -32,7 +33,7 @@ export const routes: Routes = [
       {path: "analytics", component: AnalyticsComponent},
       {path: "calendar", component: CalendarComponent},
       {path: "appoiment", component: AppoimentComponent},
-      {path: "profile", component: ProfileComponent}
+      {path: "profile", component: ProfileComponent},
     ]
   }
 ];

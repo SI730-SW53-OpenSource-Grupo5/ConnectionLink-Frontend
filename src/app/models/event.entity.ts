@@ -8,8 +8,6 @@ class EventEntity {
   category: number;
   specialist: any;
 
-  specialistt: any; // objto que contiene la informacion del especialista asociado al evento
-
   constructor(id: string, title: string, description: string, profile_image_url: string, banner_image_url: string, day: string, categoryId: number, specialist_id: string) {
     this.id = id;
     this.title = title;

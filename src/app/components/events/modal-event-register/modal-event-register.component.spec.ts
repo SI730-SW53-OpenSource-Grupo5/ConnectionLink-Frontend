@@ -1,18 +1,19 @@
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalEventRegisterComponent } from './modal-event-register.component';
+import { CreateNewEventComponent } from './modal-event-register.component';
 
-describe('ModalEventRegisterComponent', () => {
-  let component: ModalEventRegisterComponent;
-  let fixture: ComponentFixture<ModalEventRegisterComponent>;
+describe('ModalEventregister', () => {
+  let component: CreateNewEventComponent;
+  let fixture: ComponentFixture<CreateNewEventComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ModalEventRegisterComponent]
+      imports: [CreateNewEventComponent]
     })
-    .compileComponents();
-    
-    fixture = TestBed.createComponent(ModalEventRegisterComponent);
+      .compileComponents();
+
+    fixture = TestBed.createComponent(CreateNewEventComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

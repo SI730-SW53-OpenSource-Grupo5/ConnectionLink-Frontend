@@ -28,4 +28,8 @@ export class EventService {
     return this.http.get<any>(`${this.baseURL + this.eventsEndpoint}/specialist/username/${eventId}`);
   }
 
+  createEvent(event: EventEntity): Observable<EventEntity> {
+    return this.http.post<EventEntity>(this.eventsPath(), event);
+  }
+
 }
