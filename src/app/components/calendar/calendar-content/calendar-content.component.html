@@ -1,5 +1,5 @@
 <section class="calendar h-full relative">
-  <h2>Notifications:</h2>
+  <h2>Schedule:</h2>
   <p class="pt-4 pb-6">Here you can see notifications about your registered appointments and events.</p>
   <div class="flex mb-5">
     <mat-form-field class="-mb-2" style="width: 300px">
@@ -12,9 +12,9 @@
     </mat-form-field>
   </div>
   @if (selectedFilter === 'appointments') {
-    <app-appointments-scheduled-list></app-appointments-scheduled-list>
+    <app-appointments-scheduled-list [appointments]="appointments" ></app-appointments-scheduled-list>
   }
   @if (selectedFilter === 'events') {
-    <app-events-registered-list></app-events-registered-list>
+    <app-events-registered-list [events]="events" ></app-events-registered-list>
   }
 </section>

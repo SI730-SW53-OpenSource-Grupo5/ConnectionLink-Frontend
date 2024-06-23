@@ -19,8 +19,8 @@ export class UserService {
     return this.http.get<User>(`${this.base_Url}/${id}`);
   }
 
-  getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(this.base_Url);
+  getUsers(): Observable<any[]> {
+    return this.http.get<any[]>(this.base_Url);
   }
 
   createNewUser(user: any): Observable<User> {
@@ -32,6 +32,11 @@ export class UserService {
     return this.http.post<User>(this.base_Url, user);
   }
   getCurrentUser(): Observable<User> {
-    return this.http.get<User>(`${this.base_Url}/current`); 
+    return this.http.get<User>(`${this.base_Url}/current`);
   }
+
+  getUserByUserName(username: string): Observable<User> {
+    return this.http.get<User>(`${this.base_Url}/username/${username}`);
+  }
+
 }

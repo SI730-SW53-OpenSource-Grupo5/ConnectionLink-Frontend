@@ -16,7 +16,11 @@ export class CalendarService {
 
   createDateCalendar(calendar: Calendar): Observable<Calendar> {
     console.log(calendar)
-    return this.http.post<Calendar>(this.base_Url + "/calendars/", calendar);
+    return this.http.post<Calendar>(this.base_Url + "/calendars", calendar);
+  }
+
+  getListCalendarBySpecialistUsername(username: string): Observable<any[]> {
+    return this.http.get<any[]>(this.base_Url + "/calendars/specialist/" + username);
   }
 
   getListCalendarSpecialist(username: string): Observable<Calendar> {

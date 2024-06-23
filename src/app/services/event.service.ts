@@ -18,8 +18,8 @@ export class EventService {
     return `${this.baseURL}${this.eventsEndpoint}`;
   }
 
-  getAllEvents(): Observable<EventEntity>{
-    return this.http.get<EventEntity>(this.baseURL + this.eventsEndpoint);
+  getAllEvents(): Observable<any>{
+    return this.http.get<any>(this.baseURL + this.eventsEndpoint);
   }
 
   // obtenemos la data de los especilistas en base al eventId

@@ -39,10 +39,9 @@ export class SpecialistComponent implements OnInit {
   specialistId: any = "";
   currentUser!: User;
   isReviewModalOpen: boolean = false;
-  rawUser: User = {
+  rawUser: any = {
     id: '12345',
-    firstName: 'Ramirex',
-    lastName: 'Hotman',
+    fullName: 'Ramirez Hotman',
     profileImg: 'https://example.com/profile-img.jpg',
     email: 'ramihot@connectionlink.com',
     password: 'securepassword',
@@ -52,10 +51,10 @@ export class SpecialistComponent implements OnInit {
   };
 
   constructor(
-    private route: ActivatedRoute, 
-    private specialistService: SpecialistService, 
-    private calendarService: CalendarService, 
-    private reviewService: ReviewService, 
+    private route: ActivatedRoute,
+    private specialistService: SpecialistService,
+    private calendarService: CalendarService,
+    private reviewService: ReviewService,
     private userService: UserService
   ) {}
 
@@ -81,16 +80,19 @@ export class SpecialistComponent implements OnInit {
   }
 
   loadInitialData() {
+
+    /*this.calendarService.getListCalendarSpecialist(this.specialistId).subscribe(
+      (response: any) => {
+        this.specialistCalendarData = response;
+      }
+    );
+
     this.specialistService.getSpecialist(this.specialistId).subscribe(
       (response: any) => {
         this.specialistData = response[0];
       }
     );
-    this.calendarService.getListCalendarSpecialist(this.specialistId).subscribe(
-      (response: any) => {
-        this.specialistCalendarData = response;
-      }
-    );
+
     this.reviewService.getReviewSpecialist(this.specialistId).subscribe(
       (response: any) => {
         response.map(
@@ -108,7 +110,7 @@ export class SpecialistComponent implements OnInit {
           }
         );
       }
-    );
+    );*/
   }
 
   openAddReviewModal(): void {

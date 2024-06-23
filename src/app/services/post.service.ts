@@ -19,7 +19,7 @@ export class PostService {
   }
 
   createPost(item: any): Observable<PostEntity> {
-    return this.http.post<PostEntity>(this.postsPath(), JSON.stringify(item)); // se maneraja errores luego
+    return this.http.post<PostEntity>(this.postsPath(), item); // se maneraja errores luego
   }
 
   getAllPosts(): Observable<PostEntity> {

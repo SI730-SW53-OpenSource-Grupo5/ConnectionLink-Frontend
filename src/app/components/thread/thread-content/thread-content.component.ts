@@ -4,7 +4,7 @@ import {MatIcon} from "@angular/material/icon";
 import CommentEntity from "../../../models/comment.entity";
 import {ThreadService} from "../../../services/thread.service";
 import {ActivatedRoute} from "@angular/router";
-import {NgForOf} from "@angular/common";
+import {DatePipe, NgForOf} from "@angular/common";
 import {NewCommentModalComponent} from "../new-comment-modal/new-comment-modal.component";
 
 @Component({
@@ -14,18 +14,20 @@ import {NewCommentModalComponent} from "../new-comment-modal/new-comment-modal.c
     CommentListComponent,
     MatIcon,
     NgForOf,
-    NewCommentModalComponent
+    NewCommentModalComponent,
+    DatePipe
   ],
   templateUrl: './thread-content.component.html',
   styleUrl: './thread-content.component.scss'
 })
-export class ThreadContentComponent implements OnInit{
+export class ThreadContentComponent implements OnInit {
 
   post: any = {};
   comments: Array<CommentEntity> = [];
   showPopup: boolean = false;
 
-  constructor(private threadService: ThreadService, private  route: ActivatedRoute) {}
+  constructor(private threadService: ThreadService, private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
     this.loadThreadInformation();
@@ -54,20 +56,7 @@ export class ThreadContentComponent implements OnInit{
   getCommentsByPostId(postId: number) {
     this.threadService.getCommentsByPostId(postId).subscribe(
       (response: any) => {
-        this.comments = response.map((item: CommentEntity) => {
-          return new CommentEntity(
-            item.id,
-            item.postId,
-            item.name,
-            item.email,
-            item.type,
-            item.comment,
-            item.imageURL,
-            item.publication_date,
-            item.likes_quantity,
-            item.username
-          )
-        });
+        this.comments = response;
         console.log(this.comments);
       });
   }
