@@ -32,7 +32,7 @@ export class AddUserReviewComponent implements OnInit {
 
   review: Review = {
     id: null,
-    user: { id: '', firstName: '', lastName: '', profileImg: '', email: '', password: '', phone: '', role: '', isSubscribed: false },
+    user: { id: '', fullName: '', username: '', description: '', profileImageUrl: '', bannerImageUrl: '',  email: '', password: '', age: 0, birthday:new Date(),isSpecialistUser: false,cvUrl:'',createdAt:new Date(),updatedAt:new Date()  },
     specialist: { firstName: '', lastName: '', age: 0, studies: '', ocupation: '', biography: '', cv: '', urlImage: '', username: '', email: '', password: '', etiquets: '', phone: '' },
     description: ''
   };
