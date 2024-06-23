@@ -9,7 +9,7 @@ import {environment} from "../enviroments/environments";
   providedIn: 'root'
 })
 export class SpecialistService {
-  base_Url=`${environment.baseUrl}/specialists`;
+  base_Url=`${environment.baseUrl}/users/specialists`;
   constructor(private http: HttpClient) {}
 
   getSpecialist(username: string): Observable<Specialist> {

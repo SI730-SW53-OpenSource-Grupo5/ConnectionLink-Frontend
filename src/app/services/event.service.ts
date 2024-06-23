@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import EventEntity from "../models/event.entity";
 import {environment} from "../enviroments/environments";
+import {User} from "../models/user";
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class EventService {
 
   // obtenemos la data de los especilistas en base al eventId
   getSpecialistByEvent(eventId: string): Observable<any> {
-    return this.http.get<any>(`${this.baseURL}/specialists/${eventId}`);
+    return this.http.get<any>(`${this.baseURL + this.eventsEndpoint}/specialist/username/${eventId}`);
   }
 
 }

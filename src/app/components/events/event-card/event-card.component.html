@@ -1,22 +1,22 @@
 <div class="cards-event-container mt-3">
   <article *ngFor="let event of events" class="flex flex-col" style="border: 1px solid #DDDDDD">
     <div class="inline-flex">
-      <img class="banner" [src]="event.banner_img">
+      <img class="banner" [src]="event.bannerImageUrl">
     </div>
     <div class="flex flex-col gap-3 px-4 py-5 bg-slate-100 h-full">
       <div class="flex flex-row justify-between items-center">
         <h4 class="text-blue-950 font-semibold">{{ event.title }}</h4>
-        <p class="font-medium tracking-wide">Status: <span class="text-blue-600 capitalize">{{ event.status }}</span></p>
+       <!--<p class="font-medium tracking-wide">Status: <span class="text-blue-600 capitalize">{{ event.status }}</span></p>-->
       </div>
       <p class="description" style="padding: 3px 0">
         {{ event.description }}
       </p>
       <div class="flex flex-row gap-3 items-center justify-between">
         <div class="flex flex-row items-center gap-2">
-          <img class="rounded-full w-12 h-12" [src]="event.specialist?.urlImage || 'https://randomuser.me/api/portraits/women/17.jpg'">
+          <img class="rounded-full w-12 h-12" [src]="event.specialist?.profileImageUrl || 'https://randomuser.me/api/portraits/women/17.jpg'">
           <div class="flex flex-col gap-1 mt-1">
-            <h5>{{ event.specialist?.firstName + " " + event.specialist?.lastName }}</h5>
-            <span class="text-slate-500">{{ event.specialist?.ocupation }}</span>
+            <h5>{{ event.specialist?.fullName }} </h5>
+            <span class="text-slate-500">{{ event.specialist?.description }}</span>
           </div>
         </div>
         <mat-icon

@@ -40,22 +40,27 @@ export class SpecialistComponent implements OnInit {
   currentUser!: User;
   isReviewModalOpen: boolean = false;
   rawUser: User = {
-    id: '12345',
-    firstName: 'Ramirex',
-    lastName: 'Hotman',
-    profileImg: 'https://example.com/profile-img.jpg',
-    email: 'ramihot@connectionlink.com',
-    password: 'securepassword',
-    phone: '+1234567890',
-    role: 'patient',
-    isSubscribed: true
+    id: '',
+    fullName: '',
+    username: '',
+    description: '',
+    profileImageUrl: '',
+    bannerImageUrl: '',
+    email: '',
+    password: '',
+    age: 0,
+    birthday: new Date(),
+    isSpecialistUser: false,
+    cvUrl: '',
+    createdAt: new Date(),
+    updatedAt: new Date()
   };
 
   constructor(
-    private route: ActivatedRoute, 
-    private specialistService: SpecialistService, 
-    private calendarService: CalendarService, 
-    private reviewService: ReviewService, 
+    private route: ActivatedRoute,
+    private specialistService: SpecialistService,
+    private calendarService: CalendarService,
+    private reviewService: ReviewService,
     private userService: UserService
   ) {}
 
@@ -95,7 +100,7 @@ export class SpecialistComponent implements OnInit {
       (response: any) => {
         response.map(
           (element: any) => {
-            this.userService.getUser(element.userId).subscribe(
+            this.userService.getUserById(element.userId).subscribe(
               (res: any) => {
                 this.specialistReviewData.push({
                   id: element.id,

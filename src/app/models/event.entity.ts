@@ -1,19 +1,24 @@
 class EventEntity {
   id: string;
-  idSpecialist: string;
   title: string;
-  banner_img: string;
   description: string;
-  status: string;
-  specialist: any; // objto que contiene la informacion del especialista asociado al evento
+  profileImageUrl: string;
+  bannerImageUrl: string;
+  day: string;
+  category: number;
+  specialist: any;
 
-  constructor(id: string, idSpecialist: string, title: string, banner_img: string, description: string, status: string) {
+  specialistt: any; // objto que contiene la informacion del especialista asociado al evento
+
+  constructor(id: string, title: string, description: string, profile_image_url: string, banner_image_url: string, day: string, categoryId: number, specialist_id: string) {
     this.id = id;
-    this.idSpecialist = idSpecialist;
     this.title = title;
-    this.banner_img = banner_img;
     this.description = description;
-    this.status = status;
+    this.profileImageUrl = profile_image_url;
+    this.bannerImageUrl = banner_image_url;
+    this.day = day;
+    this.category = categoryId;
+    this.specialist = specialist_id
   }
 }
 export default EventEntity;

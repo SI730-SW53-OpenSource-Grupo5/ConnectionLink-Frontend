@@ -32,9 +32,36 @@ export class AddUserReviewComponent implements OnInit {
 
   review: Review = {
     id: null,
-    user: { id: '', firstName: '', lastName: '', profileImg: '', email: '', password: '', phone: '', role: '', isSubscribed: false },
-    specialist: { firstName: '', lastName: '', age: 0, studies: '', ocupation: '', biography: '', cv: '', urlImage: '', username: '', email: '', password: '', etiquets: '', phone: '' },
-    description: ''
+    user: {
+      id: '',
+      fullName: '',
+      username: '',
+      description: '',
+      profileImageUrl: '',
+      bannerImageUrl: '',
+      email: '',
+      password: '',
+      age: 0,
+      birthday: new Date(),
+      isSpecialistUser: false,
+      cvUrl: '',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    specialist: {
+      fullName: '',
+      age: 0,
+      bannerImageUrl: '',
+      birthday: '',
+      cvUrl: '',
+      description: '',
+      email: '',
+      is_specialist_user: false,
+      password: '',
+      profileImageUrl: '',
+      username: ''
+    },
+    description: '',
   };
 
   isReviewAdded!: boolean;
@@ -47,8 +74,8 @@ export class AddUserReviewComponent implements OnInit {
   ngOnInit(): void {
     this.review.user = this.currentUser;
     this.isReviewAdded = false;
-    this.review.specialist.firstName =this.specialistData.firstName;
-    console.log(this.review.specialist.firstName); // Verificar inicialización
+    this.review.specialist.fullName =this.specialistData.fullName;
+    console.log(this.review.specialist.fullName); // Verificar inicialización
   }
 
   onCancel(): void {

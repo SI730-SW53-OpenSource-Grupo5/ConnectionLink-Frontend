@@ -1,15 +1,13 @@
 export interface Specialist {
-    "firstName": string,
-    "lastName": string,
     "age": number,
-    "studies": string,
-    "ocupation": string,
-    "biography": string,
-    "cv": string,
-    "urlImage": string,
-    "username": string,
+    "bannerImageUrl": string,
+    "birthday": string,
+    "cvUrl": string,
+    "description": string,
     "email": string,
+    "fullName": string,
+    "is_specialist_user": boolean,
     "password": string,
-    "etiquets": string,
-    "phone": string
+    "profileImageUrl": string,
+    "username": string
 }
