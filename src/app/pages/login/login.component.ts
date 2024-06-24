@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
   }
 
   getUsers() {
-    this.userService.getUsers().subscribe(
+    this.userService.getAllSpecialistUsers().subscribe(
       response => {
         this.users = response;
         console.log(this.users);

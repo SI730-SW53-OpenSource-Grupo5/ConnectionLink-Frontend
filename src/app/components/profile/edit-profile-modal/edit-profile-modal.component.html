@@ -6,7 +6,7 @@
         <p>Full name</p>
         <mat-form-field class="w-full max-w-[70%]">
           <input class="border border-black" matInput placeholder="Name of Specialist" name="name" required
-                 [(ngModel)]="userData.firstName"/>
+                 [(ngModel)]="userData.fullName"/>
         </mat-form-field>
       </div>
 
@@ -18,32 +18,33 @@
       </div>
 
       <div class="flex gap-[20px] items-center">
-        <p>Phone</p>
+        <p>Profile ImageURL</p>
         <mat-form-field class="w-full max-w-[70%]">
-          <input matInput placeholder="Etiquets of Specialist" name="etiquets" required
-                 [(ngModel)]="userData.etiquets"/>
+          <input matInput placeholder="Profile Image URL" name="profileImageUrl" required
+                 [(ngModel)]="userData.profileImageUrl"/>
         </mat-form-field>
       </div>
 
       <div class="flex gap-[20px] items-center">
         <p>Age</p>
         <mat-form-field class="w-full max-w-[70%]">
-          <input matInput placeholder="Etiquets of Specialist" name="etiquets" required
+          <input matInput placeholder="Age" name="age" required
+                  [(ngModel)]="userData.age"
           />
         </mat-form-field>
       </div>
 
       <div class="flex gap-[20px] items-center">
-        <p>Bio</p>
+        <p>Description</p>
         <mat-form-field class="w-full max-w-[70%]">
-          <textarea matInput placeholder="Bio of Specialist" name="bio" required [(ngModel)]="userData.bio"></textarea>
+          <textarea matInput placeholder="Bio of User" name="description" required [(ngModel)]="userData.description"></textarea>
         </mat-form-field>
       </div>
 
       <div class="flex gap-[20px] items-center justify-end mt-[20px]">
         <button mat-raised-button
                 class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase ">
-          Reserve
+          Update
         </button>
         <button mat-raised-button
                 class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase "

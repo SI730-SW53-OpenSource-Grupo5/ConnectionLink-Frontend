@@ -1,13 +1,18 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {MatIcon} from "@angular/material/icon";
 import {EditProfileModalComponent} from "../edit-profile-modal/edit-profile-modal.component";
+import {AuthService} from "../../../shared/auth/auth.service";
+import {startWith} from "rxjs";
+import {User} from "../../../models/user";
+import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-profile-content',
   standalone: true,
   imports: [
     MatIcon,
-    EditProfileModalComponent
+    EditProfileModalComponent,
+    DatePipe
   ],
   templateUrl: './profile-content.component.html',
   styleUrl: './profile-content.component.scss'
@@ -15,18 +20,24 @@ import {EditProfileModalComponent} from "../edit-profile-modal/edit-profile-moda
 export class ProfileContentComponent implements OnInit {
 
   showPopup: boolean = false;
-  user: any;
+  user: User | null = null;
 
-  constructor() {
+  constructor(private authService: AuthService) {
   }
 
-  ngOnInit() {
-    const user = localStorage.getItem('user');
-    if (user) {
-      this.user = JSON.parse(user);
-    } else {
-      this.user = {};
-    }
+  ngOnInit(): void {
+    this.authService.user$
+      .pipe(startWith(this.getUserFromLocalStorage()))
+      .subscribe(user => {
+        if (user) {
+          this.user = user;
+        }
+      });
+  }
+
+  private getUserFromLocalStorage(): User | null {
+    const userStorage = localStorage.getItem('user');
+    return userStorage ? JSON.parse(userStorage) : null;
   }
 
   handleTogglePopup() {

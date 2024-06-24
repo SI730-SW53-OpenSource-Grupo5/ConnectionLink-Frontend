@@ -11,7 +11,7 @@
       <mat-icon class="cursor-pointer font-medium text-2xl w-0 h-0 mb-1.5 hover:scale-125 transition-all duration-300 ease-out"
                 fontIcon="star_border"></mat-icon>
     </div>
-    <p class="font-medium">Publication: <span class="font-normal">{{ post.createdAt | date:'long' }}</span></p>
+    <p class="font-medium">Publication: <span class="font-normal">{{ post.createdAt | date:'MM/dd/yyyy' }}</span></p>
     <p class="font-medium">Subject: <span class="font-normal">{{ post.title }}</span></p>
     <p class="text-pretty description">
       {{ post.content }}

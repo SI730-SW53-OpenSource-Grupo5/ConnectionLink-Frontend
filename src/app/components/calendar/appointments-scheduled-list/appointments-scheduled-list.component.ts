@@ -14,7 +14,7 @@ import {DatePipe, NgForOf} from "@angular/common";
   styleUrl: './appointments-scheduled-list.component.scss'
 })
 export class AppointmentsScheduledListComponent implements OnInit{
-  
+
   @Input() appointments: any[] = [];
   user: any | null = null;
 

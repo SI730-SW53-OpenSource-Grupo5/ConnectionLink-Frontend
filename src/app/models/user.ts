@@ -1,5 +1,5 @@
 export class User {
-  id: string;
+  id?: string;
   fullName: string;
   username: string;
   description: string;
@@ -11,8 +11,8 @@ export class User {
   birthday: Date;
   isSpecialistUser: boolean;
   cvUrl: string;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt?: Date;
+  updatedAt?: Date;
 
   constructor(
     id: string,

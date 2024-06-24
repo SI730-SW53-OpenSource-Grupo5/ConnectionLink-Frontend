@@ -10,24 +10,6 @@ import { UserService } from "../../services/user.service";
 import { User } from "../../models/user";
 import { EmailExistsModalComponent } from "../../components/register/email-exists-modal/email-exists-modal.component";
 
-interface Form {
-  firstName: string;
-  lastName: string;
-  phone: string;
-  email: string;
-  password: string;
-  role: string;
-  profileImg: string;
-  username: string;
-  description: string;
-  bannerImageUrl: string;
-  age: number;
-  birthday: string;
-  isSpecialistUser: boolean;
-  cvUrl: string;
-  [key: string]: any; // Index signature para permitir propiedades dinámicas
-}
-
 @Component({
   selector: 'app-register',
   standalone: true,
@@ -48,7 +30,7 @@ export class RegisterComponent implements OnInit {
   confirmPassword: string = '';
   isUserCreated: boolean = false;
 
-  form: Form = {
+  form: any = {
     firstName: '',
     lastName: '',
     phone: '',
@@ -59,7 +41,7 @@ export class RegisterComponent implements OnInit {
     username: '',
     description: '',
     bannerImageUrl: '',
-    age: 0,
+    age: undefined,
     birthday: '',
     isSpecialistUser: false,
     cvUrl: ''
@@ -116,7 +98,7 @@ export class RegisterComponent implements OnInit {
     );
   }
 
-  createUserFromForm(form: Form): User {
+  createUserFromForm(form: any): User {
     return new User(
       '', // id, se generará automáticamente en el backend
       form.firstName + ' ' + form.lastName, // fullName
@@ -136,7 +118,7 @@ export class RegisterComponent implements OnInit {
   }
 
   areFieldsComplete() {
-    const fieldsRequired: (keyof Form)[] = ['firstName', 'lastName', 'phone', 'email', 'password', 'role', 'username', 'description', 'bannerImageUrl', 'age', 'birthday', 'isSpecialistUser', 'cvUrl'];
+    const fieldsRequired: (keyof any)[] = ['firstName', 'lastName', 'phone', 'email', 'password', 'role', 'username', 'description', 'bannerImageUrl', 'age', 'birthday', 'isSpecialistUser', 'cvUrl'];
 
     // verify if all inputs are fill
     for (let field of fieldsRequired) {
