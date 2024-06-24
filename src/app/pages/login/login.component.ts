@@ -21,7 +21,7 @@ import {AuthService} from "../../shared/auth/auth.service";
 })
 export class LoginComponent implements OnInit {
 
-  users: User[] = [];
+  users: any[] = [];
   email: string = '';
   password: string = '';
   isRegistered: boolean = false;

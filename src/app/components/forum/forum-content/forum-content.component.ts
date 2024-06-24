@@ -75,25 +75,13 @@ export class ForumContentComponent implements OnInit {
   }
 
   getAllPosts() {
-    this.postService.getAllPosts().subscribe(
-      (response: any) => {
-        this.posts = response.map((item: PostEntity) => {
-          return new PostEntity(
-            item.id,
-            item.name,
-            item.email,
-            item.subject,
-            item.description,
-            item.profile_img,
-            item.publication_date,
-            item.likes_quantity,
-            item.comments_quantity
-          )
-        });
-        this.initialPosts = [...this.posts];
-        console.log(this.posts);
-      });
-  }
+  this.postService.getAllPosts().subscribe(
+    (response: any) => {
+      this.posts = response;
+      this.initialPosts = [...this.posts];
+      console.log(this.posts);
+    });
+}
 
   filterByTopics(word: string) {
     this.posts = this.posts.filter(post => post.subject.toLowerCase().includes(word.toLowerCase()));

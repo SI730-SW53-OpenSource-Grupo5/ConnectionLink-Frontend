@@ -24,7 +24,7 @@ export const routes: Routes = [
       {path: "home", component: HomeComponent},
       {path: "forum/:id", component: ForumComponent},
       {path: "inboxs", component: InboxsComponent},
-      {path: "specialist/:id", component: SpecialistComponent},
+      {path: "specialist/:username", component: SpecialistComponent},
       {path: "forums", component: ForumComponent},
       {path: "forums/:id", component: ThreadComponent},
       {path: "events", component: EventsComponent},

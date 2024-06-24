@@ -12,6 +12,9 @@ export class AppointmentService {
   base_Url=`${environment.baseUrl}/appointments`;
   constructor(private http: HttpClient) {}
 
+  getListAppointments(): Observable<any> {
+    return this.http.get<any>(this.base_Url);
+  }
 
   getListAppointmentsByUser(userId: string): Observable<Appointment> {
     return this.http.get<Appointment>(this.base_Url + "/?userId=" + userId);
@@ -21,11 +24,8 @@ export class AppointmentService {
     return this.http.get<Appointment>(this.base_Url + "/?calendarId=" + calendarId);
   }
 
-  createAppointment(appointment: Appointment): Observable<Appointment> {
-    return this.http.post<Appointment>(this.base_Url, JSON.stringify({
-      userId: appointment.userId,
-      calendarId: appointment.calendarId
-    }));
+  createAppointment(appointment: any): Observable<any> {
+    return this.http.post<any>(this.base_Url, appointment);
   }
 
 }

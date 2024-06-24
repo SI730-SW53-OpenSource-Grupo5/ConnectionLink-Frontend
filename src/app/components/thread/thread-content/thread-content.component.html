@@ -1,33 +1,33 @@
 <section>
   <article class="author-container bg-slate-100 p-4 flex flex-col gap-5 rounded-lg">
     <div class="flex flex-row justify-between">
-      <div class="flex flex-row gap-3">
-        <img class="example-header-image" [src]="post.profile_img">
+      <div class="flex flex-row gap-4">
+        <img class="example-header-image" [src]="post.user?.profileImageUrl">
         <div class="flex flex-col justify-center gap-1">
           <div class="flex flex-row items-center gap-2 relative">
-            <p class="text-sm font-normal">{{ post.name }}</p>
-            <div class="author flex flex-row items-center gap-1.5">
+            <p class="text-sm font-normal">{{ post.user?.fullName }}</p>
+            <div class="author flex flex-row items-center -mr-4 gap-0">
               <mat-icon class="font-medium text-xl w-0 h-0 mb-1.5 text-blue-800"
                         fontIcon="person"></mat-icon>
               <p class="font-medium text-blue-800">Author</p>
             </div>
           </div>
-          <span class="text-sm font-light text-gray-500">{{ post.email }}</span>
+          <span class="text-sm font-light text-gray-500">{{ post.user?.email }}</span>
         </div>
       </div>
     </div>
-    <p class="font-medium">Subject: <span class="font-normal">{{ post.subject }}</span></p>
+    <p class="font-medium">Subject: <span class="font-normal">{{ post.title }}</span></p>
     <p class="text-pretty">Dear Hope ConnectLink,<br/>
-      {{ post.description }}
+      {{ post.content }}
     </p>
     <div class="flex flex-row gap-4 items-center justify-between flex-wrap">
       <div class="flex flex-row gap-5 items-center flex-wrap">
         <div class="flex flex-row gap-2 items-center">
-          <span>{{ post.comments_quantity }} comments</span>
+          <span>{{ post.comments?.length }} comments</span>
           <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="comment"></mat-icon>
         </div>
         <div class="flex flex-row gap-2 items-center">
-          <span>{{ post.likes_quantity }}</span>
+          <span>{{ post.likes }}</span>
           <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="thumb_up_alt"></mat-icon>
         </div>
         <div class="flex flex-row gap-2 items-center">
@@ -39,7 +39,7 @@
           <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="outlined_flag"></mat-icon>
         </div>
       </div>
-      <p class="font-medium">Publication: <span class="font-normal">{{ post.publication_date }}</span></p>
+      <p class="font-medium">Publication: <span class="font-normal">{{ post.createdAt | date:'long' }}</span></p>
     </div>
   </article>
   <div class="flex flex-row justify-between my-3 flex-wrap gap-8">

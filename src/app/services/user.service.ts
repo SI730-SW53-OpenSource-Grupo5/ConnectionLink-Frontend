@@ -20,8 +20,10 @@ export class UserService {
     return this.http.get<User>(`${this.baseUrl}/${id}`);
   }
 
-  getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(this.baseUrl);
+
+  getUsers(): Observable<any[]> {
+    return this.http.get<any[]>(this.base_Url);
+
   }
 
   createNewUser(user: User): Observable<User> {
@@ -33,6 +35,7 @@ export class UserService {
   }
 
   getCurrentUser(): Observable<User> {
+
     return this.http.get<User>(`${this.baseUrl}/current`);
   }
 
@@ -42,5 +45,11 @@ export class UserService {
 
   getAllPatientUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.baseUrl);
+
   }
+
+  getUserByUserName(username: string): Observable<User> {
+    return this.http.get<User>(`${this.base_Url}/username/${username}`);
+  }
+
 }

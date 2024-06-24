@@ -8,13 +8,13 @@
         <p>Specialist Name</p>
         <mat-form-field class="w-full max-w-[70%]">
 
-          <input class="border border-black" matInput placeholder="Name of Specialist" name="name" required  [(ngModel)]="review.specialist.firstName"/>
+          <input class="border border-black" matInput placeholder="Name of Specialist" name="name" required  [(ngModel)]="reviewData.specialistUsername"/>
         </mat-form-field>
       </div>
       <div class="flex gap-[20px] items-center">
         <p>Review</p>
         <mat-form-field class="w-full max-w-[70%]">
-          <textarea matInput placeholder="Write your review here" name="description" required [(ngModel)]="review.description"></textarea>
+          <textarea matInput placeholder="Write your review here" name="description" required [(ngModel)]="reviewData.description"></textarea>
         </mat-form-field>
       </div>
 
@@ -34,7 +34,7 @@
     </div>
   }
   </div>
-  
+
 </section>
 
 

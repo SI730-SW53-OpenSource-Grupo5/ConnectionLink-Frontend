@@ -6,7 +6,7 @@
       <div class="flex gap-[20px] items-center">
         <p class="self-start pt-3">Author</p>
         <mat-form-field class="w-full max-w-[70%]">
-          <input matInput [placeholder]="post.name" name="author" readonly>
+          <input matInput [placeholder]="post.user.fullName" name="author" readonly>
         </mat-form-field>
       </div>
 
@@ -14,7 +14,7 @@
       <div class="flex gap-[20px] items-center">
         <p class="self-start pt-3">Subject</p>
         <mat-form-field class="w-full max-w-[70%]">
-          <input matInput [placeholder]="post.subject" name="subject" readonly>
+          <input matInput [placeholder]="post.title" name="subject" readonly>
         </mat-form-field>
       </div>
 
@@ -22,7 +22,7 @@
       <div class="flex gap-[20px] items-center">
         <p class="self-start pt-3">Commentary</p>
         <mat-form-field class="w-full max-w-[70%]">
-          <textarea matInput placeholder="Content" name="content" required [(ngModel)]="commentData.comment"></textarea>
+          <textarea matInput placeholder="Content" name="content" required [(ngModel)]="commentData.content"></textarea>
         </mat-form-field>
       </div>
 

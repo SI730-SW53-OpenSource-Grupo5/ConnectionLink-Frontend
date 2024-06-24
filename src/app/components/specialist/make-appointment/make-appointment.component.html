@@ -6,42 +6,42 @@
                 <div class="flex gap-[20px] items-center">
                     <p>Specialist name</p>
                     <mat-form-field class="w-full max-w-[70%]">
-                        <input class="border border-black" matInput placeholder="Name of Specialist" name="name" required  [(ngModel)]="specialistData.firstName"/>
+                        <input class="border border-black" matInput [placeholder]="userSpecialist.fullName" name="name" readonly />
                     </mat-form-field>
                 </div>
-    
+
                 <div class="flex gap-[20px] items-center">
                     <p>Email</p>
                     <mat-form-field class="w-full max-w-[70%]">
-                        <input matInput placeholder="Email of Specialist" name="email" required  [(ngModel)]="specialistData.email"/>
+                        <input matInput [placeholder]="userSpecialist.email" name="email" readonly />
                     </mat-form-field>
                 </div>
-    
+
                 <div class="flex gap-[20px] items-center">
-                    <p>Etiquets</p>
+                    <p>Birthday</p>
                     <mat-form-field class="w-full max-w-[70%]">
-                        <input matInput placeholder="Etiquets of Specialist" name="etiquets" required  [(ngModel)]="specialistData.etiquets"/>
+                        <input matInput [placeholder]="userSpecialist.birthday" name="birthday" readonly/>
                     </mat-form-field>
                 </div>
-    
+
+              <div class="flex gap-[20px] items-center">
+                <p>Username</p>
+                <mat-form-field class="w-full max-w-[70%]">
+                  <input matInput [placeholder]="userSpecialist.username" name="username" readonly/>
+                </mat-form-field>
+              </div>
+
                 <div class="flex gap-[20px] items-center">
                     <p>Schedule</p>
                     <mat-form-field class="w-full max-w-[70%]">
                         <mat-select placeholder="Schedule of appoinment" name="schedule" [(ngModel)]="selectedOptionForm">
-                            @for (calendar of specialistCalendarData; track calendar) {
-                                <mat-option [value]="calendar.id">{{calendar.hour + " - " + calendar.day}}</mat-option>
+                            @for (calendar of specialistCalendar; track calendar) {
+                                <mat-option [value]="calendar.id">{{calendar.hourResource.hour + " - " + calendar.day.day}}</mat-option>
                             }
                         </mat-select>
                     </mat-form-field>
                 </div>
-    
-                <div class="flex gap-[20px] items-center">
-                    <p>Phone</p>
-                    <mat-form-field class="w-full max-w-[70%]">
-                        <input matInput placeholder="Phone of Specialist" name="phone" required  [(ngModel)]="specialistData.phone"/>
-                    </mat-form-field>
-                </div>
-    
+
                 <div class="flex gap-[20px] items-center justify-end mt-[20px]">
                     <button mat-raised-button class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase ">Reserve</button>
                     <button mat-raised-button class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase " (click)="clickedPopup.emit()">Cancel</button>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {MatIcon} from "@angular/material/icon";
 
 @Component({
@@ -11,5 +11,7 @@ import {MatIcon} from "@angular/material/icon";
   styleUrl: './events-registered-list.component.scss'
 })
 export class EventsRegisteredListComponent {
+
+  @Input() events: any[] = [];
 
 }
