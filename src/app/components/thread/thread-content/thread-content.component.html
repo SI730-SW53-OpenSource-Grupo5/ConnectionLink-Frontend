@@ -1,18 +1,18 @@
 <section>
-  <article class="author-container bg-slate-100 p-4 flex flex-col gap-5 rounded-lg">
+  <article class="author-container bg-slate-100 p-4 flex flex-col gap-5 rounded-lg relative">
     <div class="flex flex-row justify-between">
       <div class="flex flex-row gap-4">
         <img class="example-header-image" [src]="post.user?.profileImageUrl">
         <div class="flex flex-col justify-center gap-1">
           <div class="flex flex-row items-center gap-2 relative">
             <p class="text-sm font-normal">{{ post.user?.fullName }}</p>
-            <div class="author flex flex-row items-center -mr-4 gap-0">
-              <mat-icon class="font-medium text-xl w-0 h-0 mb-1.5 text-blue-800"
-                        fontIcon="person"></mat-icon>
-              <p class="font-medium text-blue-800">Author</p>
-            </div>
           </div>
           <span class="text-sm font-light text-gray-500">{{ post.user?.email }}</span>
+        </div>
+        <div class="author flex flex-row items-center mr-[0px] gap-0">
+          <mat-icon class="font-medium text-xl w-0 h-0 mb-1.5 text-blue-800"
+                    fontIcon="person"></mat-icon>
+          <p class="font-medium text-blue-800">Author</p>
         </div>
       </div>
     </div>
@@ -29,14 +29,6 @@
         <div class="flex flex-row gap-2 items-center">
           <span>{{ post.likes }}</span>
           <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="thumb_up_alt"></mat-icon>
-        </div>
-        <div class="flex flex-row gap-2 items-center">
-          <span>Compartir</span>
-          <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="share"></mat-icon>
-        </div>
-        <div class="flex flex-row gap-2 items-center">
-          <span>Reportar</span>
-          <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="outlined_flag"></mat-icon>
         </div>
       </div>
       <p class="font-medium">Publication: <span class="font-normal">{{ post.createdAt | date:'long' }}</span></p>

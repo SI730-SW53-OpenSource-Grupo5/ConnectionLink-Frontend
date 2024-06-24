@@ -16,8 +16,8 @@ export class AppointmentService {
     return this.http.get<any>(this.base_Url);
   }
 
-  getListAppointmentsByUser(userId: string): Observable<Appointment> {
-    return this.http.get<Appointment>(this.base_Url + "/?userId=" + userId);
+  getListAppointmentsByUser(username: string): Observable<any> {
+    return this.http.get<any>(this.base_Url + "/user/" + username);
   }
 
   getListAppointmentsByCalendar(calendarId: string): Observable<Appointment> {

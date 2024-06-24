@@ -34,22 +34,32 @@ import {EventUserRegisterComponent} from "../event-user-register/event-user-regi
 export class EventCardComponent implements OnInit {
 
   showPopUp!: boolean;
+  actualEvent!: string;
   @Input() events: Array<EventEntity> = [];
+  user: any;
 
   constructor(private router: Router, private appointmentService: AppointmentService,
               private calendarService: CalendarService) {
   }
 
   ngOnInit() {
+    let userJSON = localStorage.getItem("user");
 
+    if (userJSON !== null) {
+        this.user = JSON.parse(userJSON);
+    }
+    console.log(this.events)
   }
 
-  showRegisterEvent() {
+  showRegisterEvent(id: string) {
     this.showPopUp = true;
+    this.actualEvent = id;
   }
 
   closeModal(): void {
     this.showPopUp = false;
   }
-
+  checkUserExists(username: string, event: EventEntity): boolean {
+    return event.users.some((user: any )=> user.username === username);
+  }
 }

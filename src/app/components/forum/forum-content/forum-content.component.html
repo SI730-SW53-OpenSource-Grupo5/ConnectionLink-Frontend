@@ -15,7 +15,7 @@
         Refresh
         <mat-icon class="text-xl w-0 h-0 mb-1.5" fontIcon="refresh"></mat-icon>
       </button>
-      <mat-form-field class="-mb-5" style="width: 175px">
+      `<mat-form-field class="-mb-5" style="width: 175px">
         <mat-label>Order By</mat-label>
         <mat-select [(value)]="selectedFilter" (selectionChange)="orderPostsBy($event.value)" >
           @for (filter of filters; track filter) {

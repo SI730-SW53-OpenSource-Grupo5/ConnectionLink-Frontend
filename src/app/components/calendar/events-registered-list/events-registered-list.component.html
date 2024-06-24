@@ -1,24 +1,23 @@
 <section class="events-registered-list">
-  <article class="bg-slate-100 p-4 flex flex-col gap-3.5 rounded-xl">
+  <article *ngFor="let event of events; let i = index" class="bg-slate-100 p-4 flex flex-col gap-3.5 rounded-xl">
     <div class="flex flex-row justify-between items-center mb-2">
       <div>
-        <h4 class="title-event">MindFullness Workshop</h4>
+        <h4 class="title-event">{{event.title}}</h4>
       </div>
       <div class="flex flex-row gap-2 items-center">
         <mat-icon
           class="text-slate-500 cursor-pointer font-medium text-md w-0 h-0 mb-0 hover:scale-125 transition-all duration-300 ease-out"
           fontIcon="access_time"></mat-icon>
-        <span class="text-slate-500 mt-0.5 tracking-wider">25/04/23</span>
+        <span class="text-slate-500 mt-0.5 tracking-wider">{{event.day}}</span>
       </div>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 grid-rows-[1fr,auto] sm:grid-rows-1 gap-3">
       <div>
         <span class="font-medium text-base text-[#0C359E] tracking-wide">Speaker Information:</span>
         <div class="flex flex-col gap-3 mt-3">
-          <p><span class="font-medium">Name: </span>Nekolas Esteban</p>
-          <p><span class="font-medium">Role: </span>Counsenling</p>
-          <p><span class="font-medium">Phone: </span>23123213</p>
-          <p><span class="font-medium">Email: </span>nekoexample.com</p>
+          <p><span class="font-medium">Name: </span>{{event.specialist.fullName}}</p>
+          <p><span class="font-medium">Role: </span>{{"Specialist"}}</p>
+          <p><span class="font-medium">Email: </span>{{event.specialist.email}}</p>
         </div>
         <button
           class="flex justify-center items-center bg-[#EFF0FF] text-black border border-black gap-1
@@ -32,12 +31,8 @@
         <img
           class="rounded-2xl h-full"
           alt="image_event"
-          src="https://i0.wp.com/olasdelunares.es/wp-content/uploads/2023/09/bienestar.jpeg?fit=800%2C533&ssl=1">
+          [src]="event.bannerImageUrl">
       </div>
-    </div>
-    <div class="mt-1.5 flex justify-between items-center">
-      <p class="text-black"><span class="text-red-700 font-medium">Registered in:</span> 24/28/12 - 8:40AM</p>
-      <p><span class="font-medium text-red-800">Status:</span> Premium</p>
     </div>
   </article>
 </section>

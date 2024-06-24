@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {FormsModule, NgForm} from "@angular/forms";
 import {MatFormField} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
@@ -24,12 +24,13 @@ import EventEntity from "../../../models/event.entity";
   templateUrl: './modal-event-register.component.html',
   styleUrl: './modal-event-register.component.scss'
 })
-export class ModalEventRegisterComponent {
+export class ModalEventRegisterComponent implements OnInit{
 
   @Input() showPopup!: boolean;
   @Output() closeModal = new EventEmitter<void>();
   eventData!: EventEntity;
   isCreatedEvent!: boolean;
+  user !: any;
   @Output() clickedPopup = new EventEmitter<void>();
 
   @ViewChild('eventForm') eventForm!: NgForm;
@@ -37,7 +38,14 @@ export class ModalEventRegisterComponent {
   constructor(private router: Router, private eventService: EventService) {
     this.eventData= new EventEntity('','','','','','',0,'',0);
   }
+  ngOnInit(): void {
+    let userJSON = localStorage.getItem("user");
 
+    if (userJSON !== null) {
+        this.user = JSON.parse(userJSON);
+    }
+  }
+  
   MakeEvent() {
     this.isCreatedEvent = true;
   }

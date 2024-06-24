@@ -37,6 +37,7 @@ export class EventsComponent implements OnInit {
   showPopUp!: boolean;
   selectedEventFilter: string | null = null;
   events: Array<EventEntity> = [];
+  user: any;
   // guardamos una copia de arreglo inicial
   initialEvents: Array<EventEntity> = [];
 
@@ -48,6 +49,12 @@ export class EventsComponent implements OnInit {
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
+    let userJSON = localStorage.getItem("user");
+
+    if (userJSON !== null) {
+        this.user = JSON.parse(userJSON);
+    }
+
     this.getAllEvents();
   }
 
@@ -102,5 +109,5 @@ export class EventsComponent implements OnInit {
       }
     )
   }
-
+  
 }

@@ -16,16 +16,23 @@ import { DateAppoinmentsComponent } from '../../components/appoinment/date-appoi
   styleUrl: './appoiment.component.scss'
 })
 export class AppoimentComponent implements OnInit{
-  specialistData!: Specialist;
-  specialistCalendarData!: Array<Calendar>;
+  specialistData!: any;
+  specialistCalendarData!: Array<any>;
   isEditMode !: boolean;
   showPopup: boolean = false;
   calendarSelected !: Calendar;
+  user: any | null = null;
+
   constructor(private specialistService: SpecialistService, private calendarService: CalendarService) {}
 
   ngOnInit(): void {
-    this.specialistData = {} as Specialist;
-    this.specialistCalendarData = [] as Array<Calendar>;  
+    let user = localStorage.getItem("user")
+    if(user != null) {
+      this.user = JSON.parse(user);
+    }
+
+    this.specialistData = this.user;
+    this.specialistCalendarData = [] as Array<any>;  
     this.isEditMode = false;
     this.calendarSelected = {} as Calendar;
     this.loadInitialData();
@@ -37,9 +44,10 @@ export class AppoimentComponent implements OnInit{
         this.specialistData = response[0]
       }
     )
-    this.calendarService.getListCalendarSpecialist("smithandrew").subscribe(
+    this.calendarService.getListCalendarSpecialist(this.user.username).subscribe(
       (response: any) => {
         this.specialistCalendarData = response
+        
       }
     )
   }

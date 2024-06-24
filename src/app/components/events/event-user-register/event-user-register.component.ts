@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {FormsModule, NgForm} from "@angular/forms";
 import {MatFormField} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
@@ -25,12 +25,15 @@ import  { UserEventRegisterEntity } from "../../../models/userEventRegister.enti
   templateUrl: './event-user-register.component.html',
   styleUrl: './event-user-register.component.scss'
 })
-export class EventUserRegisterComponent {
+
+export class EventUserRegisterComponent implements OnInit {
   @Input() showPopup!: boolean;
+  @Input() actualEvent!: string;
+
   @Output() closeModal = new EventEmitter<void>();
 
   isCreatedUserRegister!: boolean;
-
+  user!: any;
   eventData: UserEventRegisterEntity = {
     'username': '',
     'eventId': 1
@@ -42,6 +45,14 @@ export class EventUserRegisterComponent {
 
   constructor(private router: Router, private eventService: EventService) {
   }
+  ngOnInit(): void {
+    let userJSON = localStorage.getItem("user");
+    
+    if (userJSON !== null) {
+        this.user = JSON.parse(userJSON);
+        
+    }
+  }
 
   MakeUserRegister() {
     this.isCreatedUserRegister = true;
@@ -52,7 +63,8 @@ export class EventUserRegisterComponent {
   }
 
   onSubmit() {
-    this.eventService.createUserEventRegister(this.userRegisterForm.value).subscribe(
+    console.log({username: this.user.username, eventId: this.actualEvent})
+    this.eventService.createUserEventRegister({username: this.user.username, eventId: this.actualEvent}).subscribe(
       (response: any) => {
         this.MakeUserRegister()
       }

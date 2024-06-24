@@ -1,24 +1,8 @@
 <section *ngIf="showPopup" class="popup">
   <div class="popup-content p-[30px] md:p-[70px]">
     @if(!isCreatedUserRegister) {
-      <h2 class="pb-[30px]">Register in an event:</h2>
       <form (submit)="onSubmit()" #userRegisterForm="ngForm">
-        <div class="flex gap-[20px] items-center">
-          <p>Username</p>
-          <mat-form-field class="w-full max-w-[70%]">
-            <input class="border border-black" matInput placeholder="Your Username" name="username" required  [(ngModel)]="eventData.username"/>
-          </mat-form-field>
-        </div>
-
-        <div class="flex gap-[20px] items-center">
-          <p>Event Id</p>
-          <mat-form-field class="w-full max-w-[70%]">
-            <input matInput placeholder="Id of Event" name="eventId" required  [(ngModel)]="eventData.eventId"/>
-          </mat-form-field>
-        </div>
-
-
-        <div class="flex gap-[20px] items-center justify-end mt-[20px]">
+        <div class="flex gap-[20px] items-center justify-center mt-[20px]">
           <button mat-raised-button class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase " >Register</button>
           <button mat-raised-button class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase " (click)="closeModal.emit()">Cancel</button>
         </div>

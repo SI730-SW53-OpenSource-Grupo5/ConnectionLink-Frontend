@@ -23,7 +23,7 @@
         </div>
       </ng-template>
     </div>
-    <p class="text-pretty">Dear Hope ConnectLink,<br/>
+    <p class="text-pretty">
       {{ comment.content }}
     </p>
     <div class="flex flex-row gap-3 items-center flex-wrap justify-between">
@@ -38,19 +38,6 @@
           <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="person_search"></mat-icon>
           </button>
         }
-
-        <div class="flex flex-row gap-2 items-center">
-          <span>{{ comment.likes }}</span>
-          <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="thumb_up_alt"></mat-icon>
-        </div>
-        <div class="flex flex-row gap-2 items-center">
-          <span>Compartir</span>
-          <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="share"></mat-icon>
-        </div>
-        <div class="flex flex-row gap-2 items-center">
-          <span>Reportar</span>
-          <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="outlined_flag"></mat-icon>
-        </div>
       </div>
       <p class="font-medium">Publication: <span class="font-normal">{{ comment.createdAt | date: 'long' }}</span></p>
     </div>

@@ -8,6 +8,7 @@ import {AppointmentsScheduledListComponent} from "../appointments-scheduled-list
 import {EventsRegisteredListComponent} from "../events-registered-list/events-registered-list.component";
 import {AppointmentService} from "../../../services/appointment.service";
 import {EventService} from "../../../services/event.service";
+import { User } from '../../../models/user';
 
 interface Filter {
   value: string;
@@ -35,7 +36,7 @@ export class CalendarContentComponent implements OnInit {
   appointments: any[] = [];
   events: any[] = [];
   selectedFilter: 'appointments' | 'events' = 'appointments';
-
+  user: any | null = null;
   filters: Filter[] = [
     {value: 'appointments', viewValue: 'Appointments scheduled'},
     {value: 'events', viewValue: 'Events registered'},
@@ -45,7 +46,12 @@ export class CalendarContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.appointmentService.getListAppointments().subscribe(
+    let user = localStorage.getItem("user")
+    if(user != null) {
+      this.user = JSON.parse(user);
+    }
+    
+    this.appointmentService.getListAppointmentsByUser(this.user.username).subscribe(
       (appointments: any[]) => {
         this.appointments = appointments;
       },
@@ -61,10 +67,11 @@ export class CalendarContentComponent implements OnInit {
 
     switch (filter) {
       case 'appointments':
-        this.appointmentService.getListAppointments().subscribe(
+        this.appointmentService.getListAppointmentsByUser(this.user.username).subscribe(
           (appointments: any[]) => {
             this.appointments = appointments;
             this.selectedFilter = 'appointments';
+            console.log(appointments)
           },
           (error) => {
             console.log(error);
@@ -72,10 +79,11 @@ export class CalendarContentComponent implements OnInit {
         );
         break;
       case 'events':
-        this.eventService.getAllEvents().subscribe(
+        this.eventService.getEventByUserUsername(this.user.username).subscribe(
           (events: any[]) => {
             this.events = events;
             this.selectedFilter = 'events';
+            console.log(events)
           },
           (error) => {
             console.log(error);

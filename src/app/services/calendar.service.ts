@@ -23,8 +23,8 @@ export class CalendarService {
     return this.http.get<any[]>(this.base_Url + "/calendars/specialist/" + username);
   }
 
-  getListCalendarSpecialist(username: string): Observable<Calendar> {
-    return this.http.get<Calendar>(this.base_Url + "/calendars/?username=" + username);
+  getListCalendarSpecialist(username: string): Observable<any> {
+    return this.http.get<any>(this.base_Url + "/calendars/specialist/" + username);
   }
 
   updateAvailableCalendar(data: Calendar, available: boolean): Observable<Calendar> {

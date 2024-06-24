@@ -9,7 +9,7 @@ import {environment} from "../enviroments/environments";
 })
 export class UserService {
 
-  private baseUrl = `${environment.baseUrl}/api/v1/users`;
+  private baseUrl = `${environment.baseUrl}/users`;
   constructor(private http: HttpClient) {}
 
   getUserByUsername(username: string): Observable<User> {
@@ -22,7 +22,7 @@ export class UserService {
 
 
   getUsers(): Observable<any[]> {
-    return this.http.get<any[]>(this.base_Url);
+    return this.http.get<any[]>(this.baseUrl);
 
   }
 
@@ -49,7 +49,7 @@ export class UserService {
   }
 
   getUserByUserName(username: string): Observable<User> {
-    return this.http.get<User>(`${this.base_Url}/username/${username}`);
+    return this.http.get<User>(`${this.baseUrl}/username/${username}`);
   }
 
 }

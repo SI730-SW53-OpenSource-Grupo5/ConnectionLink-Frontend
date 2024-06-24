@@ -35,4 +35,7 @@ export class EventService {
     return this.http.post<any>(`${this.baseURL + this.eventsEndpoint}/user`, userEventRegister);
   }
 
+  getEventByUserUsername(username: string): Observable<any> {
+    return this.http.get<any>(`${this.baseURL}/events/user/username/${username}`);
+  }
 }

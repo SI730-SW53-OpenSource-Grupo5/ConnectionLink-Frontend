@@ -19,12 +19,14 @@
             <span class="text-slate-500">{{ event.specialist?.description }}</span>
           </div>
         </div>
-        <mat-icon
+        @if(!this.user.isSpecialistUser && !checkUserExists(this.user.username, event)){
+          <mat-icon
           style="font-size: 1.7rem"
           class="self-end cursor-pointer mt-0.5 font-medium w-0 h-0 mb-1.5 hover:scale-110 transition-all duration-300 ease-out"
-          fontIcon="launch" (click)="showRegisterEvent()"></mat-icon>
+          fontIcon="launch" (click)="showRegisterEvent(event.id)"></mat-icon>
+        }
       </div>
     </div>
   </article>
-  <app-event-user-register [showPopup]="showPopUp" (closeModal)="closeModal()"></app-event-user-register>
+  <app-event-user-register [actualEvent]="actualEvent" [showPopup]="showPopUp" (closeModal)="closeModal()"></app-event-user-register>
 </div>

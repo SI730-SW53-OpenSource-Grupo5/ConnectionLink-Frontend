@@ -13,7 +13,7 @@
     </div>
     <p class="font-medium">Publication: <span class="font-normal">{{ post.createdAt | date:'long' }}</span></p>
     <p class="font-medium">Subject: <span class="font-normal">{{ post.title }}</span></p>
-    <p class="text-pretty description">Dear Hope ConnectLink,<br/>
+    <p class="text-pretty description">
       {{ post.content }}
     </p>
     <div class="flex flex-row gap-8 items-center flex-wrap">
@@ -31,14 +31,6 @@
       <div class="flex flex-row gap-2 items-center">
         <span>{{ post.comments.length }}</span>
         <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="comment"></mat-icon>
-      </div>
-      <div class="flex flex-row gap-2 items-center">
-        <span>Compartir</span>
-        <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="share"></mat-icon>
-      </div>
-      <div class="flex flex-row gap-2 items-center">
-        <span>Reportar</span>
-        <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="outlined_flag"></mat-icon>
       </div>
     </div>
   </article>

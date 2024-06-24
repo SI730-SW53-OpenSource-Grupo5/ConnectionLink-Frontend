@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import {Component, Input} from '@angular/core';
 import {MatIcon} from "@angular/material/icon";
 
@@ -5,7 +6,8 @@ import {MatIcon} from "@angular/material/icon";
   selector: 'app-events-registered-list',
   standalone: true,
   imports: [
-    MatIcon
+    MatIcon,
+    CommonModule
   ],
   templateUrl: './events-registered-list.component.html',
   styleUrl: './events-registered-list.component.scss'
