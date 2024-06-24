@@ -1,14 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {FormsModule} from "@angular/forms";
-import {CommonModule, NgIf} from "@angular/common";
-import {MatDialog} from "@angular/material/dialog";
-import {PasswordModalComponent} from "../../components/register/password-modal/password-modal.component";
-import {FillFormModalComponent} from "../../components/register/fill-form-modal/fill-form-modal.component";
-import {RegisteredModalComponent} from "../../components/register/registered-modal/registered-modal.component";
-import {Router} from "@angular/router";
-import {UserService} from "../../services/user.service";
-import {User} from "../../models/user";
-import {EmailExistsModalComponent} from "../../components/register/email-exists-modal/email-exists-modal.component";
+import { Component, OnInit } from '@angular/core';
+import { FormsModule } from "@angular/forms";
+import { CommonModule, NgIf } from "@angular/common";
+import { MatDialog } from "@angular/material/dialog";
+import { PasswordModalComponent } from "../../components/register/password-modal/password-modal.component";
+import { FillFormModalComponent } from "../../components/register/fill-form-modal/fill-form-modal.component";
+import { RegisteredModalComponent } from "../../components/register/registered-modal/registered-modal.component";
+import { Router } from "@angular/router";
+import { UserService } from "../../services/user.service";
+import { User } from "../../models/user";
+import { EmailExistsModalComponent } from "../../components/register/email-exists-modal/email-exists-modal.component";
 
 interface Form {
   firstName: string;
@@ -18,7 +18,14 @@ interface Form {
   password: string;
   role: string;
   profileImg: string;
-  [key: string]: string;
+  username: string;
+  description: string;
+  bannerImageUrl: string;
+  age: number;
+  birthday: string;
+  isSpecialistUser: boolean;
+  cvUrl: string;
+  [key: string]: any; // Index signature para permitir propiedades dinámicas
 }
 
 @Component({
@@ -33,7 +40,7 @@ interface Form {
     RegisteredModalComponent
   ],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.scss'
+  styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
 
@@ -49,10 +56,16 @@ export class RegisterComponent implements OnInit {
     password: '',
     role: 'patient',
     profileImg: '',
-  }
+    username: '',
+    description: '',
+    bannerImageUrl: '',
+    age: 0,
+    birthday: '',
+    isSpecialistUser: false,
+    cvUrl: ''
+  };
 
-  constructor(private router: Router, private userService: UserService,
-              public dialog: MatDialog) { }
+  constructor(private router: Router, private userService: UserService, public dialog: MatDialog) { }
 
   ngOnInit() {
     this.getUsers();
@@ -77,7 +90,7 @@ export class RegisterComponent implements OnInit {
     }
 
     if (this.form.password !== this.confirmPassword) {
-      console.log('Las contraseñas no son iwales');
+      console.log('Las contraseñas no son iguales');
       this.dialog.open(PasswordModalComponent);
       return;
     }
@@ -90,7 +103,9 @@ export class RegisterComponent implements OnInit {
     }
 
     // create new user when all validations have been passed
-    this.userService.createNewUser(this.form).subscribe(
+    const newUser: User = this.createUserFromForm(this.form);
+
+    this.userService.createNewUser(newUser).subscribe(
       response => {
         console.log(response);
         this.dialog.open(RegisteredModalComponent);
@@ -99,32 +114,47 @@ export class RegisterComponent implements OnInit {
         console.error('Error to register a new user:', error);
       }
     );
+  }
 
+  createUserFromForm(form: Form): User {
+    return new User(
+      '', // id, se generará automáticamente en el backend
+      form.firstName + ' ' + form.lastName, // fullName
+      form.username,
+      form.description,
+      form.profileImg,
+      form.bannerImageUrl,
+      form.email,
+      form.password,
+      form.age,
+      new Date(form.birthday),
+      form.isSpecialistUser,
+      form.cvUrl,
+      new Date(), // createdAt
+      new Date()  // updatedAt
+    );
   }
 
   areFieldsComplete() {
-
-    const fieldsRequired = ['firstName', 'lastName', 'phone', 'email', 'password', 'role']
+    const fieldsRequired: (keyof Form)[] = ['firstName', 'lastName', 'phone', 'email', 'password', 'role', 'username', 'description', 'bannerImageUrl', 'age', 'birthday', 'isSpecialistUser', 'cvUrl'];
 
     // verify if all inputs are fill
     for (let field of fieldsRequired) {
-      if (!this.form[field] || this.form[field].trim().length === 0) {
+      const value = this.form[field];
+      if (typeof value === 'string' && value.trim().length === 0) {
+        return false;
+      } else if (typeof value === 'number' && isNaN(value)) {
+        return false;
+      } else if (typeof value === 'boolean' && value === null) {
         return false;
       }
     }
 
-    // verify if at least one of the radio buttons is selected
-    if (this.form.role == '' && this.form.role == '') {
-      return false;
-    }
-
     return true;
-
   }
 
   navigateToLogin() {
     this.isUserCreated = false;
     this.router.navigate(['/login']);
   }
-
 }

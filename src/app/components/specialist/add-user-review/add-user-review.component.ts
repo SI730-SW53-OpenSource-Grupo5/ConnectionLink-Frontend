@@ -33,6 +33,15 @@ export class AddUserReviewComponent implements OnInit {
   @Input() showPopup!: boolean;
   @Input() currentUser!: User;
   @Output() closePopup = new EventEmitter<Review | null>();
+
+
+  review: Review = {
+    id: null,
+    user: { id: '', fullName: '', username: '', description: '', profileImageUrl: '', bannerImageUrl: '',  email: '', password: '', age: 0, birthday:new Date(),isSpecialistUser: false,cvUrl:'',createdAt:new Date(),updatedAt:new Date()  },
+    specialist: { firstName: '', lastName: '', age: 0, studies: '', ocupation: '', biography: '', cv: '', urlImage: '', username: '', email: '', password: '', etiquets: '', phone: '' },
+    description: ''
+  };
+
   isReviewAdded!: boolean;
 
   constructor(

@@ -1,22 +1,33 @@
 <mat-toolbar class="header w-full flex flex-wrap" color="default">
-  <div class=" flex flex-row items-center gap-5">
+  <div class="flex flex-row items-center gap-5">
     <div class="flex flex-row items-center gap-3">
       <mat-icon (click)="toggleSidebar.emit()" class="hamburguer flex font-medium cursor-pointer text-2xl w-0 h-0 -mt-1.5 text-green-800"
                 aria-label="menu icon" fontIcon="menu"></mat-icon>
       <img class="block h-12 w-12" src="../../../assets/logo-connectionlink.png" alt="logoAidManager"/>
       <div class="flex flex-col justify-center gap-1 mt-0.5">
         <p class="title-logo text-md font-medium tracking-wide">ConnectionLink</p>
+
+        <span class="text-sm text-blue-800 font-normal capitalize">as {{ user?.username }}</span>
+
         <span class="text-sm text-blue-800 font-normal capitalize">as {{ user?.isSpecialistUser === false ? 'Specialist' : 'Patient' }}</span>
+
       </div>
     </div>
   </div>
   <span class="spacer"></span>
+  <button mat-icon-button aria-label="notifications" (click)="openNotifications()">
+    <mat-icon>notifications</mat-icon>
+  </button>
   <div class="flex flex-row gap-4 cursor-pointer" (click)="goToPage('profile')">
     <div mat-card-avatar class="example-header-image"></div>
     <div class="flex flex-col justify-center gap-1.5">
       <p class="text-base font-medium tracking-wide">{{ user?.fullName }}</p>
       <div class="flex flex-row items-center gap-4">
+
+        <p class="text-sm text-green-600 font-normal">{{ user?.isSpecialistUser ? 'Specialist User' : 'Regular User' }}</p>
+
         <p class="text-sm text-green-600 font-normal">{{ user?.isSpecialistUser === false ? 'Single User' : 'Premium User' }}</p>
+
         <div class="members-quantity flex flex-row items-center text-green-700">
           <mat-icon class="flex text-lg w-0 h-0 -mt-1.5" aria-hidden="false" aria-label="team icon" fontIcon="person"></mat-icon>
           <span class="text-sm">23</span>
@@ -24,4 +35,5 @@
       </div>
     </div>
   </div>
+  
 </mat-toolbar>

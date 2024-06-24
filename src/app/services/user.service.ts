@@ -9,30 +9,43 @@ import {environment} from "../enviroments/environments";
 })
 export class UserService {
 
-  base_Url=`${environment.baseUrl}/users`;
+  private baseUrl = `${environment.baseUrl}/api/v1/users`;
   constructor(private http: HttpClient) {}
 
-  getUser(username: string): Observable<User> {
-    return this.http.get<User>(this.base_Url + "/?username=" + username);
+  getUserByUsername(username: string): Observable<User> {
+    return this.http.get<User>(`${this.baseUrl}/username/${username}`);
   }
-  getUserById(id: string): Observable<any> {
-    return this.http.get<User>(`${this.base_Url}/${id}`);
+
+  getUserById(id: string): Observable<User> {
+    return this.http.get<User>(`${this.baseUrl}/${id}`);
   }
+
 
   getUsers(): Observable<any[]> {
     return this.http.get<any[]>(this.base_Url);
+
   }
 
-  createNewUser(user: any): Observable<User> {
-
-    if (user.role === 'patient') {
-      user.isSubscribed = false;
-    }
-
-    return this.http.post<User>(this.base_Url, user);
+  createNewUser(user: User): Observable<User> {
+    return this.http.post<User>(this.baseUrl, user);
   }
+
+  updateUser(id: string, user: User): Observable<User> {
+    return this.http.put<User>(`${this.baseUrl}/${id}`, user);
+  }
+
   getCurrentUser(): Observable<User> {
-    return this.http.get<User>(`${this.base_Url}/current`);
+
+    return this.http.get<User>(`${this.baseUrl}/current`);
+  }
+
+  getAllSpecialistUsers(): Observable<User[]> {
+    return this.http.get<User[]>(`${this.baseUrl}/specialists`);
+  }
+
+  getAllPatientUsers(): Observable<User[]> {
+    return this.http.get<User[]>(this.baseUrl);
+
   }
 
   getUserByUserName(username: string): Observable<User> {

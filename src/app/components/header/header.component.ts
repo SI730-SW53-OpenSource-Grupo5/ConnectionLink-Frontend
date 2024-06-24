@@ -1,11 +1,13 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {MatToolbar} from "@angular/material/toolbar";
-import {MatIcon} from "@angular/material/icon";
-import {MatCardAvatar, MatCardHeader, MatCardImage} from "@angular/material/card";
-import {User} from "../../models/user";
-import {AuthService} from "../../shared/auth/auth.service";
-import {startWith} from "rxjs";
-import {Router} from "@angular/router";
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MatToolbar } from "@angular/material/toolbar";
+import { MatIcon } from "@angular/material/icon";
+import { MatCardAvatar, MatCardHeader, MatCardImage } from "@angular/material/card";
+import { User } from "../../models/user";
+import { AuthService } from "../../shared/auth/auth.service";
+import { startWith } from "rxjs";
+import { Router } from "@angular/router";
+import { MatDialog } from "@angular/material/dialog";
+import { NotificationModalComponent } from '../notifications/notifications.component';
 
 @Component({
   selector: 'app-header',
@@ -18,7 +20,7 @@ import {Router} from "@angular/router";
     MatCardHeader
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
 
@@ -26,8 +28,7 @@ export class HeaderComponent implements OnInit {
 
   @Output() toggleSidebar = new EventEmitter<void>();
 
-  constructor(private authService: AuthService, private router: Router) {
-  }
+  constructor(private authService: AuthService, private router: Router, private dialog: MatDialog) {}
 
   ngOnInit() {
     this.authService.user$
@@ -44,9 +45,15 @@ export class HeaderComponent implements OnInit {
     return userStorage ? JSON.parse(userStorage) : null;
   }
 
-
   goToPage(url: string) {
-    this.router.navigateByUrl(url)
+    this.router.navigateByUrl(url);
   }
 
+  openNotifications(): void {
+    const username = this.user?.username;
+    this.dialog.open(NotificationModalComponent, {
+      width: '400px',
+      data: { username }
+    });
+  }
 }
