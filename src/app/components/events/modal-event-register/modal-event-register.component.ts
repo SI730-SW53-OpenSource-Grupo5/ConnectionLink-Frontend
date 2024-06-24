@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {FormsModule} from "@angular/forms";
+import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
+import {FormsModule, NgForm} from "@angular/forms";
 import {MatFormField} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import {MatOption} from "@angular/material/autocomplete";
@@ -7,6 +7,7 @@ import {MatSelect} from "@angular/material/select";
 import {NgForOf, NgIf} from "@angular/common";
 import {EventService} from "../../../services/event.service";
 import {Router} from "@angular/router";
+import EventEntity from "../../../models/event.entity";
 
 @Component({
   selector: 'app-modal-event-register',
@@ -27,24 +28,29 @@ export class ModalEventRegisterComponent {
 
   @Input() showPopup!: boolean;
   @Output() closeModal = new EventEmitter<void>();
-  schedules: string[] = ['Horario 1', 'Horario 2'];
-  platforms: string[] = ['Microsoft Team', 'Videollamada Zoom'];
+  eventData!: EventEntity;
+  isCreatedEvent!: boolean;
+  @Output() clickedPopup = new EventEmitter<void>();
 
-  eventData = {
-    firstName: '',
-    email: '',
-    etiquets: '',
-    phone: ''
-  };
-  selectedOptionForm!: string;
+  @ViewChild('eventForm') eventForm!: NgForm;
 
-  constructor(private eventService: EventService, private router: Router) { }
-
-  onSubmit() {
-    console.log('oli');
+  constructor(private router: Router, private eventService: EventService) {
+    this.eventData= new EventEntity('','','','','','',0,'');
   }
 
-  goToPage(url: string) {
-    this.router.navigateByUrl(url)
+  MakeEvent() {
+    this.isCreatedEvent = true;
+  }
+
+  goToPage(page: string): void {
+    this.router.navigate([page]);
+  }
+
+  onSubmit() {
+    this.eventService.createEvent(this.eventForm.value).subscribe(
+      (response: any) => {
+        this.MakeEvent()
+      }
+    )
   }
 }
