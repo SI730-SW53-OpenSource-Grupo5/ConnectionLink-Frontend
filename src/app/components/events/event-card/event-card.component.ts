@@ -11,6 +11,7 @@ import {Router} from "@angular/router";
 import {AppointmentService} from "../../../services/appointment.service";
 import {CalendarService} from "../../../services/calendar.service";
 import {ModalEventRegisterComponent} from "../modal-event-register/modal-event-register.component";
+import {EventUserRegisterComponent} from "../event-user-register/event-user-register.component";
 
 @Component({
   selector: 'app-event-card',
@@ -25,7 +26,7 @@ import {ModalEventRegisterComponent} from "../modal-event-register/modal-event-r
     MatOption,
     MatSelect,
     NgIf,
-    ModalEventRegisterComponent
+    EventUserRegisterComponent
   ],
   templateUrl: './event-card.component.html',
   styleUrl: './event-card.component.scss'

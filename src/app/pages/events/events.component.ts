@@ -6,6 +6,7 @@ import {EventService} from "../../services/event.service";
 import {EventCardComponent} from "../../components/events/event-card/event-card.component";
 import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
 import {MatOption, MatSelect} from "@angular/material/select";
+import {ModalEventRegisterComponent} from "../../components/events/modal-event-register/modal-event-register.component";
 
 interface Filter {
   value: string,
@@ -25,13 +26,15 @@ interface Filter {
     MatFormField,
     MatSelect,
     MatOption,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ModalEventRegisterComponent
   ],
   templateUrl: './events.component.html',
   styleUrl: './events.component.scss'
 })
 export class EventsComponent implements OnInit {
 
+  showPopUp!: boolean;
   selectedEventFilter: string | null = null;
   events: Array<EventEntity> = [];
   // guardamos una copia de arreglo inicial
@@ -54,6 +57,13 @@ export class EventsComponent implements OnInit {
     //this.events = filteredEvents;
   }
 
+  showRegisterEvent() {
+    this.showPopUp = true;
+  }
+
+  closeModal(): void {
+    this.showPopUp = false;
+  }
   refreshEvents() {
     // restauramos el estado inicial de events
     this.events = [...this.initialEvents];
@@ -72,7 +82,8 @@ export class EventsComponent implements OnInit {
             item.bannerImageUrl,
             item.day,
             item.category,
-            item.specialist
+            item.specialist,
+            item.users
           );
           this.eventService.getSpecialistByEvent(item.specialist.username);
           /*this.eventService.getSpecialistByEvent(item.specialist.username).subscribe(

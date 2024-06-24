@@ -8,38 +8,43 @@ import {NgForOf, NgIf} from "@angular/common";
 import {EventService} from "../../../services/event.service";
 import {Router} from "@angular/router";
 import EventEntity from "../../../models/event.entity";
+import  { UserEventRegisterEntity } from "../../../models/userEventRegister.entity";
 
 @Component({
-  selector: 'app-modal-event-register',
+  selector: 'app-event-user-register',
   standalone: true,
-  imports: [
-    FormsModule,
-    MatFormField,
-    MatInput,
-    MatOption,
-    MatSelect,
-    NgIf,
-    NgForOf
-  ],
-  templateUrl: './modal-event-register.component.html',
-  styleUrl: './modal-event-register.component.scss'
+    imports: [
+      FormsModule,
+      MatFormField,
+      MatInput,
+      MatOption,
+      MatSelect,
+      NgIf,
+      NgForOf
+    ],
+  templateUrl: './event-user-register.component.html',
+  styleUrl: './event-user-register.component.scss'
 })
-export class ModalEventRegisterComponent {
-
+export class EventUserRegisterComponent {
   @Input() showPopup!: boolean;
   @Output() closeModal = new EventEmitter<void>();
-  eventData!: EventEntity;
-  isCreatedEvent!: boolean;
-  @Output() clickedPopup = new EventEmitter<void>();
 
-  @ViewChild('eventForm') eventForm!: NgForm;
+  isCreatedUserRegister!: boolean;
 
-  constructor(private router: Router, private eventService: EventService) {
-    this.eventData= new EventEntity('','','','','','',0,'',0);
+  eventData: UserEventRegisterEntity = {
+    'username': '',
+    'eventId': 1
   }
 
-  MakeEvent() {
-    this.isCreatedEvent = true;
+  @Output() clickedPopup = new EventEmitter<void>();
+
+  @ViewChild('userRegisterForm') userRegisterForm!: NgForm;
+
+  constructor(private router: Router, private eventService: EventService) {
+  }
+
+  MakeUserRegister() {
+    this.isCreatedUserRegister = true;
   }
 
   goToPage(page: string): void {
@@ -47,9 +52,9 @@ export class ModalEventRegisterComponent {
   }
 
   onSubmit() {
-    this.eventService.createEvent(this.eventForm.value).subscribe(
+    this.eventService.createUserEventRegister(this.userRegisterForm.value).subscribe(
       (response: any) => {
-        this.MakeEvent()
+        this.MakeUserRegister()
       }
     )
   }

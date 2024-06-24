@@ -31,4 +31,8 @@ export class EventService {
     return this.http.post<EventEntity>(this.eventsPath(), event);
   }
 
+  createUserEventRegister(userEventRegister: any): Observable<any> {
+    return this.http.post<any>(`${this.baseURL + this.eventsEndpoint}/user`, userEventRegister);
+  }
+
 }
