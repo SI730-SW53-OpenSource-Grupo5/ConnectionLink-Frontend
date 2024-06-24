@@ -21,10 +21,12 @@
       <img class="max-w-[400px] w-full flex mx-auto min-h-[350px] object-cover rounded-xl"
            src="{{ user?.profileImageUrl }}" alt="Smith Kimbell Image Profile"/>
       <div>
-        <button class="flex items-center bg-[#EFF0FF] text-black border border-black gap-1
-                  px-[15px] py-[12.5px] rounded-2xl hover:bg-purple-300 transition-all duration-300 ease-in-out"
-                (click)="clickedPopup.emit()">Make an appoinment
-        </button>
+        @if(!this.userLogin.isSpecialistUser) {
+          <button class="flex items-center bg-[#EFF0FF] text-black border border-black gap-1
+                    px-[15px] py-[12.5px] rounded-2xl hover:bg-purple-300 transition-all duration-300 ease-in-out"
+                  (click)="clickedPopup.emit()">Make an appoinment
+          </button>
+        }
       </div>
     </div>
   </div>

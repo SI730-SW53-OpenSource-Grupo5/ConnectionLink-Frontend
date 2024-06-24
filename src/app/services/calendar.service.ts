@@ -14,9 +14,8 @@ export class CalendarService {
   base_Url= environment.baseUrl;
   constructor(private http: HttpClient) {}
 
-  createDateCalendar(calendar: Calendar): Observable<Calendar> {
-    console.log(calendar)
-    return this.http.post<Calendar>(this.base_Url + "/calendars", calendar);
+  createDateCalendar(calendar: any): Observable<any> {
+    return this.http.post<any>(this.base_Url + "/calendars", calendar);
   }
 
   getListCalendarBySpecialistUsername(username: string): Observable<any[]> {

@@ -3,12 +3,6 @@
         @if(!isCreatedAppoiment) {
             <h2 class="pb-[30px]">Make date an appoinment:</h2>
             <form (submit)="onSubmit()" #specialistForm="ngForm">
-                <div class="flex gap-[20px] items-center">
-                    <p>Specialist name</p>
-                    <mat-form-field class="w-full max-w-[70%]">
-                        <input class="border border-black" matInput placeholder="Name of Specialist" name="name" required  [(ngModel)]="specialistData.firstName" disabled/>
-                    </mat-form-field>
-                </div>
 
                 <div class="flex gap-[20px] items-center">
                     <p>Day</p>
@@ -26,7 +20,7 @@
                     <mat-form-field class="w-full max-w-[70%]">
                         <mat-select placeholder="Hour of appoinment" name="schedule" [(ngModel)]="selectedHourForm">
                             @for (hour of hours; track hour) {
-                                <mat-option [value]="hour.id">{{hour.time}}</mat-option>
+                                <mat-option [value]="hour.id">{{hour.hour}}</mat-option>
                             }
                         </mat-select>
                     </mat-form-field>

@@ -45,9 +45,16 @@ export class MakeDateAppoinmentComponent implements OnInit {
   date !: Calendar;
   hours !: Hour[];
   days !: Day[];
+  user: any | null = null;
+
   constructor(private router: Router, private appointmentService: AppointmentService, private calendarService: CalendarService) {}
   
   ngOnInit() {
+    let user = localStorage.getItem("user")
+    if(user != null) {
+      this.user = JSON.parse(user);
+    }
+
     this.selectedDayForm = "";
     this.selectedHourForm = "";
     this.date = {} as Calendar;
@@ -75,13 +82,14 @@ export class MakeDateAppoinmentComponent implements OnInit {
           this.hours.map(
             (hour: Hour) => {
               if(hour.id == this.selectedHourForm) {
-                this.date.day = day.day
-                this.date.hour = hour.time
-                this.date.username = this.specialistData.username
-                this.date.available = true
-                this.date.id = ""
+                let data: any = {
+                  "dayId": this.selectedDayForm,
+                  "hourId": this.selectedHourForm,
+                  "url": "https://meet.google.com/",
+                  "specialistUsername": this.user.username
+                };
 
-                this.calendarService.createDateCalendar(this.date).subscribe(
+                this.calendarService.createDateCalendar(data).subscribe(
                   response => {
                     console.log(response)
                   }

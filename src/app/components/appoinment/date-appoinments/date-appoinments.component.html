@@ -3,9 +3,9 @@
         <mat-card class="flex flex-col gap-[25px] px-[10px] py-[15px] card roundede-[5px]" *ngFor="let calendarData of specialistCalendarData">
             <mat-card-header class="flex items-center">
                 <div class="ml-15px cardHeader">
-                    <p class="mb-0 text-sm">Day: {{calendarData.day}}</p>
-                    <p class="mb-0 text-sm">Hour: {{calendarData.hour}}</p>
-                    <p class="mb-0 text-sm">Available: {{calendarData.available}}</p>
+                    <p class="mb-0 text-sm">Day: {{calendarData.day.day}}</p>
+                    <p class="mb-0 text-sm">Hour: {{calendarData.hourResource.hour}}</p>
+                    <p class="mb-0 text-sm">Available: {{calendarData.isAvailable}}</p>
                 </div>
             </mat-card-header>
             <mat-card-content class="cardContent flex">

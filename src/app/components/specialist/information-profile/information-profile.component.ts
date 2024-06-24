@@ -17,6 +17,7 @@ import {DatePipe} from "@angular/common";
 export class InformationProfileComponent implements OnInit{
 
   user: any | null = null;
+  userLogin: any | null = null;
   @Output() clickedPopup = new EventEmitter<void>();
   @Input() specialistData!: Specialist;
 
@@ -25,10 +26,16 @@ export class InformationProfileComponent implements OnInit{
   }
 
   ngOnInit() {
+    let userL = localStorage.getItem("user")
+    if(userL != null) {
+      this.userLogin = JSON.parse(userL);
+    }
+    
     this.loadUserInformation();
   }
 
   loadUserInformation() {
+    
     this.route.paramMap.subscribe(params => {
       const userUsername = params.get('username')!;
       this.getUserByUsername(userUsername);

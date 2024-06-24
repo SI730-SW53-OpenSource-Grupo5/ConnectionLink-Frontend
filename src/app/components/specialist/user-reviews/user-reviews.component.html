@@ -1,8 +1,10 @@
 <section class="mt-8">
     <div class="flex justify-end mt-4">
-        <button class="flex items-center bg-[#EFF0FF] text-black border border-black gap-1 px-[15px] py-[12.5px] rounded-2xl hover:bg-purple-300 transition-all duration-300 ease-in-out" (click)="openAddReview()">
-          Add Review
-        </button>
+        @if(!this.userLogin.isSpecialistUser && this.user.username != this.userLogin.username) {
+          <button class="flex items-center bg-[#EFF0FF] text-black border border-black gap-1 px-[15px] py-[12.5px] rounded-2xl hover:bg-purple-300 transition-all duration-300 ease-in-out" (click)="openAddReview()">
+            Add Review
+          </button>
+        }
       </div>
     <h3>User Reviews:</h3>
 

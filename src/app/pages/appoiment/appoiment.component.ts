@@ -47,7 +47,7 @@ export class AppoimentComponent implements OnInit{
     this.calendarService.getListCalendarSpecialist(this.user.username).subscribe(
       (response: any) => {
         this.specialistCalendarData = response
-        
+        console.log(response)
       }
     )
   }

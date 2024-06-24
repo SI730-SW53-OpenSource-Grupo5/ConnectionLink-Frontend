@@ -20,6 +20,7 @@ import {ReviewService} from "../../../services/review.service";
 export class UserReviewsComponent implements OnInit {
 
   user: any | null = null;
+  userLogin: any | null = null;
   reviews: any[] | null = null;
   @Input() specialistReviewData!: Array<Review>;
   @Output() addReview = new EventEmitter<void>();
@@ -33,6 +34,11 @@ export class UserReviewsComponent implements OnInit {
   }
 
   ngOnInit() {
+    let userL = localStorage.getItem("user")
+    if(userL != null) {
+      this.userLogin = JSON.parse(userL);
+    }
+    
     this.loadReviewsList();
   }
 
