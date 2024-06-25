@@ -36,6 +36,8 @@ export class MakeAppointmentComponent implements OnInit {
   user: any | null = null;
   userSpecialist: any | null = null;
   username = this.route.snapshot.paramMap.get('username')!;
+  userLogin: any | null = null;
+
   @Input() showPopup!: boolean;
   @Input() specialistData!: Specialist;
   @Input() specialistCalendarData!: Array<Calendar>;
@@ -56,7 +58,10 @@ export class MakeAppointmentComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    let userL = localStorage.getItem("user")
+    if(userL != null) {
+      this.userLogin = JSON.parse(userL);
+    }
     this.getSpecialistByUsername(this.username);
 
     this.authService.user$
@@ -134,7 +139,7 @@ export class MakeAppointmentComponent implements OnInit {
     let appointmentData = {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
-      userUsername: this.route.snapshot.paramMap.get('username')!,
+      userUsername: this.userLogin.username,
       calendarId: this.selectedOptionForm,
     }
 

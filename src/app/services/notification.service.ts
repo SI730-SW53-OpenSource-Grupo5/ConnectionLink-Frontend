@@ -10,7 +10,7 @@ import { Notifications } from '../models/Notifications';
 export class NotificationService {
 
  
-  private baseUrl = `${environment.baseUrl}/api/v1/notifications`;
+  private baseUrl = `${environment.baseUrl}/notifications`;
 
   constructor(private http: HttpClient) { }
 
