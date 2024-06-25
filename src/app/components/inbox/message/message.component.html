@@ -1,35 +1,38 @@
-<div *ngFor="let messageWithUser of messagesWithUsers; let i = index; trackBy: trackByMessageId">
-  <h1 *ngIf="shouldDisplayDate(i)">
-    {{ messageWithUser.messages.date | date: 'mediumDate' }}
-  </h1>
-  <mat-card class="message-card">
-    <mat-card-title *ngIf="messageWithUser.messages.id !== previousMessageId">
-      
-    </mat-card-title>
-    
-    <mat-card-header>
-      <div class="headerr">
-        <div class="image">
-          <img
-            [src]="messageWithUser.users.urlImage"
-            (load)="onImageLoad($event, messageWithUser)"
-            class="message-card-image"
-          />
+<section>
+  <h2>Last messages:</h2>
+  <div *ngFor="let messageWithUser of messagesWithUsers; let i = index; trackBy: trackByMessageId">
+    <h5 class="font-medium" style="padding-top: 20px" *ngIf="shouldDisplayDate(i)">
+      {{ messageWithUser.messages.date | date: 'mediumDate' }}
+    </h5>
+    <mat-card class="message-card">
+      <mat-card-title *ngIf="messageWithUser.messages.id !== previousMessageId">
+
+      </mat-card-title>
+
+      <mat-card-header>
+        <div class="header">
+          <div class="image">
+            <img
+              [src]="messageWithUser.users.urlImage"
+              (load)="onImageLoad($event, messageWithUser)"
+              class="message-card-image"
+            />
+          </div>
+          <div class="name">
+            <mat-card-title class="message-card-title">
+              {{ messageWithUser.users.firstName }} {{ messageWithUser.users.lastName }}
+            </mat-card-title>
+          </div>
         </div>
-        <div class="name">
-          <mat-card-title class="message-card-title">
-            {{ messageWithUser.users.firstName }} {{ messageWithUser.users.lastName }}
-          </mat-card-title>
-        </div>
+      </mat-card-header>
+      <div class="text">
+        <mat-card-content class="message-card-content">
+          <div class="message">
+            <p>{{ messageWithUser.messages.message }}</p>
+          </div>
+        </mat-card-content>
       </div>
-    </mat-card-header>
-    <div class="text">
-      <mat-card-content class="message-card-content">
-        <div class="message">
-          <p>{{ messageWithUser.messages.message }}</p>
-        </div>
-      </mat-card-content>
-    </div>
-  </mat-card>
- 
-</div>
+    </mat-card>
+
+  </div>
+</section>

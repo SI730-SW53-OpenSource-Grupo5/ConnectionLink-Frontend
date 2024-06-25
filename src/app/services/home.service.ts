@@ -10,13 +10,17 @@ export class HomeService {
 
   constructor(private http: HttpClient) { }
 
-  getPosti(index: any){
+  getPostById(index: any){
     return this.http.get<any>(`${this.baseUrl}/specialists/${index}`);
 
   }
-  getPost(){
-    return this.http.get<any>(`${this.baseUrl}/specialists`);
 
+  getPost(limit = 3){
+    return this.http.get<any>(`${this.baseUrl}/posts`, {
+      params: {
+        _limit: limit.toString()
+      }
+    });
   }
 }
 

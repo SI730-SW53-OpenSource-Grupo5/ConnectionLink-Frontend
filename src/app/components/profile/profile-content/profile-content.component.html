@@ -1,0 +1,26 @@
+<section class="profile-information-container h-full">
+  <div class="grid grid-cols-1 xl:grid-cols-[1fr,auto] grid-rows-[1fr,auto] xl:grid-rows-1 p-8
+      items-center gap-10 w-full border border-gray-300 justify-center bg-slate-50 h-full">
+    <div class="flex flex-col gap-4 md:w-[80%] w-[100%]">
+      <h2 class="text-blue-900">{{ user?.fullName }} profile:</h2>
+      <p><strong>Full name:</strong> {{ user?.fullName }} </p>
+      <p><strong>Email:</strong> {{ user?.email }}</p>
+      <p><strong>Birthday:</strong> {{ user?.birthday | date: 'MM/dd/yyyy' }}</p>
+      <p><strong>Banner Image:</strong> {{ user?.bannerImageUrl }}</p>
+      <p><strong>Age:</strong>{{ user?.age }}</p>
+      <p style="line-height: 1.725 !important;"><strong>Bio:</strong> {{ user?.description }}</p>
+    </div>
+    <div class="w-full flex flex-col gap-6 items-center">
+      <img class="max-w-[400px] w-full flex mx-auto min-h-[400px] object-cover rounded-xl" src="{{user?.profileImageUrl}}"
+           alt="{{ user?.fullName + ' Image Profile' }}"/>
+      <button
+        (click)="showEditProfileModal()"
+        class="flex items-center bg-[#EFF0FF] text-black border border-black gap-1
+        px-[15px] py-[12.5px] rounded-2xl hover:bg-gray-300 transition-all duration-300 ease-in-out">
+        <span class="uppercase mr-1">Edit Profile</span>
+        <mat-icon aria-hidden="false" aria-label="Edit Profile Icon">edit</mat-icon>
+      </button>
+    </div>
+  </div>
+  <app-edit-profile-modal [showPopup]="showPopup" (closeModal)="closeModal()"></app-edit-profile-modal>
+</section>

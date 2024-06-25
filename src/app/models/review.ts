@@ -3,7 +3,7 @@ import { User } from "./user";
 
 export interface Review {
     "id": any,
-    "user": User,
+    "user": any,
     "specialist": Specialist,
     "description": string
 }

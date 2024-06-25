@@ -18,8 +18,8 @@ export class EventService {
     return `${this.baseURL}${this.eventsEndpoint}`;
   }
 
-  getAllEvents(): Observable<EventEntity>{
-    return this.http.get<EventEntity>(this.baseURL + this.eventsEndpoint);
+  getAllEvents(): Observable<any>{
+    return this.http.get<any>(this.baseURL + this.eventsEndpoint);
   }
 
   // obtenemos la data de los especilistas en base al eventId
@@ -27,4 +27,15 @@ export class EventService {
     return this.http.get<any>(`${this.baseURL}/specialists/${eventId}`);
   }
 
+  createEvent(event: EventEntity): Observable<EventEntity> {
+    return this.http.post<EventEntity>(this.eventsPath(), event);
+  }
+
+  createUserEventRegister(userEventRegister: any): Observable<any> {
+    return this.http.post<any>(`${this.baseURL + this.eventsEndpoint}/user`, userEventRegister);
+  }
+
+  getEventByUserUsername(username: string): Observable<any> {
+    return this.http.get<any>(`${this.baseURL}/events/user/username/${username}`);
+  }
 }

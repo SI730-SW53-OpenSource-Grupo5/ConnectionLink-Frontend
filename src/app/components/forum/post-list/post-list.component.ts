@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {MatIcon} from "@angular/material/icon";
 import PostEntity from "../../../models/post.entity";
-import {NgForOf} from "@angular/common";
+import {DatePipe, NgForOf} from "@angular/common";
 import {Router} from "@angular/router";
 
 @Component({
@@ -9,18 +9,20 @@ import {Router} from "@angular/router";
   standalone: true,
   imports: [
     MatIcon,
-    NgForOf
+    NgForOf,
+    DatePipe
   ],
   templateUrl: './post-list.component.html',
   styleUrl: './post-list.component.scss'
 })
 export class PostListComponent {
 
-  @Input() posts: Array<PostEntity> = [];
+  @Input() posts: Array<any> = [];
 
   constructor(private router: Router) {}
 
   navigateTo(postId: number) {
+    console.log(postId);
     this.router.navigate(['/forums', postId]);
   }
 }

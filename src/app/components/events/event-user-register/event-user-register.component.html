@@ -1,0 +1,21 @@
+<section *ngIf="showPopup" class="popup">
+  <div class="popup-content p-[30px] md:p-[70px]">
+    @if(!isCreatedUserRegister) {
+      <form (submit)="onSubmit()" #userRegisterForm="ngForm">
+        <div class="flex gap-[20px] items-center justify-center mt-[20px]">
+          <button mat-raised-button class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase " >Register</button>
+          <button mat-raised-button class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase " (click)="closeModal.emit()">Cancel</button>
+        </div>
+      </form>
+    } @else {
+      <div class="flex flex-col gap-[20px] items-center">
+        <img src="../../../assets/check.svg" alt="Check Icon" />
+        <h2>You were successfully registered!</h2>
+        <div class="flex gap-[20px] items-center justify-center">
+          <button class="flex items-center bg-[#C3E8D6] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase" mat-raised-button (click)="goToPage('/')" >Go to Home</button>
+          <button class="flex items-center bg-[#CAFDF4] text-black border border-black gap-1 px-[35px] py-[12.5px] rounded-full uppercase" mat-raised-button (click)="closeModal.emit()">Go to Events</button>
+        </div>
+      </div>
+    }
+  </div>
+</section>

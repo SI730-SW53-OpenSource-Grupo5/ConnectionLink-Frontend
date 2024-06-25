@@ -6,6 +6,7 @@ import {EventService} from "../../services/event.service";
 import {EventCardComponent} from "../../components/events/event-card/event-card.component";
 import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
 import {MatOption, MatSelect} from "@angular/material/select";
+import {ModalEventRegisterComponent} from "../../components/events/modal-event-register/modal-event-register.component";
 
 interface Filter {
   value: string,
@@ -25,15 +26,18 @@ interface Filter {
     MatFormField,
     MatSelect,
     MatOption,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ModalEventRegisterComponent
   ],
   templateUrl: './events.component.html',
   styleUrl: './events.component.scss'
 })
 export class EventsComponent implements OnInit {
 
+  showPopUp!: boolean;
   selectedEventFilter: string | null = null;
   events: Array<EventEntity> = [];
+  user: any;
   // guardamos una copia de arreglo inicial
   initialEvents: Array<EventEntity> = [];
 
@@ -45,15 +49,28 @@ export class EventsComponent implements OnInit {
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
+    let userJSON = localStorage.getItem("user");
+
+    if (userJSON !== null) {
+        this.user = JSON.parse(userJSON);
+    }
+
     this.getAllEvents();
   }
 
   filterByStatus(status: string) {
     console.log(status);
-    const filteredEvents = this.events.filter(event => event.status.toLowerCase().includes(status.toLowerCase()));
-    this.events = filteredEvents;
+    //const filteredEvents = this.events.filter(event => event.status.toLowerCase().includes(status.toLowerCase()));
+    //this.events = filteredEvents;
   }
 
+  showRegisterEvent() {
+    this.showPopUp = true;
+  }
+
+  closeModal(): void {
+    this.showPopUp = false;
+  }
   refreshEvents() {
     // restauramos el estado inicial de events
     this.events = [...this.initialEvents];
@@ -66,20 +83,24 @@ export class EventsComponent implements OnInit {
         this.events = response.map((item: EventEntity) => {
           let event = new EventEntity(
             item.id,
-            item.idSpecialist,
             item.title,
-            item.banner_img,
             item.description,
-            item.status,
+            item.profileImageUrl,
+            item.bannerImageUrl,
+            item.day,
+            item.category,
+            item.specialist,
+            item.users
           );
-
-          this.eventService.getSpecialistByEvent(item.idSpecialist).subscribe(
+          this.eventService.getSpecialistByEvent(item.specialist.username);
+          /*this.eventService.getSpecialistByEvent(item.specialist.username).subscribe(
             (specialist: any) => {
+              console.log(specialist);
               // se ha creado una nuevo property en la entidad EventEntity
               // para aceptar un objeto specialist con la informacion de specialist
-              event.specialist = specialist;
+              event.specialistt = specialist.specialist;
             }
-          );
+          );*/
 
           return event;
         });
@@ -88,5 +109,5 @@ export class EventsComponent implements OnInit {
       }
     )
   }
-
+  
 }

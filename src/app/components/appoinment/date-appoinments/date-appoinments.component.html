@@ -1,0 +1,16 @@
+<section class="mt-8">
+    <div class="flex flex-col gap-[20px] custom-appoinments" >
+        <mat-card class="flex flex-col gap-[25px] px-[10px] py-[15px] card roundede-[5px]" *ngFor="let calendarData of specialistCalendarData">
+            <mat-card-header class="flex items-center">
+                <div class="ml-15px cardHeader">
+                    <p class="mb-0 text-sm">Day: {{calendarData.day.day}}</p>
+                    <p class="mb-0 text-sm">Hour: {{calendarData.hourResource.hour}}</p>
+                    <p class="mb-0 text-sm">Available: {{calendarData.isAvailable}}</p>
+                </div>
+            </mat-card-header>
+            <mat-card-content class="cardContent flex">
+                <button  class="bg-[#CAFDF4] text-black border border-black gap-1 px-[17.5px] py-[6.25px] rounded-full uppercase" mat-raised-button (click)="onClickRemove(calendarData)">Delete</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</section>

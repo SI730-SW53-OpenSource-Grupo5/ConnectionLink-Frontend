@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .cards-event-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(475px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   grid-template-rows: auto;
   gap: 30px;
 }

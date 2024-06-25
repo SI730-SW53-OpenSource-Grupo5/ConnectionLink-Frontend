@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>Notificaciones</h2>
+<mat-dialog-content>
+  <div *ngFor="let notification of notifications">
+    <mat-card>
+      <mat-card-title>{{ notification.title }}</mat-card-title>
+      <mat-card-content>{{ notification.description }}</mat-card-content>
+      <mat-card-subtitle>{{ notification.createdAt | date: 'short' }}</mat-card-subtitle>
+      <mat-divider></mat-divider>
+      <div class="notification-footer">
+        <a mat-button color="primary" [href]="notification.url" target="_blank">Ver Más</a>
+        <span class="notification-status" [ngClass]="{'read': notification.isRead, 'unread': !notification.isRead}">
+          {{ notification.isRead ? 'Leído' : 'No leído' }}
+        </span>
+      </div>
+    </mat-card>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="close()">Cerrar</button>
+</mat-dialog-actions>

@@ -6,6 +6,12 @@
         <p>Join and participate in various events created by different specialists</p>
       </div>
       <div class="flex flex-row gap-3 self-center">
+        @if(this.user.isSpecialistUser) {
+          <button  class="flex items-center bg-[#EFF0FF] text-black border border-black gap-1
+                  px-[15px] py-[12.5px] rounded-2xl hover:bg-purple-300 transition-all duration-300 ease-in-out"
+                (click)="showRegisterEvent()">Create Event
+        </button>
+        }
         <button
           (click)="refreshEvents()"
           class="bg-slate-100 px-3 hover:bg-slate-300 transition-all duration-300 ease rounded-lg">
@@ -25,5 +31,7 @@
       </div>
     </div>
     <app-event-card [events]="events"></app-event-card>
+    <app-modal-event-register [showPopup]="showPopUp" (closeModal)="closeModal()"></app-modal-event-register>
+    
   </div>
 </section>

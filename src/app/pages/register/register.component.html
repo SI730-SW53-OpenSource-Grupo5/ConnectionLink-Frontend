@@ -1,0 +1,61 @@
+<section class="background-register min-h-screen py-10 flex items-center justify-center">
+  <div class="flex flex-col gap-10 max-w-[700px] mx-auto w-11/12 items-center justify-center min-h-full">
+    <div class="flex flex-row items-center gap-4">
+      <img class="w-14 h-14" src="assets/logo-connectionlink.png">
+      <h1 class="logo-title font-lora">ConnectionLink</h1>
+    </div>
+    <div class="flex flex-col py-8 px-5 sm:py-10 sm:px-20 gap-8 w-full items-stretch bg-white drop-shadow-md">
+      <h5 class="text-center self-center">Revolutionize mental health advocacy with precise analytics</h5>
+      <form class="flex flex-col gap-5 mb-3 mt-3" (ngSubmit)="onSubmitRegister()">
+        <input name="fullName" [(ngModel)]="form.fullName"
+               class="p-3.5 border-slate-300 rounded-2xl border-[1px] indent-1 flex-1"
+               type="text" placeholder="Full Name" autocomplete="on">
+        <input name="username" [(ngModel)]="form.username"
+               class="p-3.5 border-slate-300 rounded-2xl border-[1px] indent-1 flex-1"
+               type="text" placeholder="Username" autocomplete="on">
+        <input name="description" [(ngModel)]="form.description"
+               class="p-3.5 border-slate-300 rounded-2xl border-[1px] indent-1 flex-1"
+               type="text" placeholder="Description" autocomplete="on">
+        <input name="profileImageUrl" [(ngModel)]="form.profileImageUrl"
+               class="p-3.5 border-slate-300 rounded-2xl border-[1px] indent-1 flex-1"
+               type="text" placeholder="Profile Image URL" autocomplete="on">
+        <input name="password" [(ngModel)]="form.password"
+               class="p-3.5 border-slate-300 rounded-2xl border-[1px] indent-1"
+               type="password" placeholder="Password" autocomplete="on">
+        <input name="confirmPassword" [(ngModel)]="form.confirmPassword"
+               class="p-3.5 border-slate-300 rounded-2xl border-[1px] indent-1"
+               type="password" placeholder="Confirm Password" autocomplete="on">
+        <input name="email" [(ngModel)]="form.email"
+               class="p-3.5 border-slate-300 rounded-2xl border-[1px] indent-1"
+               type="email" placeholder="Email" autocomplete="on">
+        <input name="age" [(ngModel)]="form.age"
+               class="p-3.5 border-slate-300 rounded-2xl border-[1px] indent-1 flex-1"
+               type="number" placeholder="Age" autocomplete="on">
+        <div class="flex flex-row items-center justify-center gap-8 mt-3">
+          <div class="flex flex-row gap-2 items-center">
+            <input class="radio-input" type="radio" id="patient" name="type_user" value="false" autocomplete="on"
+                   [(ngModel)]="form.isSpecialistUser"/>
+            <label class="radio-label" for="patient">Patient</label>
+          </div>
+          <div class="flex flex-row gap-2 items-center">
+            <input class="radio-input" type="radio" id="specialist" name="type_user" value="true" autocomplete="on"
+                   [(ngModel)]="form.isSpecialistUser"/>
+            <label class="radio-label" for="specialist">Specialist</label>
+          </div>
+        </div>
+        <input *ngIf="form.isSpecialistUser" name="cvUrl" [(ngModel)]="form.cvUrl"
+               class="p-3.5 border-slate-300 rounded-2xl border-[1px] indent-1 flex-1"
+               type="text" placeholder="CV URL" autocomplete="on">
+        <button class="w-full sm:w-auto mt-5 bg-blue-700 text-white
+    py-3.5 rounded-[2rem] self-center px-0 sm:px-24
+    hover:bg-blue-800 transition-all duration-200 ease-in" type="submit">
+          Sign up
+        </button>
+      </form>
+    </div>
+    <p>Already have an account? <span
+      class="text-blue-800 font-medium cursor-pointer"
+      (click)="navigateToLogin()"
+    >Log in</span></p>
+  </div>
+</section>

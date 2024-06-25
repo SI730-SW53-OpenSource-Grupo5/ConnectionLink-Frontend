@@ -21,11 +21,17 @@ export class ThreadService {
 
   //Obtenemos el post en base al posId
   getPostById(postId: number): Observable<PostEntity> {
-    return this.http.get<PostEntity>(this.postsPath(postId));
+    return this.http.get<PostEntity>(`${this.baseURL}/posts/${postId}`);
   }
 
   // obtenemos los comentarios en base al postId seleccionado
   getCommentsByPostId(postId: number): Observable<CommentEntity[]> {
-    return this.http.get<CommentEntity[]>(`${this.baseURL}/comments?postId=${postId}`);
+    return this.http.get<CommentEntity[]>(`${this.baseURL}/comments/post/${postId}`);
   }
+
+  // creamos un comentario
+  createComment(item: any): Observable<any> {
+    return this.http.post<any>(`${this.baseURL}/comments`, item);
+  }
+
 }

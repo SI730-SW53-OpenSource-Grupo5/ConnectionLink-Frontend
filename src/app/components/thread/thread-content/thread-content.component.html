@@ -1,0 +1,50 @@
+<section>
+  <article class="author-container bg-slate-100 p-4 flex flex-col gap-5 rounded-lg relative">
+    <div class="flex flex-row justify-between">
+      <div class="flex flex-row gap-4">
+        <img class="example-header-image" [src]="post.user?.profileImageUrl">
+        <div class="flex flex-col justify-center gap-1">
+          <div class="flex flex-row items-center gap-2 relative">
+            <p class="text-sm font-normal">{{ post.user?.fullName }}</p>
+          </div>
+          <span class="text-sm font-light text-gray-500">{{ post.user?.email }}</span>
+        </div>
+        <div class="author flex flex-row items-center mr-[0px] gap-0">
+          <mat-icon class="font-medium text-xl w-0 h-0 mb-1.5 text-blue-800"
+                    fontIcon="person"></mat-icon>
+          <p class="font-medium text-blue-800">Author</p>
+        </div>
+      </div>
+    </div>
+    <p class="font-medium">Subject: <span class="font-normal">{{ post.title }}</span></p>
+    <p class="text-pretty">Dear Hope ConnectLink,<br/>
+      {{ post.content }}
+    </p>
+    <div class="flex flex-row gap-4 items-center justify-between flex-wrap">
+      <div class="flex flex-row gap-5 items-center flex-wrap">
+        <div class="flex flex-row gap-2 items-center">
+          <span>{{ post.comments?.length }} comments</span>
+          <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="comment"></mat-icon>
+        </div>
+        <div class="flex flex-row gap-2 items-center">
+          <span>{{ post.likes }}</span>
+          <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="thumb_up_alt"></mat-icon>
+        </div>
+      </div>
+      <p class="font-medium">Publication: <span class="font-normal">{{ post.createdAt | date:'long' }}</span></p>
+    </div>
+  </article>
+  <div class="flex flex-row justify-between my-3 flex-wrap gap-8">
+    <h4 class="pt-4 pb-3.5 font-semibold">Comments:</h4>
+    <button
+      (click)="showNewComment()"
+      class="flex items-center border-[1px] border-slate-800 bg-slate-100 text-slate-950
+              gap-1 px-4 self-center py-1.5 rounded-2xl tracking-wider hover:bg-slate-200 transition-all duration-300 ease"
+    >
+      New comment
+      <mat-icon class="text-xl w-0 h-0 mb-1" fontIcon="comment"></mat-icon>
+    </button>
+  </div>
+  <app-new-comment-modal [post]="post"  [showPopup]="showPopup" (closeModal)="closeModal()"></app-new-comment-modal>
+  <app-comment-list [comments]="comments"></app-comment-list>
+</section>
