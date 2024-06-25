@@ -10,6 +10,7 @@ import {environment} from "../enviroments/environments";
 export class UserService {
 
   private baseUrl = `${environment.baseUrl}/users`;
+  private base_Url = `${environment.baseUrl}`;
   constructor(private http: HttpClient) {}
 
   getUserByUsername(username: string): Observable<User> {
@@ -50,6 +51,15 @@ export class UserService {
 
   getUserByUserName(username: string): Observable<User> {
     return this.http.get<User>(`${this.baseUrl}/username/${username}`);
+  }
+  signIn(username: string, password: string): Observable<any> {
+    return this.http.post<any>(`${this.base_Url}/authentication/sign-in`, {
+      username,
+      password
+    });
+  }
+  signUp(user: any): Observable<any> {
+    return this.http.post<any>(`${this.base_Url}/authentication/sign-up`, user);
   }
 
 }

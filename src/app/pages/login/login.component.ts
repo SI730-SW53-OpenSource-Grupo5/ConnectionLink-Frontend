@@ -46,24 +46,20 @@ export class LoginComponent implements OnInit {
   handleSubmitLogin() {
     console.log(this.email);
     console.log(this.password);
-
-    for (let i = 0; i < this.users.length; i++) {
-
-      if (this.users[i].email === this.email && this.users[i].password === this.password) {
+    this.userService.signIn(this.email, this.password).subscribe(
+      response => {
         this.isRegistered = true;
-        // setamos el estado user en AuthService
-        this.authService.setUser(this.users[i]);
+        this.authService.setUser(response);
         this.navigateToHome();
-        break;
+      },
+      error => {
+        if (!this.isRegistered) {
+          this.dialog.open(ErrorCredentialsModalComponent);
+        }
       }
+    )
 
-    }
-
-    if (!this.isRegistered) {
-      // mostramos un modal que es un componente cuando las credenciales ingresadas
-      // no sean las correctas
-      this.dialog.open(ErrorCredentialsModalComponent);
-    }
+    
 
   }
 

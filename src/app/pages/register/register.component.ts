@@ -36,7 +36,9 @@ export class RegisterComponent implements OnInit {
     phone: '',
     email: '',
     password: '',
-    role: 'patient',
+    role: [
+      "ROLE_USER"
+    ],
     profileImg: '',
     username: '',
     description: '',
@@ -66,28 +68,26 @@ export class RegisterComponent implements OnInit {
     console.log(this.form);
 
     // verify if the inputs are empty
-    if (!this.areFieldsComplete()) {
-      this.dialog.open(FillFormModalComponent);
-      return;
-    }
+    /* 
+      if (!this.areFieldsComplete()) {
+        this.dialog.open(FillFormModalComponent);
+        return;
+      }
+    */
 
-    if (this.form.password !== this.confirmPassword) {
+    if (this.form.password !== this.form.confirmPassword) {
       console.log('Las contraseñas no son iguales');
       this.dialog.open(PasswordModalComponent);
       return;
     }
 
-    // verify is the email has already been registered in the users array with some method
-    const emailExists = this.users.some(user => user.email === this.form.email);
-    if (emailExists) {
-      this.dialog.open(EmailExistsModalComponent);
-      return;
-    }
-
     // create new user when all validations have been passed
     const newUser: User = this.createUserFromForm(this.form);
+    let userRegister = this.form;
 
-    this.userService.createNewUser(newUser).subscribe(
+    userRegister.birthday = new Date();
+
+    this.userService.signUp(userRegister).subscribe(
       response => {
         console.log(response);
         this.dialog.open(RegisteredModalComponent);
@@ -118,7 +118,7 @@ export class RegisterComponent implements OnInit {
   }
 
   areFieldsComplete() {
-    const fieldsRequired: (keyof any)[] = ['firstName', 'lastName', 'phone', 'email', 'password', 'role', 'username', 'description', 'bannerImageUrl', 'age', 'birthday', 'isSpecialistUser', 'cvUrl'];
+    const fieldsRequired: (keyof any)[] = ['fullName', 'email', 'password', 'username', 'description', 'bannerImageUrl', 'age', 'birthday', 'isSpecialistUser', 'cvUrl'];
 
     // verify if all inputs are fill
     for (let field of fieldsRequired) {
