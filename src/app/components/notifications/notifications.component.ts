@@ -18,6 +18,7 @@ import { MatDividerModule } from '@angular/material/divider';
 export class NotificationModalComponent implements OnInit {
 
   notifications: Notifications[] = [];
+  userLogin: any | null = null;
 
   constructor(
     private notificationService: NotificationService,
@@ -26,7 +27,11 @@ export class NotificationModalComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.notificationService.getNotificationsByUsername(this.data.username).subscribe((notifications: Notifications[]) => {
+    let userL = localStorage.getItem("user")
+    if(userL != null) {
+      this.userLogin = JSON.parse(userL);
+    }
+    this.notificationService.getNotificationsByUsername(this.userLogin.username).subscribe((notifications: Notifications[]) => {
       this.notifications = notifications;
     });
   }

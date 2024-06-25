@@ -55,6 +55,7 @@ export class UserReviewsComponent implements OnInit {
       this.reviewService.getReviewsBySpecialistUsername(username).subscribe(
         (reviews) => {
           this.reviews = reviews;
+          console.log(reviews)
         }
       )
     });

@@ -1,6 +1,6 @@
 <section class="mt-8">
     <div class="flex justify-end mt-4">
-        @if(!this.userLogin.isSpecialistUser && this.user.username != this.userLogin.username) {
+        @if(!this.userLogin.isSpecialistUser) {
           <button class="flex items-center bg-[#EFF0FF] text-black border border-black gap-1 px-[15px] py-[12.5px] rounded-2xl hover:bg-purple-300 transition-all duration-300 ease-in-out" (click)="openAddReview()">
             Add Review
           </button>
@@ -17,12 +17,7 @@
             <p class="mb-0 text-sm">{{review.user.fullName}}</p>
             <p class="mb-0 text-sm text-[#C2C2C2]">{{review.user.email}}</p>
           </div>
-          <img class="w-[50px] h-[50px] rounded-full mr-[15px]" mat-card-image src="{{review.specialist?.profileImageUrl}}" alt=""/>
-          <div class="ml-[15px] cardHeader">
-            <p class="mb-0 text-sm">{{review.specialist?.fullName}}</p>
-            <p class="mb-0 text-sm text-[#C2C2C2]">{{review.specialist?.email}}</p>
-
-          </div>
+         
         </mat-card-header>
         <mat-card-content class="cardContent">
           <p>{{review.description}}</p>
